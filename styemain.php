@@ -12,7 +12,7 @@
 	align-items : center;
 	width : 100%;
 	justify-content : space-around;
-	background : url("pagebg.jpg") no-repeat;
+	background : url("img/parchemin_fond.jpg") no-repeat;
 	background-size : 100%;
 	}
 	.index .style{

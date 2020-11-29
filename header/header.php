@@ -1,3 +1,6 @@
+<?php
+$_SERVER['DOCUMENT_ROOT'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +18,7 @@
 		<nav class="navbar" id="navbar">
   			<div class="max-width">
     			<div class="resplogo">
-    				<img src="../img/logo.png" alt="Logo du site">
+    				<img src="img/logo.png" alt="Logo du site">
     				<h1>The Unknown Authors Library</h1>
     			</div>
     			<div class="respsearch">
