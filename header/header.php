@@ -1,6 +1,3 @@
-<?php
-$_SERVER['DOCUMENT_ROOT'];
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +15,7 @@ $_SERVER['DOCUMENT_ROOT'];
 		<nav class="navbar" id="navbar">
   			<div class="max-width">
     			<div class="resplogo">
-    				<img src="img/logo.png" alt="Logo du site">
+    				<img src="http://localhost/bibliotheque/img/logo.png" alt="Logo du site">
     				<h1>The Unknown Authors Library</h1>
     			</div>
     			<div class="respsearch">
@@ -32,9 +29,9 @@ $_SERVER['DOCUMENT_ROOT'];
     			</div>
 			</div>
     		<ul class="menu">
-				<li><a href="index.php">Accueil</a></li>
-				<li><a href="auteur.php">Auteurs</a></li>
-				<li><a href="bibliotheque.php">Biblioth&#232;que</a></li>
+				<li><a href="http://localhost/bibliotheque/index.php">Accueil</a></li>
+				<li><a href="http://localhost/bibliotheque/auteur.php">Auteurs</a></li>
+				<li><a href="http://localhost/bibliotheque/bibliotheque.php">Biblioth&#232;que</a></li>
 				<li><a href="">Cat&#233;gorie</a></li>
 			</ul>
 		</nav>
@@ -45,7 +42,6 @@ $_SERVER['DOCUMENT_ROOT'];
 		var avposcourant = window.pageYOffset;
 		window.onscroll = function() {
 		var poscourant = window.pageYOffset;
-		if (poscourant > 170) {
   			if (avposcourant > poscourant) {
     			document.getElementById("navbar").style.top = "0";
     			haut.style.display = "block";
@@ -53,7 +49,6 @@ $_SERVER['DOCUMENT_ROOT'];
     			document.getElementById("navbar").style.top = "-170px";
     			haut.style.display = "none";
   			}
-  		}
   			avposcourant = poscourant;
 		}
 		

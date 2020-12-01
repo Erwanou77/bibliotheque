@@ -1,6 +1,3 @@
-<?php
-$_SERVER['DOCUMENT_ROOT'];
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -75,9 +72,9 @@ dt{
 	<main class="bibliotheque">
 		<div class="container">
 			<div class="desktop">
-				<a href="livres/2265096493.php">									
+				<a href="livres/2265096490.php">
 					<div class="position">
-						<img src="img/couvertures/juste_une_ombre.png" alt="Image de couverture du livre juste une ombre">
+						<img src="img/couvertures/juste_une_ombre.png" alt="Couverture du livre juste une ombre">
 						<dl>
 							<dt>Titre :</dt>
 							<dd>Juste une ombre</dd>
@@ -96,15 +93,15 @@ dt{
 						</dl>
 						<dl>
 							<dt>ISBN :</dt>
-							<dd>2265096493</dd>
+							<dd>2265096490</dd>
 						</dl>
 					</div>
 				</a>
 			</div>
 			<div class="desktop">
-				<a href="">
+				<a href="livres/2266243004.php">
 					<div class="position">
-						<img src="img/couvertures/Maitres_du_jeu.png" alt="Image de couverture du livre Maitres du jeu">
+						<img src="img/couvertures/Maitres_du_jeu.png" alt="Couverture du livre Maitres du jeu">
 						<dl>
 							<dt>Titre :</dt>
 							<dd>Maîtres du jeu</dd>
@@ -129,9 +126,9 @@ dt{
 				</a>
 			</div>
 			<div class="desktop">
-				<a href="">
+				<a href="livres/2266258656.php">
 					<div class="position">
-						<img src="img/couvertures/Satan_etait_un_ange.png" alt="Image de couverture du livre Satan etait un ange">
+						<img src="img/couvertures/Satan_etait_un_ange.png" alt="Couverture du livre Satan etait un ange">
 						<dl>
 							<dt>Titre :</dt>
 							<dd>Satan &#233;tait un ange</dd>
@@ -156,9 +153,9 @@ dt{
 				</a>
 			</div>
 			<div class="desktop">
-				<a href="">
+				<a href="livres/2878582853.php">
 					<div class="position">
-						<img src="img/couvertures/un_lieu_incertain.png" alt="Image de couverture du livre un lieu 	incertain">
+						<img src="img/couvertures/un_lieu_incertain.png" alt="Couverture du livre un lieu incertain">
 						<dl>
 							<dt>Titre :</dt>
 							<dd>Un lieu incertain</dd>
@@ -183,9 +180,9 @@ dt{
 				</a>
 			</div>
 			<div class="desktop">
-				<a href="">
+				<a href="livres/2290120332.php">
 					<div class="position">
-						<img src="img/couvertures/Temps_glaciaires.png" alt="Image de couverture du livre Temps glaciaires">
+						<img src="img/couvertures/Temps_glaciaires.png" alt="Couverture du livre Temps glaciaires">
 						<dl>
 							<dt>Titre :</dt>
 							<dd>Temps glaciaires</dd>
@@ -210,9 +207,9 @@ dt{
 				</a>
 			</div>
 			<div class="desktop">
-				<a href="">
+				<a href="livres/2226319468.php">
 					<div class="position">
-						<img src="img/couvertures/Promesse.png" alt="Image de couverture du livre Promesse">
+						<img src="img/couvertures/Promesse.png" alt="Couverture du livre Promesse">
 						<dl>
 							<dt>Titre :</dt>
 							<dd>Promesse</dd>
@@ -237,9 +234,9 @@ dt{
 				</a>
 			</div>
 			<div class="desktop">
-				<a href="">
+				<a href="livres/2253184381.php">
 					<div class="position">
-						<img src="img/couvertures/Delivrance.png" alt="Image de couverture du livre Delivrance">
+						<img src="img/couvertures/Delivrance.png" alt="Couverture du livre Delivrance">
 						<dl>
 							<dt>Titre :</dt>
 							<dd>D&#233;livrance</dd>
@@ -264,9 +261,9 @@ dt{
 				</a>
 			</div>
 			<div class="desktop">
-				<a href="">
+				<a href="livres/9781786486202.php">
 					<div class="position">
-						<img src="img/couvertures/Victim_2117.png" alt="Image de couverture du livre Victim 2117">
+						<img src="img/couvertures/Victim_2117.png" alt="Couverture du livre Victim 2117">
 						<dl>
 							<dt>Titre :</dt>
 							<dd>Victim 2117</dd>
@@ -285,15 +282,15 @@ dt{
 						</dl>
 						<dl>
 							<dt>ISBN :</dt>
-							<dd>1786486202</dd>
+							<dd>9781786486202</dd>
 						</dl>
 					</div>
 				</a>
 			</div>
 			<div class="desktop">
-				<a href="">
+				<a href="livres/2266283782.php">
 					<div class="position">
-						<img src="img/couvertures/Nuit.png" alt="Image de couverture du livre Nuit">
+						<img src="img/couvertures/Nuit.png" alt="Couverture du livre Nuit">
 						<dl>
 							<dt>Titre :</dt>
 							<dd>Nuit</dd>
@@ -318,9 +315,9 @@ dt{
 				</a>
 			</div>
 			<div class="desktop">
-				<a href="index.php">
+				<a href="livres/2374481905.php">
 					<div class="position">
-						<img src="img/couvertures/La_Vallee.png" alt="Image de couverture du livre La vallee">
+						<img src="img/couvertures/La_Vallee.png" alt="Couverture du livre La vallee">
 						<dl>
 							<dt>Titre :</dt>
 							<dd>La Vall&#233;e</dd>

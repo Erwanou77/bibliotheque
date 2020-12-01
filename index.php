@@ -6,7 +6,7 @@
     <?php include("styemain.php");?>
   </head>
   <body>
-    <?php include('header.php');?>
+    <?php include('header/header.php');?>
     <main class="accueil">
       <div class="index">
         <div class="style">
@@ -24,10 +24,10 @@
           </p>
         </div>
         <div class="img">
-          <img src="fond.jpg" width="100%" />
+          <img src="img/fond.jpg" width="100%" />
         </div>
       </div>
     </main>
-    <?php include('footer.php');?>
+    <?php include('Footer/footer.php');?>
   </body>
 </html>
