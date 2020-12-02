@@ -76,7 +76,7 @@
 		</a>
 	</div>
 	<div class="position">
-		<a href="#">
+		<a href="Auteur/fred_vargas.php">
 			<div class="centre">
 				<img src="img/Auteurs/fred_vargas.jpg" alt="Portrait Fred Vargas">
 				<div class="texte">
@@ -89,7 +89,7 @@
 		</a>
 	</div>
 	<div class="position">
-		<a href="#">
+		<a href="Auteur/jussi_adler.php">
 			<div class="centre">
 				<img src="img/Auteurs/jussi_adler_olsen.jpg" alt="Portrait Jussi Adler-Olsen">
 				<div class="texte">
@@ -102,7 +102,7 @@
 		</a>
 	</div>
 	<div class="position">
-		<a href="#">
+		<a href="Auteur/bernard_minier.php">
 			<div class="centre">
 				<img src="img/Auteurs/bernard_minier.jpg" alt="Portrait Bernard Minier">
 				<div class="texte">

@@ -5,15 +5,15 @@
 	padding : 0;
 	}
 	.accueil{
-		padding-top: 170px;
+	padding-top: 170px;
+	background : url("img/parchemin_fond.jpg") no-repeat;
+	background-size : 100%;
 	}
 	.index{
 	display :flex;
 	align-items : center;
 	width : 100%;
 	justify-content : space-around;
-	background : url("img/parchemin_fond.jpg") no-repeat;
-	background-size : 100%;
 	}
 	.index .style{
 	text-align:center;
