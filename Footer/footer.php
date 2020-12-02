@@ -15,13 +15,14 @@
 		</div>
 		<div class="contact">
 			<h3>Liens : </h3>
-			<a href="index.php">Accueil</a>
-			<a href="auteur.php">Auteurs</a>
-			<a href="bibliotheque.php">Biblioth&#232;que</a>
+			<a href="http://localhost/bibliotheque/index.php">Accueil</a>
+			<a href="http://localhost/bibliotheque/auteur.php">Auteurs</a>
+			<a href="http://localhost/bibliotheque/bibliotheque.php">Biblioth&#232;que</a>
 			<a href="">Cat&#233;gorie</a>
 		</div>
 		<div class="contact">
-			<h3>Contact</h3>
+			<h3>D&#233;tail du site</h3>
+			<a href="http://localhost/bibliotheque/plandusite.php">Plan du site</a>
 		</div>
 	</footer>
 </body>

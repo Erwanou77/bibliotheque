@@ -6,6 +6,9 @@
 <body>
 <?php require("../header/header.php")?>
 	<section class="livres">
+		<div class="retour">
+			<p><a href="../bibliotheque.php">biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;Maîtres du jeu</p>
+		</div>
 		<div class="all">
 			<div class="centrage">
 				<img src="../img/couvertures/Maitres_du_jeu.png" alt="Couverture du livre Maitres du jeu">
@@ -18,7 +21,7 @@
 					<dl>
 						<dt>Auteurs :</dt>
 						<a href="#">
-							<dd>Karine Giebel</dd>
+							<dd>Karine Gi&#233;bel</dd>
 						</a>
 					</dl>
 					<dl>
@@ -44,7 +47,7 @@
 				</div>
 			</div>
 			<div class="resume">
-				<h2>Sysnopsis</h2>
+				<h2>Synopsis</h2>
 				<p>Il y a des crimes parfaits.<br>Il y a des meurtres gratuits.<br>Folie sanguinaire ou machination diabolique, la peur est la même. Elle est là, partout : elle s'insinue, elle vous étouffe... Pour lui, c'est un nectar. Pour vous, une attente insoutenable. D'où viendra le coup fatal ? De l'ami ? De l'amant ? De cet inconnu à l'air inoffensif ? D'outre-tombe, peut-être...
 				</p>
 			</div>

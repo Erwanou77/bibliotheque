@@ -6,6 +6,9 @@
 <body>
 <?php require("../header/header.php")?>
 	<section class="livres">
+		<div class="retour">
+			<p><a href="../bibliotheque.php">biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;Temps glaciaires</p>
+		</div>
 		<div class="all">
 			<div class="centrage">
 				<img src="../img/couvertures/Temps_glaciaires.png" alt="Couverture du livre Temps glaciaires">
@@ -44,7 +47,7 @@
 				</div>
 			</div>
 			<div class="resume">
-				<h2>Sysnopsis</h2>
+				<h2>Synopsis</h2>
 				<p>Le printemps s'annonça par un triolet de suicides. Une même signature laissée près des victimes, un étrange symbole en forme de guillotine. Pour le commissaire Adamsberg et ses adjoints Danglard et Retancourt, c'est le début d'une enquête débridée qui les conduira des arcanes d'une étrange société, férue des écrits de Robespierre, aux terres lointaines et embrumées d'Islande. Entre polar historique, tragédie et conte fantastique, Fred Vargas maîtrise à merveille le subtil équilibre des genres pour créer le sien, inimitable.
 				</p>
 			</div>

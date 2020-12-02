@@ -6,6 +6,9 @@
 <body>
 <?php require("../header/header.php")?>
 	<section class="livres">
+		<div class="retour">
+			<p><a href="../bibliotheque.php">biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;D&#233;livrance</p>
+		</div>
 		<div class="all">
 			<div class="centrage">
 				<img src="../img/couvertures/Delivrance.png" alt="Couverture du livre Delivrance">
@@ -44,7 +47,7 @@
 				</div>
 			</div>
 			<div class="resume">
-				<h2>Sysnopsis</h2>
+				<h2>Synopsis</h2>
 				<p>Une bouteille jetée à la mer, repêchée et oubliée dans un commissariat des Highlands. A l’intérieur, un appel au secours écrit en lettres de sang et en danois. Lorsque le message échoue au Département V de la police de Copenhague, chargé des dossiers non élucidés, les années ont passé. L’imprévisible Carl Morck, Assad, son assistant syrien au flair infaillible, et Rose, la secrétaire punk, vont-ils prendre au sérieux ce SOS ?
 				</p>
 			</div>

@@ -6,6 +6,9 @@
 <body>
 <?php require("../header/header.php")?>
 	<section class="livres">
+		<div class="retour">
+			<p><a href="../bibliotheque.php">biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;Satan &#233;tait un ange</p>
+		</div>
 		<div class="all">
 			<div class="centrage">
 				<img src="../img/couvertures/Satan_etait_un_ange.png" alt="Couverture du livre Satan etait un ange">
@@ -18,7 +21,7 @@
 					<dl>
 						<dt>Auteurs :</dt>
 						<a href="#">
-							<dd>Karine Giebel</dd>
+							<dd>Karine Gi&#233;bel</dd>
 						</a>
 					</dl>
 					<dl>
@@ -44,7 +47,7 @@
 				</div>
 			</div>
 			<div class="resume">
-				<h2>Sysnopsis</h2>
+				<h2>Synopsis</h2>
 				<p>Deux trajectoires, deux lignes de fuite.<br>Hier encore, François était quelqu'un. Un homme qu'on regardait avec admiration, avec envie. Aujourd'hui, il n'est plus qu'un fugitif tentant d'échapper à son assassin. Qui le rattrapera, où qu'il aille. Quoi qu'il fasse.<br>Paul regarde derrière lui ; il voit la cohorte des victimes qui hurlent vengeance. Il paye le prix de ses fautes. L'échéance approche...<br>Dans la même voiture, sur une même route, deux hommes que tout semble opposer, et qui pourtant fuient ensemble leur destin différent. Rouler droit devant. Faire ce qu'ils n'ont jamais fait.<br>Puisque l'horizon est bouché, autant tenter une dernière percée. Flamboyante.
 				</p>
 			</div>

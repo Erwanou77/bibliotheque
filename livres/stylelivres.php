@@ -4,7 +4,19 @@
 	background-size: 100%;
 	padding: 200px 0 70px 0;
 	max-width: 1600px;
-	margin: 0 auto;
+}
+.retour p{
+	text-align: center;
+	font-size: 15px;
+	background: white;
+	width: 350px;
+	padding: 20px 0;
+	border-radius: 0 20px 20px 0;
+}
+.retour p a{
+	color: black;
+	font-size: 20px;
+	text-decoration: underline;
 }
 .all{
 	background: white;
@@ -56,8 +68,6 @@ dl{
 .resume h2{
 	text-align: center;
 	margin: 30px 0;
-}
-.resume p{
 }
 
 @media screen and (max-width: 800px){

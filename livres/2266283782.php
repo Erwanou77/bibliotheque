@@ -6,6 +6,9 @@
 <body>
 <?php require("../header/header.php")?>
 	<section class="livres">
+		<div class="retour">
+			<p><a href="../bibliotheque.php">biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;Nuit</p>
+		</div>
 		<div class="all">
 			<div class="centrage">
 				<img src="../img/couvertures/Nuit.png" alt="Couverture du livre Nuit">
@@ -44,7 +47,7 @@
 				</div>
 			</div>
 			<div class="resume">
-				<h2>Sysnopsis</h2>
+				<h2>Synopsis</h2>
 				<p>Nuit de tempête en mer du Nord. Secoué par des vents violents, l'hélicoptère dépose Kirsten Nigaard sur la plate-forme pétrolière. L'inspectrice norvégienne enquête sur le meurtre d'une technicienne de la base offshore. Un homme manque à l'appel. En fouillant sa cabine, Kirsten découvre une série de photos. Quelques jours plus tard, elle est dans le bureau de Martin Servaz. L'absent s'appelle Julian Hirtmann, le tueur retors et insaisissable que le policier poursuit depuis des années. Etrangement, sur plusieurs clichés, Martin Servaz apparaît. Kirsten lui tend alors une autre photo. Celle d'un enfant. Au dos, juste un prénom : Gustav. Pour Kirsten et Martin, c'est le début d'un voyage terrifiant. Avec, au bout de la nuit, le plus redoutable des ennemis.
 				</p>
 			</div>

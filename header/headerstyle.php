@@ -5,6 +5,12 @@
 	text-decoration: none;
 	outline: none;
 }
+h1,h2,h3,h4,h5,h6,dt{
+	font-family: Bernard MT Condensed;
+}
+p,a,em,dd,li{
+	font-family: Book Antiqua;
+}
 /* style du header */
 
 .navbar{
@@ -66,7 +72,6 @@
 	color: white;
 }
 .navbar h1{
-	font-family: 'Book antiqua';
 	color: white;
 	text-align: center;
 }
@@ -124,7 +129,6 @@ input[type="search"]:focus{
   	display: inline-block;
 }
 .navbar .menu li a{
-	font-family: 'Bernard MT Condensed';
   	color: white;
 	font-size:20px;
 	padding: 10px 50px;

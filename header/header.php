@@ -35,7 +35,6 @@
 				<li><a href="">Cat&#233;gorie</a></li>
 			</ul>
 		</nav>
-
 	</header>
 	<script type="text/javascript">
 		var haut = document.getElementById("top");
@@ -63,6 +62,6 @@
       		$('.menu-btn i').toggleClass("active");
     		});
   		});
-		</script>
+	</script>
 </body>
 </html>

@@ -6,6 +6,9 @@
 <body>
 <?php require("../header/header.php")?>
 	<section class="livres">
+		<div class="retour">
+			<p><a href="../bibliotheque.php">biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;Promesse</p>
+		</div>
 		<div class="all">
 			<div class="centrage">
 				<img src="../img/couvertures/Promesse.png" alt="Couverture du livre Promesse">
@@ -44,7 +47,7 @@
 				</div>
 			</div>
 			<div class="resume">
-				<h2>Sysnopsis</h2>
+				<h2>Synopsis</h2>
 				<p>Plus de 13 millions d'exemplaires vendus dans le monde, couronné par tous les grands prix du polar, dont le Grand Prix policier des lectrices de Elle, le Danois Jussi Adler Olsen est une figure incontournable du thriller scandinave.<br><br>Bornholm, une île danoise de la mer baltique, fin des années 1990. Le cadavre d'une jeune fille est retrouvé dans un arbre, son vélo broyé au bord de la route. Aucune trace du chauffard : affaire classée. Sauf pour un inspecteur de la police locale qui finit dix-sept ans plus tard par demander l'aide de l'inspecteur Carl Mørck. Avant de se tirer une balle dans la tête.<br><br>À l'initiative de Rose, l'assistante du flegmatique Mørck, l'insolite trio du Département V en charge des cold cases débarque sur l'île de Bornholm. En remuant le passé, ils prennent le risque de réveiller de vieux démons...
 				</p>
 			</div>
