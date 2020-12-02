@@ -4,12 +4,13 @@
 	background-size: 100%; 
 	max-width: 1600px;
 	padding: 200px 0 70px 0;
+	margin: 0 auto;
 }
 .retour p{
 	text-align: center;
 	font-size: 15px;
 	background: white;
-	width: 25%;
+	width: 350px;
 	border-radius: 0 20px 20px 0;
 }
 .retour p a{
@@ -67,7 +68,7 @@ h2{
 	line-height: 25px;
 }
 @media screen and (max-width: 800px){
-	.karine{
+	.auteur{
 		padding: 300px 0 70px 0;
 	}
 	.portrait{

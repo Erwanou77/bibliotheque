@@ -6,7 +6,7 @@
 	outline: none;
 }
 h1,h2,h3,h4,h5,h6,dt{
-	font-family: Bernard MT Condensed;
+	font-family: Eras Bold ITC;
 }
 p,a,em,dd,li{
 	font-family: Book Antiqua;
@@ -27,19 +27,19 @@ p,a,em,dd,li{
   	z-index: 1;
 }
 #top {
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 2;
-  font-size: 20px;
-  border: none;
-  transition: .5s;
-  outline: none;
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 50%;
+  	position: fixed;
+  	bottom: 20px;
+  	right: 30px;
+  	z-index: 2;
+  	font-size: 20px;
+  	border: none;
+  	transition: .5s;
+  	outline: none;
+  	background-color: white;
+  	color: black;
+  	cursor: pointer;
+  	padding: 15px;
+  	border-radius: 50%;
 }
 /* Position des éléments dans le header */
 

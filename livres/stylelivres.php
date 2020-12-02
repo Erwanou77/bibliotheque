@@ -4,6 +4,7 @@
 	background-size: 100%;
 	padding: 200px 0 70px 0;
 	max-width: 1600px;
+	margin: 0 auto;
 }
 .retour p{
 	text-align: center;
@@ -36,7 +37,7 @@
 	transition: .3s;
 }
 .centrage img:hover{
-	transform: scale(1.2);
+	transform: scale(1.1);
 	transition: .3s;
 }
 .tableau{

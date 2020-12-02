@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8" />
     <?php require ("footerstyle.php")?>
 </head>
 <body>
