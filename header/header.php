@@ -15,7 +15,7 @@
 		<nav class="navbar" id="navbar">
   			<div class="max-width">
     			<div class="resplogo">
-    				<img src="http://localhost/bibliotheque/img/logo.png" alt="Logo du site">
+    				<img src="/bibliotheque/img/logo.png" alt="Logo du site">
     				<h1>The Unknown Authors Library</h1>
     			</div>
     			<div class="respsearch">
@@ -29,9 +29,9 @@
     			</div>
 			</div>
     		<ul class="menu">
-				<li><a href="http://localhost/bibliotheque/index.php">Accueil</a></li>
-				<li><a href="http://localhost/bibliotheque/auteur.php">Auteurs</a></li>
-				<li><a href="http://localhost/bibliotheque/bibliotheque.php">Biblioth&#232;que</a></li>
+				<li><a href="/bibliotheque/index.php">Accueil</a></li>
+				<li><a href="/bibliotheque/auteur.php">Auteurs</a></li>
+				<li><a href="/bibliotheque/bibliotheque.php">Biblioth&#232;que</a></li>
 				<li><a href="">Cat&#233;gorie</a></li>
 			</ul>
 		</nav>
