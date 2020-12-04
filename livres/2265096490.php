@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php require("stylelivres.php")?>
+	<link rel="stylesheet" type="text/css" href="../css/stylelivres.css">
 </head>
 <body>
 	<?php require("../header/header.php")?>

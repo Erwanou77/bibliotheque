@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php require ("footerstyle.php")?>
+    <link rel="stylesheet" type="text/css" href="/bibliotheque/css/footerstyle.css">
 </head>
 <body>
 	<footer>

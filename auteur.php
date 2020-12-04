@@ -1,60 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style type="text/css">
-.auteur{
-	background: url("img/parchemin_fond.jpg");
-	background-size: 100%; 
-	max-width: 1600px;
-	padding: 200px 0 70px 0;
-	margin: 0 auto;
-}
-.position{
-	background: white;
-	width: 80%;
-	margin: 40px auto;
-}
-.position a{
-	color: black;
-}
-.centre{
-	display: flex;
-	align-items: center;
-	padding: 20px;
-}
-.centre img{
-	transition: .3s;
-}
-.centre img:hover{
-	transform: scale(1.1);
-	transition: .3s;
-}
-.texte{
-	margin: 0 auto;
-	font-size: 20px;
-}
-.texte h1{
-	text-align: center;
-}
-.texte h4{
-	font-weight: normal;
-}
-.texte h2,h4,p{
-	padding: 20px 0;
-}	
-@media screen and (max-width: 800px){
-	.auteur{
-		padding: 300px 0 70px 0;
-	}
-	.centre{
-		flex-direction: column;
-		text-align: center;
-	}
-	.texte{
-		padding-top: 20px;
-	}
-}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/auteurstyle.css">
 </head>
 <body>
 	<?php require('header/header.php');?>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php require("styleauteur.php");?>
+	<link rel="stylesheet" type="text/css" href="../css/styleauteur.css">
 </head>
 <body>
 	<?php require('../header/header.php');?>

@@ -1,45 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style type="text/css">
-.plandusite{
-	background: url("img/parchemin_fond.jpg");
-	background-size: 100%; 
-	max-width: 1600px;
-	padding: 200px 0 30px 0;
-	margin: 0 auto;
-}
-.position{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-.position h1{
-	margin-bottom: 20px;
-}
-.position ul{
-	text-decoration: none;
-	list-style: none;
-}
-.position ul li a{
-	color: black;
-	font-size: 20px;
-}
-.position ul ul{
-	line-height: 35px;
-	margin-left: 40px;
-}
-.position ul ul ul{
-	margin-left: 40px;
-}
-@media screen and (max-width: 800px){
-	.plandusite{
-		padding: 300px 0 70px 0;
-	}
-}
-</style>
-
+	<link rel="stylesheet" type="text/css" href="css/styleplandusite.css">
 </head>
 <body>
 	<?php require('header/header.php');?>
