@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="../css/styleauteur.css">
-</head>
-<body>
-	<?php require("../header/header.php");?>
+<?php require("../header/header.php");?>
+<link rel="stylesheet" type="text/css" href="../css/styleauteur.css">
 	<main class="auteur">
 		<div class="retour">
 			<p><a href="../auteur.php">Auteurs&nbsp;</a><span>&gt;</span>&nbsp;Jussi Adler-Olsen</p>
@@ -40,6 +35,4 @@
 			</div>
 		</div>
 	</main>
-	<?php require("../Footer/footer.php");?>
-</body>
-</html>
+<?php require("../Footer/footer.php");?>

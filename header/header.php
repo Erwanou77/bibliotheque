@@ -10,32 +10,31 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
-	<header>
-		<button onclick="topFunction()" id="top" title="Go to top"><i class="fas fa-arrow-alt-circle-up"></i></button>
-		<nav class="navbar" id="navbar">
-  			<div class="max-width">
-    			<div class="resplogo">
-    				<img src="/bibliotheque/img/logo.png" alt="Logo du site">
-    				<h1>The Unknown Authors Library</h1>
-    			</div>
-    			<div class="respsearch">
-    				<form method="POST" class="search">
-						<input type="search" placeholder="Recherchez...">
-						<button type="submit" class="fas fa-search" name="submit"></button>
-					</form>
-					<div class="menu-btn">
-      					<i class="fas fa-bars"></i>
-    				</div>
-    			</div>
+<header>
+	<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="top" title="Go to top"><i class="fas fa-arrow-alt-circle-up"></i></button>
+	<nav class="navbar" id="navbar">
+			<div class="max-width">
+			<div class="resplogo">
+				<img src="/bibliotheque/img/logo.png" alt="Logo du site">
+				<h1>The Unknown Authors Library</h1>
 			</div>
-    		<ul class="menu">
-				<li><a href="/bibliotheque/index.php">Accueil</a></li>
-				<li><a href="/bibliotheque/auteur.php">Auteurs</a></li>
-				<li><a href="/bibliotheque/bibliotheque.php">Biblioth&#232;que</a></li>
-				<li><a href="">Cat&#233;gorie</a></li>
-			</ul>
-		</nav>
-	</header>
+			<div class="respsearch">
+				<form method="POST" class="search">
+					<input type="search" placeholder="Recherchez...">
+					<button type="submit" class="fas fa-search" name="submit"></button>
+				</form>
+				<div class="menu-btn">
+  					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+		</div>
+		<ul class="menu">
+			<li><a href="/bibliotheque/index.php">Accueil</a></li>
+			<li><a href="/bibliotheque/auteur.php">Auteurs</a></li>
+			<li><a href="/bibliotheque/bibliotheque.php">Biblioth&#232;que</a></li>
+			<li><a href="/bibliotheque/contact.php">Contact</a></li>
+		</ul>
+	</nav>
 	<script type="text/javascript">
 		var haut = document.getElementById("top");
 		var avposcourant = window.pageYOffset;
@@ -50,12 +49,6 @@
   			}
   			avposcourant = poscourant;
 		}
-		
-		function topFunction() {
-  			document.body.scrollTop = 0;
-  			document.documentElement.scrollTop = 0;
-		}
-
 		$(document).ready(function() {
 		$('.menu-btn').click(function() {
       		$('.navbar .menu').toggleClass("active");
@@ -63,5 +56,4 @@
     		});
   		});
 	</script>
-</body>
-</html>
+</header>

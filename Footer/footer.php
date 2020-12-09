@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="/bibliotheque/css/footerstyle.css">
-</head>
-<body>
+<link rel="stylesheet" type="text/css" href="/bibliotheque/css/footerstyle.css">
 	<footer>
 		<div class="contact">
 			<h3>Contact :</h3>
 			<h4>Erwan :</h4>
-			<h5><em>+33789428214</em></h5>
+			<h5><em>e.launay@ecole-ipssi.net</em></h5>
 			<h4>Logan :</h4>
-			<h5><em>+33658599887</em></h5>
+			<h5><em>l.hour@ecole-ipssi.net</em></h5>
 		</div>
 		<div class="contact">
 			<h3>Liens : </h3>

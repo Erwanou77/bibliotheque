@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
+<?php require("../header/header.php");?>
 	<link rel="stylesheet" type="text/css" href="../css/styleauteur.css">
-</head>
-<body>
-	<?php require("../header/header.php");?>
 	<main class="auteur">
 		<div class="retour">
 			<p><a href="../auteur.php">Auteurs&nbsp;</a><span>&gt;</span>&nbsp;Fred Vargas</p>
@@ -39,6 +34,4 @@
 			</div>
 		</div>
 	</main>
-	<?php require ("../Footer/footer.php");?>
-</body>
-</html>
+<?php require ("../Footer/footer.php");?>
