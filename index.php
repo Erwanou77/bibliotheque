@@ -1,23 +1,15 @@
 <?php include('header/header.php');?>
-<link rel="stylesheet" type="text/css" href="css/styleindex.css">
+<link rel="stylesheet" type="text/css" href="css/styleindex.css?t=<?php echo time(); ?>">
 <main class="accueil">
     <div class="index">
         <div class="style">
-            <h1>What is "The Unknown Authors Library" ?</h1>
+            <h1>Qu'est-ce que "The Unknown Authors Library" ?</h1>
             <p>
-                Sed (saepe enim redeo ad Scipionem, cuius omnis sermo erat de
-                amicitia) querebatur, quod omnibus in rebus homines diligentiores
-                essent; capras et oves quot quisque haberet, dicere posse, amicos
-                quot haberet, non posse dicere et in illis quidem parandis adhibere
-                curam, in amicis eligendis neglegentis esse nec habere quasi signa
-                quaedam et notas, quibus eos qui ad amicitias essent idonei,
-                iudicarent.Sed (saepe enim redeo ad Scipionem, cuius omnis sermo
-                erat de amicitia) querebatur, quod omnibus in rebus homines
-                diligentiores essent; capras et oves quot quisque haberet
+                The Unknown Authors Library est un site internet permettant de pouvoir faire figurer les livres de nouveaux écrivains pour qu'ils puissent se faire connaître partout en France. De plus, notre site a aussi de grand écrivains. De ce fait, les écrivains qui sont connus aujourd'hui pourront discuter avec les nouveaux écrivains pour leurs donner des conseils. 
             </p>
         </div>
         <div class="img">
-            <img src="img/fond.jpg" width="100%" />
+            <img src="img/fond.jpg" width="100%">
         </div>
     </div>
 </main>

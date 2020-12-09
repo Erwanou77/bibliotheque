@@ -1,5 +1,5 @@
 <?php require('header/header.php');?>
-<link rel="stylesheet" type="text/css" href="css/stylebiblio.css">
+<link rel="stylesheet" type="text/css" href="css/stylebiblio.css?t=<?php echo time(); ?>">
 <main class="bibliotheque">
 	<div class="container">
 		<div class="desktop">

@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/bibliotheque/css/footerstyle.css">
+<link rel="stylesheet" type="text/css" href="/bibliotheque/css/footerstyle.css?t=<?php echo time(); ?>">
 	<footer>
 		<div class="contact">
 			<h3>Contact :</h3>

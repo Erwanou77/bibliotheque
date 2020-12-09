@@ -1,5 +1,5 @@
 <?php require('header/header.php');?>
-<link rel="stylesheet" type="text/css" href="css/styleplandusite.css">
+<link rel="stylesheet" type="text/css" href="css/styleplandusite.css?t=<?php echo time(); ?>">
 <main class="plandusite">
 	<div class="position">
 		<h1>Plan du site : </h1>

@@ -22,6 +22,7 @@
 }
 .index .style h1{
     font-size : 22px;
+    padding-bottom: 10px;
 }
 .index .img{
     display: flex;
