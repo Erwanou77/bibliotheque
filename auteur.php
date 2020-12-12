@@ -1,5 +1,5 @@
 <?php require('header/header.php');?>
-<link rel="stylesheet" type="text/css" href="css/auteurstyle.css?t=<?php echo time(); ?>">
+<link rel="stylesheet" type="text/css" href="css/auteurstyle.css">
 <main class="auteur">
 	<div class="position">
 		<a href="Auteur/karine_giebel.php">

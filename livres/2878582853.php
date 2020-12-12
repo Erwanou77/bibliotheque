@@ -1,5 +1,5 @@
 <?php require("../header/header.php")?>
-<link rel="stylesheet" type="text/css" href="../css/stylelivres.css?t=<?php echo time(); ?>">
+<link rel="stylesheet" type="text/css" href="../css/stylelivres.css">
 <section class="livres">
 	<div class="retour">
 		<p><a href="../bibliotheque.php">biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;Un lieu incertain</p>

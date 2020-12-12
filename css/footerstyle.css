@@ -3,18 +3,19 @@
 	padding:0;
 }
 footer{
-	background:url('https://cdn.discordapp.com/attachments/636213120087621632/778223387238858802/fond-texture-cuir-noir_123766-92.jpg')no-repeat;
+	background:url('/bibliotheque/img/fond_cuir.jpg')no-repeat;
 	background-size: 100%;
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	max-width: 1600px;
-	margin: 0 auto;
+	margin: 0 auto; 
 }
 .contact{
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	padding: 10px 0; 
 }
 .contact h3{
 	color: white;

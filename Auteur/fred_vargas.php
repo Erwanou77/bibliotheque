@@ -1,5 +1,5 @@
 <?php require("../header/header.php");?>
-	<link rel="stylesheet" type="text/css" href="../css/styleauteur.css?t=<?php echo time(); ?>">
+	<link rel="stylesheet" type="text/css" href="../css/styleauteur.css">
 	<main class="auteur">
 		<div class="retour">
 			<p><a href="../auteur.php">Auteurs&nbsp;</a><span>&gt;</span>&nbsp;Fred Vargas</p>

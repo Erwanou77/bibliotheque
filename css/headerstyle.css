@@ -15,7 +15,7 @@ p,a,em,dd,li{
 .navbar{
 	margin: 0 auto;
   	width: 100%;
-  	background:url('https://cdn.discordapp.com/attachments/636213120087621632/778223387238858802/fond-texture-cuir-noir_123766-92.jpg')no-repeat;
+  	background:url('/bibliotheque/img/fond_cuir.jpg')no-repeat;
   	background-size: 100%;  	
   	left: 0;
 	right: 0;

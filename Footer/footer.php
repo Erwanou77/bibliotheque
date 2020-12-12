@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/bibliotheque/css/footerstyle.css?t=<?php echo time(); ?>">
+<link rel="stylesheet" type="text/css" href="/bibliotheque/css/footerstyle.css">
 	<footer>
 		<div class="contact">
 			<h3>Contact :</h3>
@@ -12,7 +12,7 @@
 			<a href="/bibliotheque/index.php">Accueil</a>
 			<a href="/bibliotheque/auteur.php">Auteurs</a>
 			<a href="/bibliotheque/bibliotheque.php">Biblioth&#232;que</a>
-			<a href="">Cat&#233;gorie</a>
+			<a href="/bibliotheque/contact.php">Contact</a>
 		</div>
 		<div class="contact">
 			<h3>D&#233;tail du site</h3>

@@ -1,5 +1,5 @@
 <?php require('header/header.php');?>
-<link rel="stylesheet" type="text/css" href="css/stylecontact.css?t=<?php echo time(); ?>">	
+<link rel="stylesheet" type="text/css" href="css/stylecontact.css">	
 <main class="formu">
 	<form action="" method="post" class="form">
 		<fieldset>
