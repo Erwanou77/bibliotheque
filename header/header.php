@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/bibliotheque/css/headerstyle.css">
 	<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link rel="shortcut icon" href="/bibliotheque/img/logo.ico" type="image/x-icon">
 </head>
 <body>
 <header>
@@ -39,13 +40,16 @@
 		var haut = document.getElementById("top");
 		var avposcourant = window.pageYOffset;
 		window.onscroll = function() {
-		var poscourant = window.pageYOffset;
-  			if (avposcourant > poscourant) {
-    			document.getElementById("navbar").style.top = "0";
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     			haut.style.display = "block";
   			} else {
-    			document.getElementById("navbar").style.top = "-170px";
     			haut.style.display = "none";
+  			}
+			var poscourant = window.pageYOffset;
+  			if (avposcourant > poscourant) {
+    			document.getElementById("navbar").style.top = "0";
+  			} else {
+    			document.getElementById("navbar").style.top = "-170px";
   			}
   			avposcourant = poscourant;
 		}
