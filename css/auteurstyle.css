@@ -38,7 +38,20 @@
 .texte h2,h4,p{
 	padding: 20px 0;
 }
-@media screen and (max-width: 800px){
+@media (min-width:801px) and (max-width:1050px){
+	.texte{
+		text-align: center;
+	}
+}
+@media (min-width:701px) and (max-width:800px){
+	.auteur{
+		padding: 300px 0 70px 0;
+	}
+	.texte{
+		text-align: center;
+	}
+}
+@media screen and (max-width: 700px){
 	.auteur{
 		padding: 300px 0 70px 0;
 	}
