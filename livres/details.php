@@ -8,40 +8,40 @@ require("../header/header.php")?>
 	<?php foreach ($pdostat as $ligne) {?>
 	<?php $images = "../img/couvertures/".$ligne['isbn'].".png";?>
 	<div class="retour">
-		<p><a href="../bibliotheque.php">Biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;<?php echo $ligne['titres']; ?></p>
+		<p><a href="../bibliotheque.php">Biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;<?php echo htmlspecialchars($ligne['titres']); ?></p>
 	</div>
 	<div class="all">
 		<div class="centrage">
-			<img src="<?php echo $images ?>" alt="Couverture du livre Promesse">
+			<img src="<?php echo htmlspecialchars($images); ?>" alt="Couverture du livre Promesse">
 			<div class="tableau">
 				<h2>Caract&#233;ristiques d&#233;taill&#233;es</h2>
 				<dl>
 					<dt>Titre :</dt>
-					<dd><?php echo $ligne['titres']; ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['titres']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Auteurs :</dt>
-					<dd><?php echo $ligne['auteurs']; ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['auteurs']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Editeurs :</dt>
-					<dd><?php echo $ligne['editeurs']; ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['editeurs']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Date de publication :</dt>
-					<dd><?php echo $ligne['date']; ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['date']); ?></dd>
 				</dl>
 				<dl>
 					<dt>ISBN :</dt>
-					<dd><?php echo $ligne['isbn']; ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['isbn']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Genre :</dt>
-					<dd><?php echo $ligne['genre']; ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['genre']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Nombre de pages :</dt>
-					<dd><?php echo $ligne['nbpage']; ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['nbpage']); ?></dd>
 				</dl>
 			</div>
 		</div>
