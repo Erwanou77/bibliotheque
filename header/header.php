@@ -12,7 +12,7 @@
 </head>
 <body>
 <header>
-	<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="top" title="Go to top"><i class="fas fa-arrow-alt-circle-up"></i></button>
+	<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="top"><i class="fas fa-arrow-alt-circle-up"></i></button>
 	<nav class="navbar" id="navbar">
 			<div class="max-width">
 			<div class="resplogo">
@@ -40,7 +40,7 @@
 		var haut = document.getElementById("top");
 		var avposcourant = window.pageYOffset;
 		window.onscroll = function() {
-			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     			haut.style.display = "block";
   			} else {
     			haut.style.display = "none";

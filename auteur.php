@@ -1,57 +1,26 @@
-<?php require('header/header.php');?>
+<?php 
+	session_start();
+	require('bdd/listautreq.php');
+	require('header/header.php');
+	include("bbcode.php");
+?>
 <link rel="stylesheet" type="text/css" href="css/auteurstyle.css">
 <main class="auteur">
+	<?php foreach ($pdostat as $ligne) {?>
+	<?php $images = "img/Auteurs/".$ligne['id'].".jpg";?>
 	<div class="position">
-		<a href="Auteur/karine_giebel.php">
+		<a href="Auteur/autlist.php?id=<?php echo $ligne['id'];?>">
 			<div class="centre">
-				<img src="img/Auteurs/karine_giebel.jpg" alt="Portrait Karine Giebel">
+				<img src="<?php echo $images; ?>" alt="Portrait <?php echo bbcode(htmlspecialchars($ligne['prenom'])) . " " . bbcode(htmlspecialchars($ligne['nom']));?>">
 				<div class="texte">
 					<h1>Informations sur l'auteur</h1>
-					<h2>Karine Gi&#233;bel</h2>
-					<h4>04 juin 1971 <br> La Seyne-sur-Mer, Var, France</h4>
-					<p>Roman policier</p>
+					<h2><?php echo bbcode(htmlspecialchars($ligne['prenom'])) . " " . bbcode(htmlspecialchars($ligne['nom']));?></h2>
+					<h4><?php echo bbcode(htmlspecialchars($ligne['date_naiss'])) ?> <br> <?php echo bbcode(htmlspecialchars($ligne['ville_naiss'])) ?></h4>
+					<p><?php echo bbcode(htmlspecialchars($ligne['genre']))?></p>
 				</div>
 			</div>
 		</a>
 	</div>
-	<div class="position">
-		<a href="Auteur/fred_vargas.php">
-			<div class="centre">
-				<img src="img/Auteurs/fred_vargas.jpg" alt="Portrait Fred Vargas">
-				<div class="texte">
-					<h1>Informations sur l'auteur</h1>
-					<h2>Fred Vargas</h2>
-					<h4>07 juin 1957<br> Paris, France</h4>
-					<p>Roman policier</p>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="position">
-		<a href="Auteur/jussi_adler.php">
-			<div class="centre">
-				<img src="img/Auteurs/jussi_adler_olsen.jpg" alt="Portrait Jussi Adler-Olsen">
-				<div class="texte">
-					<h1>Informations sur l'auteur</h1>
-					<h2>Jussi Adler-Olsen</h2>
-					<h4>02 août 1950<br> Copenhague, Danemark</h4>
-					<p>Roman policier</p>
-				</div>
-			</div>
-		</a>
-	</div>
-	<div class="position">
-		<a href="Auteur/bernard_minier.php">
-			<div class="centre">
-				<img src="img/Auteurs/bernard_minier.jpg" alt="Portrait Bernard Minier">
-				<div class="texte">
-					<h1>Informations sur l'auteur</h1>
-					<h2>Bernard Minier</h2>
-					<h4>26 août 1960<br> Béziers, Hérault, France</h4>
-					<p>Roman policier</p>
-				</div>
-			</div>
-		</a>
-	</div>
+	<?php }?>
 </main>
 <?php require ("Footer/footer.php");?>

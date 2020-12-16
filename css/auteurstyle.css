@@ -37,7 +37,7 @@
 }
 .texte h2,h4,p{
 	padding: 20px 0;
-}	
+}
 @media screen and (max-width: 800px){
 	.auteur{
 		padding: 300px 0 70px 0;
