@@ -9,7 +9,7 @@ if (isset($_POST['trie'])) {
 	}elseif ($_POST['trie']=="auteur") {
 		$pdostat = $bdd->query('SELECT * FROM livres ORDER BY auteurs');
 	}else{
-		$pdostat = $bdd->query('SELECT * FROM livres ORDER BY id');	
+		$pdostat = $bdd->query('SELECT * FROM livres ORDER BY id');
 	}
 }
 ?>
