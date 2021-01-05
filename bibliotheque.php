@@ -1,5 +1,4 @@
-<?php 
-	session_start();
+<?php
 	require('bdd/biblioreq.php');
 	require('header/header.php');
 ?>

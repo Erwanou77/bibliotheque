@@ -1,12 +1,11 @@
-<?php 
-	session_start();
+<?php
 	require('bdd/listautreq.php');
 	require('header/header.php');
-	include("bbcode.php");
+	require("bbcode.php");
 ?>
 <link rel="stylesheet" type="text/css" href="css/auteurstyle.css">
 <main class="auteur">
-	<?php foreach ($pdostat as $ligne) {?>
+	<?php foreach ($pdostate as $ligne) {?>
 	<?php $images = "img/Auteurs/".$ligne['id'].".jpg";?>
 	<div class="position">
 		<a href="Auteur/autlist.php?id=<?php echo $ligne['id'];?>">

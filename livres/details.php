@@ -12,7 +12,7 @@ require("../header/header.php")?>
 	</div>
 	<div class="all">
 		<div class="centrage">
-			<img src="<?php echo htmlspecialchars($images); ?>" alt="Couverture du livre Promesse">
+			<img src="<?php echo htmlspecialchars($images); ?>" alt="Couverture du livre">
 			<div class="tableau">
 				<h2>Caract&#233;ristiques d&#233;taill&#233;es</h2>
 				<dl>
