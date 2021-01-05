@@ -10,6 +10,15 @@ h1,h2,h3,h4,h5,h6,dt,button{
 p,a,em,dd,li{
 	font-family: Book Antiqua;
 }
+::-webkit-scrollbar {
+  width: 15px;
+  height: 8px;
+  background:#1b1b1b;
+}
+::-webkit-scrollbar-thumb{
+	background: #ddd;
+	border-radius: 10px;
+}
 /* style du header */
 
 .navbar{
