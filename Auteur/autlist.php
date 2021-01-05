@@ -6,7 +6,7 @@
 ?>
 <link rel="stylesheet" type="text/css" href="../css/styleauteur.css">
 	<main class="auteur">
-		<?php foreach ($pdostat as $ligne) {?>
+		<?php foreach ($pdostate as $ligne) {?>
 		<?php $images = "../img/Auteurs/".$ligne['id'].".jpg";?>
 		<div class="retour">
 			<p><a href="../auteur.php">Auteurs&nbsp;</a><span>&gt;</span><?php echo " " . bbcode(htmlspecialchars($ligne['prenom'])) . " " . bbcode(htmlspecialchars($ligne['nom']));?></p>
