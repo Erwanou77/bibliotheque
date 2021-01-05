@@ -71,7 +71,6 @@ p,a,em,dd,li{
 /* Logo du site */
 
 .navbar img{
-  	border-radius: 50%;
   	width: 150px;
   	margin: 0 40px 0 0;
   	display: flex;

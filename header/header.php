@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/bibliotheque/css/headerstyle.css">
 	<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<link rel="shortcut icon" href="/bibliotheque/img/logo.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/bibliotheque/img/logo1.ico" type="image/x-icon">
 </head>
 <body>
 <header>
@@ -16,7 +16,7 @@
 	<nav class="navbar" id="navbar">
 			<div class="max-width">
 			<div class="resplogo">
-				<img src="/bibliotheque/img/logo.png" alt="Logo du site">
+				<img src="/bibliotheque/img/logo1.png" alt="Logo du site">
 				<h1>The Unknown Authors Library</h1>
 			</div>
 			<div class="respsearch">
