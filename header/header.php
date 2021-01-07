@@ -1,3 +1,8 @@
+<?php
+
+$CONFIG = array("root_path"=>"/bibliotheque/");
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,10 +35,10 @@
 			</div>
 		</div>
 		<ul class="menu">
-			<li><a href="/bibliotheque/index.php">Accueil</a></li>
-			<li><a href="/bibliotheque/auteur.php">Auteurs</a></li>
-			<li><a href="/bibliotheque/bibliotheque.php">Biblioth&#232;que</a></li>
-			<li><a href="/bibliotheque/contact.php">Contact</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>index.php">Accueil</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>auteur.php">Auteurs</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>bibliotheque.php">Biblioth&#232;que</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>contact.php">Contact</a></li>
 		</ul>
 	</nav>
 	<script type="text/javascript">
