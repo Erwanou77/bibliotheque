@@ -19,7 +19,7 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
 <header>
 	<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="top"><i class="fas fa-arrow-alt-circle-up"></i></button>
 	<nav class="navbar" id="navbar">
-			<div class="max-width">
+		<div class="max-width">
 			<div class="resplogo">
 				<img src="<?php echo $CONFIG['root_path']; ?>img/logo1.png" alt="Logo du site">
 				<h1>The Unknown Authors Library</h1>
