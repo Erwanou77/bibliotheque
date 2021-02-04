@@ -56,13 +56,7 @@ p,a,em,dd,li{
   	align-items: center;
 	padding: 0 20px;
 }
-.navbar .resplogo{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	width: 100%;
-}
-.navbar .respsearch{
+.navbar .resplogo,.navbar .respsearch{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -94,22 +88,52 @@ input[type="search"]{
 	width: 80%;
 	border-radius: 20px;
 	height: 40px;
+	position: relative;
+	z-index: 2;
 	border: none;
 }
 input[type="search"]:focus{
-	box-shadow: inset 0px 0px 8px 0px #000000;
+
 }
 .fa-search{
 	background: none;
 	border: none;
 	cursor: pointer;
 	position: relative;
+	z-index: 6;
 	left: -45px;
 }
 .fa-search:hover{
 	transform: scale(1.5);
 }
-
+.complet{
+	background: white;
+	width: calc(37% - 1%);
+	margin: 0 auto;
+	position: absolute;
+	z-index: -8;
+	right: calc(10.5% - 1%);
+	top: 105px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.sea{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+	padding: 10px 0;
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px solid #ddd;
+}
+.sea p{
+	padding-right: 30px;
+}
+.sea:hover{
+	background-color: rgb(36,43,43,.5);
+}
 /* Bouton sticky */
 
 .navbar .menu-btn{
@@ -144,6 +168,36 @@ input[type="search"]:focus{
 .navbar .menu li:last-child a{
 	border: none;
 }
+@media screen and (max-width: 800px){
+	.navbar{
+		background-size: 100% 100%;
+	}
+	.navbar .max-width{
+		justify-content: center;
+		flex-direction: column;
+	}
+	.navbar .resplogo{
+		flex-direction: column;
+	}
+	.navbar img{
+		margin: 10px auto;
+	}
+	.search{
+		margin: 15px 0;
+	}
+	.complet{
+		width: calc(75% - 1%);
+		right: calc(17% - 1%);
+		left: calc(10% - 1%);
+		top: 260px;
+	}
+	.navbar .menu{
+		text-align: center;
+	}
+	.navbar .menu li a{
+		padding: 0 30px;
+	}
+}
 @media screen and (max-width: 600px){
 	.navbar{
 		background-size: 100% 100%;
@@ -174,29 +228,5 @@ input[type="search"]:focus{
 	}
 	.navbar .menu li a:hover{
 		text-decoration: underline;
-	}
-}
-@media (min-width: 601px) and (max-width: 800px){
-	.navbar{
-		background-size: 100% 100%;
-	}
-	.navbar .max-width{
-		justify-content: center;
-		flex-direction: column;
-	}
-	.navbar .resplogo{
-		flex-direction: column;
-	}
-	.navbar img{
-		margin: 10px auto;
-	}
-	.search{
-		margin: 15px 0;
-	}
-	.navbar .menu{
-		text-align: center;
-	}
-	.navbar .menu li a{
-		padding: 0 30px;
 	}
 }

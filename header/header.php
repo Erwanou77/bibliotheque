@@ -12,7 +12,8 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $CONFIG['root_path']; ?>css/headerstyle.css">
 	<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<link rel="shortcut icon" href="<?php echo $CONFIG['root_path']; ?>img/logo1.ico" type="image/x-icon">
 </head>
 <body>
@@ -25,9 +26,12 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
 				<h1>The Unknown Authors Library</h1>
 			</div>
 			<div class="respsearch">
-				<form method="POST" class="search">
-					<input type="search" placeholder="Recherchez...">
+				<form method="GET" class="search">
+					<input type="search" id="searchs" placeholder="Recherchez votre livre...">
 					<button type="submit" class="fas fa-search" name="submit"></button>
+					<div class="complet" id="resultat" style="font-size: 18px">
+						
+					</div>
 				</form>
 				<div class="menu-btn">
   					<i class="fas fa-bars"></i>
@@ -59,10 +63,28 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
   			avposcourant = poscourant;
 		}
 		$(document).ready(function() {
-		$('.menu-btn').click(function() {
-      		$('.navbar .menu').toggleClass("active");
-      		$('.menu-btn i').toggleClass("active");
-    		});
+			$('.menu-btn').click(function() {
+	      		$('.navbar .menu').toggleClass("active");
+	      		$('.menu-btn i').toggleClass("active");
+	    		});
+			$('#searchs').keyup(function() {
+				$('#resultat').html('');
+				var auteur = $(this).val();
+				if (auteur != "") {
+					$.ajax({
+						type: 'GET',
+						url: '/bibliotheque/bdd/search.php',
+						data:'auteur=' + encodeURIComponent(auteur),
+						success: function(data){
+							if (data != "") {
+								$('#resultat').append(data);
+							}else{
+								document.getElementById('resultat').innerHTML = "<p>Aucun livres trouvé</p>";
+							}
+						}
+					});
+				}
+			});
   		});
 	</script>
 </header>

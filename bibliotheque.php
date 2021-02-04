@@ -10,7 +10,7 @@
 			<option value="dates">Trier par date</option>
 			<option value="auteur">Trier par auteur</option>
 		</select>
-		<button type="submit">RafraÃ®chir</button>
+		<button type="submit">Rafraîchir</button>
 	</form>
 	<div class="container">
 		<?php foreach ($pdostat as $ligne) {?>
