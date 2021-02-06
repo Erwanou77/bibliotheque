@@ -4,6 +4,9 @@
 	text-decoration: none;
 	outline: none;
 }
+body{
+	background-color: gray;
+}
 h1,h2,h3,h4,h5,h6,dt,button{
 	font-family: Eras Bold ITC;
 }
@@ -162,7 +165,7 @@ input[type="search"]:focus{
 .navbar .menu li a{
   	color: white;
 	font-size:20px;
-	padding: 10px 50px;
+	padding: 10px 30px;
 	border-right:1px solid #ddd; 
 }
 .navbar .menu li:last-child a{
