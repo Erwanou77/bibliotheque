@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 19 jan. 2021 à 14:30
+-- Généré le : mer. 10 fév. 2021 à 16:35
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -106,6 +106,29 @@ INSERT INTO `livres` (`id`, `titres`, `auteurs`, `editeurs`, `date`, `isbn`, `ge
 (9, 'Nuit', 'Bernard Minier', 'Pocket', 2018, 2266283782, 'Roman', 608, 'Nuit de tempête en mer du Nord. Secoué par des vents violents, l\'hélicoptère dépose Kirsten Nigaard sur la plate-forme pétrolière. L\'inspectrice norvégienne enquête sur le meurtre d\'une technicienne de la base offshore. Un homme manque à l\'appel. En fouillant sa cabine, Kirsten découvre une série de photos. Quelques jours plus tard, elle est dans le bureau de Martin Servaz. L\'absent s\'appelle Julian Hirtmann, le tueur retors et insaisissable que le policier poursuit depuis des années. Etrangement, sur plusieurs clichés, Martin Servaz apparaît. Kirsten lui tend alors une autre photo. Celle d\'un enfant. Au dos, juste un prénom : Gustav. Pour Kirsten et Martin, c\'est le début d\'un voyage terrifiant. Avec, au bout de la nuit, le plus redoutable des ennemis.'),
 (10, 'La Vallée', 'Bernard Minier', 'Xo', 2020, 2374481905, 'Roman', 522, '\" Je crois que quelqu\'un est en train d\'agir comme s\'il se prenait pour Dieu... \"[rl][rl]Un appel au secours au milieu de la nuit[rl]Une vallée coupée du monde[rl]Une abbaye pleine de secrets[rl]Une forêt mystérieuse[rl]Une série de meurtres épouvantables[rl]Une population terrifiée qui veut se faire justice[rl]Un corbeau qui accuse[rl]Une communauté au bord du chaos[rl]Une nouvelle enquête de Martin Servaz[rl][rl]\" Avec La Vallée, Martin Servaz, le flic emblématique de Bernard Minier, fait un retour tonitruant ! \"[rl]Bernard Lehut, RTL[rl][rl]\" D\'une efficacité redoutable. Addictif !\"[rl]François Busnel, La Grande Librairie[rl][rl]\" Un suspense et un style parfaitement maîtrisés, des personnages touchants, et une fois encore une \"putain d\'histoire\". \"[rl]Fabrice Drouzy, Libération[rl][rl]\" Tout en menant de main de maître son histoire, Minier poursuit une réflexion sur le mal qui nous concerne tous. \"[rl]Bruno Corty, Le Figaro littéraire[rl][rl]\" un roman brillant ! \"[rl]Olivier Bureau, Le Parisien[rl][rl]\" On le dévore pour l\'efficacité de son scénario et pour la sincérité avec laquelle il dénonce l\'hyper-moralisation d\'une société moderne qui conduit au manichéisme. \"[rl]Jean-Rémi Barland, La Provence[rl][rl]\" Magnifiquement mené vers une fin spectaculaire. \"[rl]Stéphanie Janicot, Notre Temps[rl][rl]\" En matière de thriller, La Vallée est un modèle du genre. Impossible à lâcher, diablement addictif, et furieusement humain. \"[rl]Yvan, EmOtionS – blog littéraire'),
 (11, 'Dix petits nègres', 'Agatha Christie', 'Lgf', 1976, 2253003964, 'Roman', 224, 'En a-t-on parlé de l’Île du Nègre! Elle avait, selon certains, été achetée par une star de Hollywood. Des journaux avaient insinué que l’Amirauté britannique s’y livrait à des expériences ultrasecrètes. Bref, quand ils reçurent –sans savoir de qui– cette invitation à passer des vacances à l’Île du Nègre, tous les dix accoururent.');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `create_datetime` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `create_datetime`) VALUES
+(2, 'Test', 'test@gmail.com', '098f6bcd4621d373cade4e832627b4f6', '2021-02-10 16:22:11');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

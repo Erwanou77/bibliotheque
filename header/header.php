@@ -1,6 +1,6 @@
 <?php
 
-$CONFIG = array("root_path"=>"/bibliotheque/");
+$CONFIG = array("root_path"=>"/bibliotheque_v1/");
 
 ?>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
 	<nav class="navbar" id="navbar">
 		<div class="max-width">
 			<div class="resplogo">
-				<img src="<?php echo $CONFIG['root_path']; ?>img/logo1.png" alt="Logo du site">
+				<a href="<?php echo $CONFIG['root_path']; ?>index.php"><img src="<?php echo $CONFIG['root_path']; ?>img/logo1.png" alt="Logo du site"></a>
 				<h1>The Unknown Authors Library</h1>
 			</div>
 			<div class="respsearch">
@@ -30,7 +30,7 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
 					<input type="search" id="searchs" placeholder="Recherchez votre livre...">
 					<button type="submit" class="fas fa-search" name="submit"></button>
 					<div class="complet" id="resultat" style="font-size: 18px">
-						
+
 					</div>
 				</form>
 				<div class="menu-btn">
@@ -73,7 +73,7 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
 				if (auteur != "") {
 					$.ajax({
 						type: 'GET',
-						url: '/bibliotheque/bdd/search.php',
+						url: '/bibliotheque_v1/bdd/search.php',
 						data:'auteur=' + encodeURIComponent(auteur),
 						success: function(data){
 							if (data != "") {

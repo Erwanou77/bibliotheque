@@ -1,5 +1,5 @@
 <?php require('header/header.php');?>
-<link rel="stylesheet" type="text/css" href="css/stylecontact.css">	
+<link rel="stylesheet" type="text/css" href="css/stylecontact.css">
 <style type="text/css">
 	.error {
       color: red;
@@ -29,7 +29,7 @@
 				<h2>T&#233;l&#233;phone</h2>
 				<input type="tel" name="telephone">
 			</div>
-			
+
 			<div class="formall">
 				<h2>Sujet</h2>
 				<select name="sujet">
@@ -73,15 +73,15 @@
           },
           mail: {
             required: true,
-          },          
+          },
           telephone: {
             required: true,
             minlength: 10,
             maxlength: 10,
-          },          
+          },
           sujet: {
             required: true
-          },          
+          },
           message: {
             required: true
           }
@@ -105,7 +105,7 @@
           form.submit();
         }
       });
-    });    
+    });
   	</script>
 </main>
 <?php require ("Footer/footer.php");?>
