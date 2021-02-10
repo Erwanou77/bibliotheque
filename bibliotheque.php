@@ -3,7 +3,7 @@
 	require('header/header.php');
 ?>
 <link rel="stylesheet" type="text/css" href="css/stylebiblio.css">
-<main class="bibliotheque">
+<main class="principal">
 	<form method="POST" class="select">
 		<select name="trie">
 			<option value="">Trier par :</option>

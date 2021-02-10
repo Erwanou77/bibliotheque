@@ -171,7 +171,20 @@ input[type="search"]:focus{
 .navbar .menu li:last-child a{
 	border: none;
 }
+
+/* Partie principal */
+
+.principal{
+	background: url("/bibliotheque/img/parchemin_fond.jpg");
+	background-size: 100%; 
+	max-width: 1600px;
+	padding: 200px 0 70px 0;
+	margin: 0 auto;
+}
 @media screen and (max-width: 800px){
+	.principal{
+		padding-top: 300px;
+	}
 	.navbar{
 		background-size: 100% 100%;
 	}

@@ -1,12 +1,11 @@
 <?php 
 	//Démarrage d'une session et appel des fichiers
-	session_start();
 	require('../bdd/autreq.php');
 	require('../header/header.php');
 	include("../bbcode.php");
 ?>
 <link rel="stylesheet" type="text/css" href="../css/styleauteur.css">
-	<main class="auteur">
+	<main class="principal">
 		<?php foreach ($pdostate as $ligne) {?>
 		<!-- Emplacement des images -->
 		<?php $images = "../img/Auteurs/".$ligne['id'].".jpg";?>

@@ -1,10 +1,9 @@
 <?php 
-session_start();
 require"../bdd/detailslivres.php";
 include("../bbcode.php");
 require("../header/header.php")?>
 <link rel="stylesheet" type="text/css" href="../css/stylelivres.css">
-<section class="livres">
+<section class="principal">
 	<?php foreach ($pdostat as $ligne) {?>
 	<?php $images = "../img/couvertures/".$ligne['isbn'].".png";?>
 	<div class="retour">

@@ -2,13 +2,6 @@
     margin : 0;
     padding : 0;
 }
-.accueil{
-    background : url("../img/parchemin_fond.jpg") no-repeat;
-    background-size : 100% 100%;
-    max-width: 1600px;
-    padding: 200px 0 70px 0;
-    margin: 0 auto;
-}
 .index{
     display :flex;
     align-items : center;
@@ -34,7 +27,5 @@
   .index .style{
       width: 80%;
       padding: 20px 0;
-  }
-  .index .img{
   }
 }

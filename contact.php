@@ -1,15 +1,6 @@
 <?php require('header/header.php');?>
-<link rel="stylesheet" type="text/css" href="css/stylecontact.css">	
-<style type="text/css">
-	.error {
-      color: red;
-      display: block;
-    }
-    input.error,textarea.error,select.error{
-    	color: black;
-    }
-</style>
-<main class="formu">
+<link rel="stylesheet" type="text/css" href="css/stylecontact.css">
+<main class="principal">
 	<form action="bdd/contactreq.php" method="post" class="form" name="formcontact">
 		<fieldset>
 			<legend>Formulaire de contact</legend>

@@ -1,6 +1,6 @@
 <?php include('header/header.php');?>
 <link rel="stylesheet" type="text/css" href="css/styleindex.css">
-<main class="accueil">
+<main class="principal">
     <div class="index">
         <div class="style">
             <h1>Qu'est-ce que "The Unknown Authors Library" ?</h1>
