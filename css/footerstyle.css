@@ -3,19 +3,19 @@
 	padding:0;
 }
 footer{
-	background:url('/bibliotheque_v1/img/fond_cuir.jpg')no-repeat;
+	background:url('/bibliotheque/img/fond_cuir.jpg')no-repeat;
 	background-size: 100%;
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	max-width: 1600px;
-	margin: 0 auto;
+	margin: 0 auto; 
 }
 .contact{
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	padding: 10px 0;
+	padding: 10px 0; 
 }
 .contact h3{
 	color: white;
@@ -37,7 +37,7 @@ footer{
 @media screen and (max-width: 800px) {
 	footer{
 		flex-direction: column;
-		background-size: 100% 100%;
+		background-size: 100% 100%; 
 	}
 	.contact{
 		padding: 30px 0;
