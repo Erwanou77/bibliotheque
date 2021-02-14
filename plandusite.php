@@ -5,7 +5,7 @@
 	require('header/header.php');
 ?>
 <link rel="stylesheet" type="text/css" href="css/styleplandusite.css">
-<main class="plandusite">
+<main class="principal">
 	<div class="position">
 		<h1>Plan du site </h1>
 		<ul>

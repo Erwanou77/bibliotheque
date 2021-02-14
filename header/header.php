@@ -22,7 +22,7 @@ $CONFIG = array("root_path"=>"/bibliotheque_v1/");
 	<nav class="navbar" id="navbar">
 		<div class="max-width">
 			<div class="resplogo">
-				<a href="<?php echo $CONFIG['root_path']; ?>index.php"><img src="<?php echo $CONFIG['root_path']; ?>img/logo1.png" alt="Logo du site"></a>
+				<img src="<?php echo $CONFIG['root_path']; ?>img/logo1.png" alt="Logo du site">
 				<h1>The Unknown Authors Library</h1>
 			</div>
 			<div class="respsearch">
@@ -42,6 +42,7 @@ $CONFIG = array("root_path"=>"/bibliotheque_v1/");
 			<li><a href="<?php echo $CONFIG['root_path']; ?>index.php">Accueil</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>auteur.php">Auteurs</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>bibliotheque.php">Biblioth&#232;que</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>login.php">Se connecter</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>contact.php">Contact</a></li>
 		</ul>
 	</nav>
@@ -73,7 +74,7 @@ $CONFIG = array("root_path"=>"/bibliotheque_v1/");
 				if (auteur != "") {
 					$.ajax({
 						type: 'GET',
-						url: '/bibliotheque_v1/bdd/search.php',
+						url: '<?php echo $CONFIG['root_path']; ?>bdd/search.php',
 						data:'auteur=' + encodeURIComponent(auteur),
 						success: function(data){
 							if (data != "") {
