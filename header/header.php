@@ -1,6 +1,6 @@
 <?php
 
-$CONFIG = array("root_path"=>"/bibliotheque/");
+$CONFIG = array("root_path"=>"/bibliotheque");
 
 ?>
 <!DOCTYPE html>
@@ -10,11 +10,11 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<link rel="stylesheet" type="text/css" href="<?php echo $CONFIG['root_path']; ?>css/headerstyle.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $CONFIG['root_path']; ?>/css/headerstyle.css">
 	<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-	<link rel="shortcut icon" href="<?php echo $CONFIG['root_path']; ?>img/logo1.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="<?php echo $CONFIG['root_path']; ?>/img/logo1.ico" type="image/x-icon">
 </head>
 <body>
 <header>
@@ -22,7 +22,7 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
 	<nav class="navbar" id="navbar">
 		<div class="max-width">
 			<div class="resplogo">
-				<img src="<?php echo $CONFIG['root_path']; ?>img/logo1.png" alt="Logo du site">
+				<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site">
 				<h1>The Unknown Authors Library</h1>
 			</div>
 			<div class="respsearch">
@@ -39,11 +39,11 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
 			</div>
 		</div>
 		<ul class="menu">
-			<li><a href="<?php echo $CONFIG['root_path']; ?>index.php">Accueil</a></li>
-			<li><a href="<?php echo $CONFIG['root_path']; ?>auteur.php">Auteurs</a></li>
-			<li><a href="<?php echo $CONFIG['root_path']; ?>bibliotheque.php">Biblioth&#232;que</a></li>
-			<li><a href="<?php echo $CONFIG['root_path']; ?>login.php">Se connecter</a></li>
-			<li><a href="<?php echo $CONFIG['root_path']; ?>contact.php">Contact</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/index.php">Accueil</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/auteur.php">Auteurs</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php">Biblioth&#232;que</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/accueil/accueil.php">Se connecter</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/contact.php">Contact</a></li>
 		</ul>
 	</nav>
 	<script type="text/javascript">
@@ -74,7 +74,7 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
 				if (auteur != "") {
 					$.ajax({
 						type: 'GET',
-						url: '<?php echo $CONFIG['root_path']; ?>bdd/search.php',
+						url: '<?php echo $CONFIG['root_path']; ?>/bdd/search.php',
 						data:'auteur=' + encodeURIComponent(auteur),
 						success: function(data){
 							if (data != "") {

@@ -27,7 +27,7 @@ p,a,em,dd,li{
 .navbar{
 	margin: 0 auto;
   	width: 100%;
-  	background:url('/bibliotheque_v1/img/fond_cuir.jpg')no-repeat;
+  	background:url('/bibliotheque/img/fond_cuir.jpg')no-repeat;
   	background-size: 100%;
   	left: 0;
 	right: 0;
@@ -175,7 +175,7 @@ input[type="search"]:focus{
 /* Partie principal */
 
 .principal{
-	background: url("/bibliotheque_v1/img/parchemin_fond.jpg");
+	background: url("/bibliotheque/img/parchemin_fond.jpg");
 	background-size: 100%;
 	max-width: 1600px;
 	padding: 200px 0 70px 0;
