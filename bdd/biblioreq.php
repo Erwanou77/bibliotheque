@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include('config.php');
 $pdostat = $bdd->query('SELECT titre,auteur,editeur,date,isbn FROM livre');

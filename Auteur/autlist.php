@@ -6,7 +6,6 @@
 ?>
 <link rel="stylesheet" type="text/css" href="../css/styleauteur.css">
 	<main class="principal">
-		
 		<!-- Emplacement des images -->
 		<?php $ligne = $pdostate->fetch();
 		$datefmt = new IntlDateFormatter('fr_FR', NULL, NULL, NULL, NULL, 'dd MMMM yyyy');

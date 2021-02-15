@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php 
+=======
+<?php
+>>>>>>> 43750d5256da08833c6a6682623056de8a4b2c34
 require"../bdd/detailslivres.php";
 include("../bbcode.php");
 require("../header/header.php")?>

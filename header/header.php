@@ -30,7 +30,7 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
 					<input type="search" id="searchs" placeholder="Recherchez votre livre...">
 					<button type="submit" class="fas fa-search" name="submit"></button>
 					<div class="complet" id="resultat" style="font-size: 18px">
-						
+
 					</div>
 				</form>
 				<div class="menu-btn">
