@@ -9,6 +9,8 @@
 		
 		<!-- Emplacement des images -->
 		<?php $ligne = $pdostate->fetch();
+		$datefmt = new IntlDateFormatter('fr_FR', NULL, NULL, NULL, NULL, 'dd MMMM yyyy');
+		$date1 = date_create($ligne['date_naiss']);
 		$images = "../img/Auteurs/".$ligne['id'].".jpg";?>
 		<div class="retour">
 			<p><a href="../auteur.php">Auteurs&nbsp;</a><span>&gt;</span><?php echo " " . bbcode(htmlspecialchars($ligne['prenom'])) . " " . bbcode(htmlspecialchars($ligne['nom']));?></p>
@@ -21,7 +23,7 @@
 					<!-- Appel du prenom et du nom des auteurs depuis la bdd -->
 					<h2><?php echo bbcode(htmlspecialchars($ligne['prenom'])) . " " . bbcode(htmlspecialchars($ligne['nom']));?></h2>
 					<!-- Appel de la ville de naissance et de la date de naissance des auteurs depuis la bdd -->
-					<h4><?php echo bbcode(htmlspecialchars($ligne['date_naiss'])) ?> <br> <?php echo bbcode(htmlspecialchars($ligne['ville_naiss'])) ?></h4>
+					<h4><?php echo bbcode(htmlspecialchars($datefmt->format($date1))) ?> <br> <?php echo bbcode(htmlspecialchars($ligne['ville_naiss'])) ?></h4>
 					<!-- Appel du genre des auteurs depuis la bdd -->
 					<p><?php echo bbcode(htmlspecialchars($ligne['genre']))?></p>
 				</div>
