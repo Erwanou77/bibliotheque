@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : Dim 14 fév. 2021 à 15:52
+-- Généré le : lun. 15 fév. 2021 à 21:20
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `bibliotheque`
+-- Base de données : `biblio`
 --
 
 -- --------------------------------------------------------
@@ -36,7 +36,6 @@ CREATE TABLE IF NOT EXISTS `auteur` (
   `ville_naiss` varchar(50) NOT NULL,
   `genre` varchar(50) NOT NULL,
   `biographie` mediumtext NOT NULL,
-  `bibliographie` varchar(10000) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
@@ -44,12 +43,74 @@ CREATE TABLE IF NOT EXISTS `auteur` (
 -- Déchargement des données de la table `auteur`
 --
 
-INSERT INTO `auteur` (`id`, `prenom`, `nom`, `date_naiss`, `ville_naiss`, `genre`, `biographie`, `bibliographie`) VALUES
-(1, 'Karine', 'Giébel', '1971-06-04', 'La Seyne-sur-Mer, Var, France', 'Roman', 'Après avoir obtenu une licence de droit, Karine Giébel occupe pendant un moment des emplois variés (surveillante d\'externat, pigiste et photographe pour un petit journal local, saisonnière pour un Parc National, équipière chez McDonald). Puis elle intègre la fonction publique territoriale, où elle est actuellement juriste, s\'occupant des marchés publics pour une communauté d\'agglomération.[rl][rl]Elle publie ses deux premiers romans dans la collection « Rail noir » (éditions La Vie du Rail) en 2004 et 2006. Elle poursuit son travail d\'écrivain aux éditions Fleuve noir puis Belfond.[rl][rl]Avec ses huit romans, elle s\'est fait une place à part dans le thriller psychologique. Ses romans, souvent primés, sont traduits en neuf langues : allemand, italien, néerlandais, russe, espagnol, tchèque, polonais, vietnamien et coréen.', '[list]Terminus Elicius, La Vie du rail, 2004 (réédition : Belfond, 2016).[/list][list]Meurtres pour rédemption, La Vie du rail, 2006 (réédition : Fleuve noir, 2010).[/list][list]Les Morsures de l\'ombre, Fleuve noir, 2007.[/list][list]Chiens de sang, Fleuve noir, 2008.[/list][list]Jusqu\'à ce que la mort nous unisse, Fleuve noir, 2009. Le téléfilm Jusqu\'à ce que la mort nous unisse, qui a reçu le Grand Prix 2018 du Film francophone de télévision au Festival Polar de Cognac, a  été diffusé pour la première fois sur France 3 le 27 novembre 2018.[/list][list]Juste une ombre, Fleuve noir, 2012.[/list][list]Purgatoire des innocents, Fleuve noir, 2013.[/list][list]Post  Mortem, 12-21, 2013[/list][list]Satan était un ange, Fleuve noir, 2014.[/list][list]De force, Belfond, mars 2016.[/list][list]Toutes blessent la dernière tue, Belfond, 2018.[/list][list]Ce que tu as fait de moi, Belfond, 2019[/list]'),
-(2, 'Fred', 'Vargas', '1957-06-07', 'Paris, France', 'Roman', 'Fred Vargas, nom de plume de Frédérique Audoin-Rouzeau, est une écrivaine, une archéozoologue et médiéviste française.[rl][rl]Auteur de romans policiers à fort succès, elle a choisi, avec \"Vargas,\" le même pseudonyme que celui de sa sœur jumelle Joëlle, peintre contemporaine connue sous le nom de Jo Vargas, en référence à Maria Vargas, personnage joué par l\'actrice Ava Gardner dans le film \"La Comtesse aux pieds nus.\"[rl][rl]Après son bac, elle entreprend des études d\'histoire. Elle s\'intéresse à la préhistoire, puis choisit de concentrer ses efforts sur le Moyen Âge. Elle a écrit en 2003 un ouvrage scientifique sur la peste noire (Les Chemins de la peste, le rat, la puce et l\'homme).[rl][rl]Elle a débuté sa \"carrière\" d\'écrivain de roman policier par un coup de maître. Son premier roman \"Les Jeux de l\'Amour et de la Mort\", sélectionné sur manuscrit, reçut le Prix du roman policier du Festival de Cognac en 1986 et fut publié aux éditions du Masque.[rl]Devant ce succès grandissant, l\'auteur se fait de plus en plus rare, fuyant tout ce qui peut ressembler à une mondanité. Elle occupe le temps libre qui lui reste à sa famille : son fils et sa sœur jumelle, qu\'elle considère comme sa moitié.[rl][rl]Elle a publié une dizaine de romans, et quelques bandes dessinées avec Edmond Baudoin.[rl][rl]Elle a fait de son frère Stéphane Audoin-Rouzeau le personnage d\'un de ses romans.[rl][rl]En 2002, \"Pars vite et reviens tard\" reçoit le Grand prix des lectrices de Elle - (catégorie policier), le Prix des libraires et le Trophée 813 du Meilleur roman francophone.[rl][rl]Elle a obtenu le prix Landerneau polar en 2015 pour \"Temps glaciaires\" aux éditions Flammarion.[rl][rl]Ses livres ont été adaptés au cinéma et à la télévision.[rl][rl]En mai 2018, elle reçoit le prix Princesse des Asturies.[rl][rl]\"Fred Vargas a inventé un genre romanesque qui n\'appartient qu\'à elle : le Rompol. Objet essentiellement poétique, il n\'est pas noir mais nocturne, c\'est-à-dire qu\'il plonge le lecteur dans le monde onirique de ces nuits d\'enfance où l\'on joue à se faire peur, mais de façon ô combien grave et sérieuse, car le pouvoir donné à l\'imaginaire libéré est total. C\'est cette liberté de ton, cette capacité à retrouver la grâce fragile de nos émotions primordiales, cette alchimie verbale qui secoue la pesanteur du réel, qui sont la marque d\'une romancière à la voix unique dans le polar d\'aujourd’hui.\" (Jeanne Guyon, Le Magazine Littéraire)', '[list]L\'Homme aux cercles bleus, 1991 - Prix du festival de Saint-Nazaire 1992.[/list][list]L\'Homme à l\'envers, 1999 - Grand prix du roman noir de Cognac 2000, Prix mystère de la critique 2000.[/list][list]Pars vite et reviens tard, 2001 - Prix des libraires 2002, Prix des lectrices ELLE 2002, Deutscher Krimipreis.[/list][list]Sous les vents de Neptune, 2004[/list][list]Dans les bois éternels, 2006[/list][list]Un lieu incertain, 2008[/list][list]L\'Armée furieuse, 2011[/list][list]Temps glaciaires, 2015 - Prix Landerneau polar 2015[/list][list]Quand sort la recluse, 2017[/list]'),
-(3, 'Jussi', 'Adler-Olsen', '1950-08-02', 'Copenhague, Danemark', 'Roman', 'Depuis 2007, Jussi Adler-Olsen s\'est spécialisé dans une série de romans policiers dont Dossier 64, qui a été la meilleure vente de livres en 2010 au Danemark ; ainsi il a reçu cette année-là la distinction du meilleur prix littéraire danois, le prix du club des libraires : les boghandlernes gyldne laurbær ou « lauriers d\'or des libraires ».', '[list]Victim 2117, 2020[/list][list]L\'Unité Alphabet, 2020[/list][list]Selfies, 2019[/list][list]Promesse, 2018[/list][list]L\'effet papillon, 2017[/list][list]Dossier 64, 2016[/list][list]Délivrance, 2015[/list][list]Profanation, Édition noël, 2014[/list][list]Profanation, 2014[/list][list]Miséricorde, 2013[/list]'),
-(4, 'Bernard', 'Minier', '1960-08-26', 'Béziers, Hérault, France', 'Roman', 'Bernard Minier grandit à Montréjeau au pied des Pyrénées, puis fait des études à Tarbes et à Toulouse avant de séjourner un an en Espagne. Il vit aujourd’hui en Île-de-France.[rl][rl]Il fait d\'abord carrière dans l\'administration des douanes comme contrôleur principal, tout en participant à des concours de nouvelles avant de franchir le pas et d\'envoyer un manuscrit de roman à des éditeurs.[rl][rl]Il publie son premier roman, Glacé, en 2011. Salué par la presse et Prix du meilleur roman francophone au Festival Polar de Cognac, Glacé a très vite connu un large succès public et a été traduit ou est en cours de traduction dans 22 langues, dont l’anglais. Il rencontre le même succès dans plusieurs pays européens. Glacé a été adapté en série télévisée par Gaumont Télévision et M6, diffusée sur M6 en 2017 et disponible sur Netflix depuis octobre 2017. En mai 2019, le Sunday Times le classe dans son Top 100 des meilleurs romans policiers depuis 1945.[rl][rl]Glacé a pour héros le commandant Martin Servaz, un policier de Toulouse profondément humain et lettré, confronté à une série de crimes aussi épouvantables qu’incompréhensibles dans les Pyrénées au cœur de l’hiver.[rl][rl]Le Cercle (2012), N’éteins pas la lumière (2014), Nuit (2017), Sœurs (2018) et La Vallée (2020) renouent avec le même personnage..[rl][rl]Il a également publié 2 unitaires : Une putain d’histoire (2015, prix du meilleur roman francophone du Festival Polar de Cognac), dont l’intrigue ancrée aux Etats-Unis évoque les dérives d\'Internet et les menaces sur les libertés individuelles, et M, le bord de l\'abîme (2019), dont l\'histoire se déroule à Hong-Kong et aborde la puissance de la technologie et de l\'Intelligence artificielle.[rl][rl]Ses livres, traduits en 22 langues, sont tous publiés aux Éditions XO et repris en format poche chez Pocket.[rl][rl]Il fait aussi partie du collectif d\'artistes la Ligue de l\'Imaginaire.', '[list]Glacé, XO éditions, 2011[/list][list]Le Cercle, XO éditions, 2012[/list][list]N\'éteins pas la lumière, XO éditions, 2014[/list][list]Nuit, XO éditions, 2017[/list][list]Sœurs, XO éditions, 2018[/list][list]La Vallée, XO éditions, 2020[/list]'),
-(5, 'Agatha', 'Christie', '1890-09-15', 'Torquay', 'Roman', 'Créatrice du fameux détective belge Hercule Poirot, de la surannée Miss Marple et du duo infernal Tuppence et Berresford, Agatha Christie est encore considérée comme la reine du crime. Elevée dans un milieu bourgeois, la jeune Agatha se trouve vite orpheline de père, développant son aptitude à l\'écriture sous le regard bienveillant d\'une mère. Infirmière lors de la Deuxième Guerre mondiale, elle apprend l\'usage des drogues, ce qui lui sert plus tard lorsqu\'à la suite d\'un pari avec sa soeur, elle publie son premier roman en 1920 \'La Mystérieuse affaire de Styles\', où apparaît Hercule Poirot. Miss Jane Marple fait, quant à elle, son apparition dans \'L\'Affaire Prothéro\' en 1930, dénouant les énigmes le temps d\'un tricot, bien calée dans son fauteuil, très Old England, tasse de thé à la main. Suivant son deuxième mari archéologue lors de ses missions, Agatha Christie y puise l\'inspiration pour ses romans policiers, trouvant dans le mal du pays sur les dunes d\'Egypte où dans sa chambre du Winter Hotel, pour écrire des intrigues passionnantes se déroulant au pays de la Perfide Albion. Nombre de ses romans seront adaptés au cinéma et à la télévision : \'Mort sur le nil\', \'Le Crime de l\'Orient-Express\' où Pete Ustinov tient le rôle d\'Hercule Poirot... Elle pose les bases du roman policier, obéissant à un système toujours identique mais constamment renouvelé par la variété des histoires et surtout sa manière de capter le lecteur, l\'obligeant à essayer de découvrir le coupable avant qu\'il ne soit dévoilé. Ainsi, la folie, la soif de vengeance, la cupidité sont les causes récurrentes du meurtre, dénoncées habilement par Agatha Christie. Désormais honorable Lady pleine d\'humour, elle s\'éteint en 1976. Ses ventes phénoménales n\'ont pour seuls rivaux que Shakespeare ou la Bible.', 'Recueils de nouvelles mettant en scène Miss Marple :[list]Miss Marple (1), lu par Michael Lonsdale, Éditions Thélème, Paris, 2004, 1 CD.[/list][list]Miss Marple (2), lu par Michael Lonsdale, Éditions Thélème, Paris, 2004, 1 CD.[/list][list]Miss Marple (3), lu par Guillaume Galienne, Éditions Thélème, Paris, 2004, 1 CD.[/list][list]Miss Marple (4), lu par Xavier Gallais, Éditions Thélème, Paris, 2005, 1 CD.[/list][list]Miss Marple (5), lu par Gabrièle Valensi, Éditions Thélème, Paris, 2005, 1 CD.[/list][list]Miss Marple (6), lu par Thierry Hancisse, Éditions Thélème, Paris, 2005, 1 CD.[/list][rl]\r\nRomans mettant en scène Hercule Poirot :[list]Le Meurtre de Roger Ackroyd, lu par Guillaume Galienne, Éditions Thélème, Paris, 2004, 3 CD.[/list][list]Meurtre en Mésopotamie, lu par Guillaume Galienne, Éditions Thélème, Paris, 2004, 3 CD.[/list][list]Mort sur le Nil, lu par Guillaume Galienne, Éditions Thélème, Paris, 2004, 3 CD.[/list][list]Le Crime de l\'Orient-Express, lu par Denis Podalydès, Éditions Thélème, Paris, 2004.[/list][list]La Mystérieuse Affaire de Styles, lu par Françoise Gillard, Éditions Thélème, Paris, 2004, 3 CD.[/list]\r\n[list]Cartes sur table, lu par Denis Podalydès, Éditions Thélème, Paris, 2005, 3 CD.[/list][rl]\r\nAutres romans : [list]Dix Petits Nègres lu par Michael Lonsdale, Éditions Thélème, Paris, 2004, 3 CD.[/list][list]L\'Homme au complet marron, lu par Michel Vuillermoz, Éditions Thélème, Paris, 2004, 3 CD.[/list]\r\n[list]Destination inconnue, lu par Jean-Baptiste Malartre, Éditions Thélème, Paris, 2005, 3 CD.[/list]');
+INSERT INTO `auteur` (`id`, `prenom`, `nom`, `date_naiss`, `ville_naiss`, `genre`, `biographie`) VALUES
+(1, 'Karine', 'Giébel', '1971-06-04', 'La Seyne-sur-Mer, Var, France', 'Roman', 'Après avoir obtenu une licence de droit, Karine Giébel occupe pendant un moment des emplois variés (surveillante d\'externat, pigiste et photographe pour un petit journal local, saisonnière pour un Parc National, équipière chez McDonald). Puis elle intègre la fonction publique territoriale, où elle est actuellement juriste, s\'occupant des marchés publics pour une communauté d\'agglomération.[rl][rl]Elle publie ses deux premiers romans dans la collection « Rail noir » (éditions La Vie du Rail) en 2004 et 2006. Elle poursuit son travail d\'écrivain aux éditions Fleuve noir puis Belfond.[rl][rl]Avec ses huit romans, elle s\'est fait une place à part dans le thriller psychologique. Ses romans, souvent primés, sont traduits en neuf langues : allemand, italien, néerlandais, russe, espagnol, tchèque, polonais, vietnamien et coréen.'),
+(2, 'Fred', 'Vargas', '1957-06-07', 'Paris, France', 'Roman', 'Fred Vargas, nom de plume de Frédérique Audoin-Rouzeau, est une écrivaine, une archéozoologue et médiéviste française.[rl][rl]Auteur de romans policiers à fort succès, elle a choisi, avec \"Vargas,\" le même pseudonyme que celui de sa sœur jumelle Joëlle, peintre contemporaine connue sous le nom de Jo Vargas, en référence à Maria Vargas, personnage joué par l\'actrice Ava Gardner dans le film \"La Comtesse aux pieds nus.\"[rl][rl]Après son bac, elle entreprend des études d\'histoire. Elle s\'intéresse à la préhistoire, puis choisit de concentrer ses efforts sur le Moyen Âge. Elle a écrit en 2003 un ouvrage scientifique sur la peste noire (Les Chemins de la peste, le rat, la puce et l\'homme).[rl][rl]Elle a débuté sa \"carrière\" d\'écrivain de roman policier par un coup de maître. Son premier roman \"Les Jeux de l\'Amour et de la Mort\", sélectionné sur manuscrit, reçut le Prix du roman policier du Festival de Cognac en 1986 et fut publié aux éditions du Masque.[rl]Devant ce succès grandissant, l\'auteur se fait de plus en plus rare, fuyant tout ce qui peut ressembler à une mondanité. Elle occupe le temps libre qui lui reste à sa famille : son fils et sa sœur jumelle, qu\'elle considère comme sa moitié.[rl][rl]Elle a publié une dizaine de romans, et quelques bandes dessinées avec Edmond Baudoin.[rl][rl]Elle a fait de son frère Stéphane Audoin-Rouzeau le personnage d\'un de ses romans.[rl][rl]En 2002, \"Pars vite et reviens tard\" reçoit le Grand prix des lectrices de Elle - (catégorie policier), le Prix des libraires et le Trophée 813 du Meilleur roman francophone.[rl][rl]Elle a obtenu le prix Landerneau polar en 2015 pour \"Temps glaciaires\" aux éditions Flammarion.[rl][rl]Ses livres ont été adaptés au cinéma et à la télévision.[rl][rl]En mai 2018, elle reçoit le prix Princesse des Asturies.[rl][rl]\"Fred Vargas a inventé un genre romanesque qui n\'appartient qu\'à elle : le Rompol. Objet essentiellement poétique, il n\'est pas noir mais nocturne, c\'est-à-dire qu\'il plonge le lecteur dans le monde onirique de ces nuits d\'enfance où l\'on joue à se faire peur, mais de façon ô combien grave et sérieuse, car le pouvoir donné à l\'imaginaire libéré est total. C\'est cette liberté de ton, cette capacité à retrouver la grâce fragile de nos émotions primordiales, cette alchimie verbale qui secoue la pesanteur du réel, qui sont la marque d\'une romancière à la voix unique dans le polar d\'aujourd’hui.\" (Jeanne Guyon, Le Magazine Littéraire)'),
+(3, 'Jussi', 'Adler-Olsen', '1950-08-02', 'Copenhague, Danemark', 'Roman', 'Depuis 2007, Jussi Adler-Olsen s\'est spécialisé dans une série de romans policiers dont Dossier 64, qui a été la meilleure vente de livres en 2010 au Danemark ; ainsi il a reçu cette année-là la distinction du meilleur prix littéraire danois, le prix du club des libraires : les boghandlernes gyldne laurbær ou « lauriers d\'or des libraires ».'),
+(4, 'Bernard', 'Minier', '1960-08-26', 'Béziers, Hérault, France', 'Roman', 'Bernard Minier grandit à Montréjeau au pied des Pyrénées, puis fait des études à Tarbes et à Toulouse avant de séjourner un an en Espagne. Il vit aujourd’hui en Île-de-France.[rl][rl]Il fait d\'abord carrière dans l\'administration des douanes comme contrôleur principal, tout en participant à des concours de nouvelles avant de franchir le pas et d\'envoyer un manuscrit de roman à des éditeurs.[rl][rl]Il publie son premier roman, Glacé, en 2011. Salué par la presse et Prix du meilleur roman francophone au Festival Polar de Cognac, Glacé a très vite connu un large succès public et a été traduit ou est en cours de traduction dans 22 langues, dont l’anglais. Il rencontre le même succès dans plusieurs pays européens. Glacé a été adapté en série télévisée par Gaumont Télévision et M6, diffusée sur M6 en 2017 et disponible sur Netflix depuis octobre 2017. En mai 2019, le Sunday Times le classe dans son Top 100 des meilleurs romans policiers depuis 1945.[rl][rl]Glacé a pour héros le commandant Martin Servaz, un policier de Toulouse profondément humain et lettré, confronté à une série de crimes aussi épouvantables qu’incompréhensibles dans les Pyrénées au cœur de l’hiver.[rl][rl]Le Cercle (2012), N’éteins pas la lumière (2014), Nuit (2017), Sœurs (2018) et La Vallée (2020) renouent avec le même personnage..[rl][rl]Il a également publié 2 unitaires : Une putain d’histoire (2015, prix du meilleur roman francophone du Festival Polar de Cognac), dont l’intrigue ancrée aux Etats-Unis évoque les dérives d\'Internet et les menaces sur les libertés individuelles, et M, le bord de l\'abîme (2019), dont l\'histoire se déroule à Hong-Kong et aborde la puissance de la technologie et de l\'Intelligence artificielle.[rl][rl]Ses livres, traduits en 22 langues, sont tous publiés aux Éditions XO et repris en format poche chez Pocket.[rl][rl]Il fait aussi partie du collectif d\'artistes la Ligue de l\'Imaginaire.'),
+(5, 'Agatha', 'Christie', '1890-09-15', 'Torquay', 'Roman', 'Créatrice du fameux détective belge Hercule Poirot, de la surannée Miss Marple et du duo infernal Tuppence et Berresford, Agatha Christie est encore considérée comme la reine du crime. Elevée dans un milieu bourgeois, la jeune Agatha se trouve vite orpheline de père, développant son aptitude à l\'écriture sous le regard bienveillant d\'une mère. Infirmière lors de la Deuxième Guerre mondiale, elle apprend l\'usage des drogues, ce qui lui sert plus tard lorsqu\'à la suite d\'un pari avec sa soeur, elle publie son premier roman en 1920 \'La Mystérieuse affaire de Styles\', où apparaît Hercule Poirot. Miss Jane Marple fait, quant à elle, son apparition dans \'L\'Affaire Prothéro\' en 1930, dénouant les énigmes le temps d\'un tricot, bien calée dans son fauteuil, très Old England, tasse de thé à la main. Suivant son deuxième mari archéologue lors de ses missions, Agatha Christie y puise l\'inspiration pour ses romans policiers, trouvant dans le mal du pays sur les dunes d\'Egypte où dans sa chambre du Winter Hotel, pour écrire des intrigues passionnantes se déroulant au pays de la Perfide Albion. Nombre de ses romans seront adaptés au cinéma et à la télévision : \'Mort sur le nil\', \'Le Crime de l\'Orient-Express\' où Pete Ustinov tient le rôle d\'Hercule Poirot... Elle pose les bases du roman policier, obéissant à un système toujours identique mais constamment renouvelé par la variété des histoires et surtout sa manière de capter le lecteur, l\'obligeant à essayer de découvrir le coupable avant qu\'il ne soit dévoilé. Ainsi, la folie, la soif de vengeance, la cupidité sont les causes récurrentes du meurtre, dénoncées habilement par Agatha Christie. Désormais honorable Lady pleine d\'humour, elle s\'éteint en 1976. Ses ventes phénoménales n\'ont pour seuls rivaux que Shakespeare ou la Bible.');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `bibliographie`
+--
+
+DROP TABLE IF EXISTS `bibliographie`;
+CREATE TABLE IF NOT EXISTS `bibliographie` (
+  `id_biblio` int(11) NOT NULL,
+  `bibliographie` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `bibliographie`
+--
+
+INSERT INTO `bibliographie` (`id_biblio`, `bibliographie`) VALUES
+(1, 'Terminus Elicius, La Vie du rail, 2004 (réédition : Belfond, 2016).'),
+(1, 'Meurtres pour rédemption, La Vie du rail, 2006 (réédition : Fleuve noir, 2010).'),
+(1, 'Les Morsures de l\'ombre, Fleuve noir, 2007.'),
+(1, 'Chiens de sang, Fleuve noir, 2008.'),
+(1, 'Jusqu\'à ce que la mort nous unisse, Fleuve noir, 2009. Le téléfilm Jusqu\'à ce que la mort nous unisse, qui a reçu le Grand Prix 2018 du Film francophone de télévision au Festival Polar de Cognac, a  été diffusé pour la première fois sur France 3 le 27 novembre 2018.'),
+(1, 'Juste une ombre, Fleuve noir, 2012.'),
+(1, 'Purgatoire des innocents, Fleuve noir, 2013.'),
+(1, 'Post  Mortem, 12-21, 2013'),
+(1, 'Satan était un ange, Fleuve noir, 2014.'),
+(1, 'De force, Belfond, mars 2016.'),
+(1, 'Toutes blessent la dernière tue, Belfond, 2018.'),
+(1, 'Ce que tu as fait de moi, Belfond, 2019'),
+(2, 'L\'Homme aux cercles bleus, 1991 - Prix du festival de Saint-Nazaire 1992.'),
+(2, 'L\'Homme à l\'envers, 1999 - Grand prix du roman noir de Cognac 2000, Prix mystère de la critique 2000.'),
+(2, 'Pars vite et reviens tard, 2001 - Prix des libraires 2002, Prix des lectrices ELLE 2002, Deutscher Krimipreis.'),
+(2, 'Sous les vents de Neptune, 2004'),
+(2, 'Dans les bois éternels, 2006'),
+(2, 'Un lieu incertain, 2008'),
+(2, 'L\'Armée furieuse, 2011'),
+(2, 'Temps glaciaires, 2015 - Prix Landerneau polar 2015'),
+(2, 'Quand sort la recluse, 2017'),
+(3, 'Victim 2117, 2020'),
+(3, 'L\'Unité Alphabet, 2020'),
+(3, 'Selfies, 2019'),
+(3, 'Promesse, 2018'),
+(3, 'Promesse, 2018'),
+(3, 'L\'effet papillon, 2017'),
+(3, 'Dossier 64, 2016'),
+(3, 'Délivrance, 2015'),
+(3, 'Profanation, Édition noël, 2014'),
+(3, 'Profanation, 2014'),
+(3, 'Miséricorde, 2013'),
+(4, 'Glacé, XO éditions, 2011'),
+(4, 'Le Cercle, XO éditions, 2012'),
+(4, 'N\'éteins pas la lumière, XO éditions, 2014'),
+(4, 'Nuit, XO éditions, 2017'),
+(4, 'Sœurs, XO éditions, 2018'),
+(4, 'La Vallée, XO éditions, 2020'),
+(5, 'Miss Marple (1), lu par Michael Lonsdale, Éditions Thélème, Paris, 2004, 1 CD.'),
+(5, 'Miss Marple (2), lu par Michael Lonsdale, Éditions Thélème, Paris, 2004, 1 CD.'),
+(5, 'Miss Marple (3), lu par Guillaume Galienne, Éditions Thélème, Paris, 2004, 1 CD.'),
+(5, 'Miss Marple (4), lu par Xavier Gallais, Éditions Thélème, Paris, 2005, 1 CD.'),
+(5, 'Miss Marple (5), lu par Gabrièle Valensi, Éditions Thélème, Paris, 2005, 1 CD.'),
+(5, 'Miss Marple (6), lu par Thierry Hancisse, Éditions Thélème, Paris, 2005, 1 CD.');
 
 -- --------------------------------------------------------
 
@@ -129,10 +190,12 @@ INSERT INTO `livre` (`id`, `titre`, `auteur`, `editeur`, `date`, `isbn`, `genre`
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idclient` int(11) NOT NULL,
+  `nom` text NOT NULL,
+  `prenom` text NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `create_datetime` datetime NOT NULL,
-  `identifiant` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
@@ -140,8 +203,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `create_datetime`, `identifiant`) VALUES
-(1, 'test@gmail.com', 'test', '2021-02-11 18:19:31', 123456);
+INSERT INTO `users` (`id`, `idclient`, `nom`, `prenom`, `email`, `password`, `create_datetime`) VALUES
+(1, 10000001, 'test', 'teste', 'test77@gmail.com', 'd40b31764c7f77dad3fa57e01d2c19fd', '2021-02-15 17:46:03');
 
 --
 -- Contraintes pour les tables déchargées

@@ -1,5 +1,9 @@
 .principal{
+<<<<<<< HEAD
 	cursor: url("../img/book_close.png"), pointer;
+=======
+	cursor: url("/bibliotheque/img/book_close.png"), pointer;
+>>>>>>> Erwan
 }
 .select{
 	display: flex;
@@ -12,7 +16,11 @@
 }
 .select button{
 	padding: 5px;
+<<<<<<< HEAD
 	background:url('../img/fond_cuir.jpg')no-repeat;
+=======
+	background:url('/bibliotheque/img/fond_cuir.jpg')no-repeat;
+>>>>>>> Erwan
 	color: white;
 }
 .container{

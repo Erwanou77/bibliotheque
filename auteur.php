@@ -6,7 +6,10 @@
 <link rel="stylesheet" type="text/css" href="css/auteurstyle.css">
 <main class="principal">
 	<?php foreach ($pdostate as $ligne) {?>
-	<?php $images = "img/Auteurs/".$ligne['id'].".jpg";?>
+	<?php 
+	$datefmt = new IntlDateFormatter('fr_FR', NULL, NULL, NULL, NULL, 'dd MMMM yyyy');
+	$date1 = date_create($ligne['date_naiss']);
+	$images = "img/Auteurs/".$ligne['id'].".jpg";?>
 	<div class="position">
 		<a href="Auteur/autlist.php?id=<?php echo $ligne['id'];?>">
 			<div class="centre">
@@ -14,7 +17,7 @@
 				<div class="texte">
 					<h1>Informations sur l'auteur</h1>
 					<h2><?php echo bbcode(htmlspecialchars($ligne['prenom'])) . " " . bbcode(htmlspecialchars($ligne['nom']));?></h2>
-					<h4><?php echo bbcode(htmlspecialchars($ligne['date_naiss'])) ?> <br> <?php echo bbcode(htmlspecialchars($ligne['ville_naiss'])) ?></h4>
+					<h4><?php echo bbcode(htmlspecialchars($datefmt->format($date1))) ?> <br> <?php echo bbcode(htmlspecialchars($ligne['ville_naiss'])) ?></h4>
 					<p><?php echo bbcode(htmlspecialchars($ligne['genre']))?></p>
 				</div>
 			</div>

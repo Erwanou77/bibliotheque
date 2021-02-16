@@ -176,7 +176,11 @@ input[type="search"]:focus{
 
 .principal{
 	background: url("/bibliotheque/img/parchemin_fond.jpg");
+<<<<<<< HEAD
 	background-size: 100%;
+=======
+	background-size: 100%; 
+>>>>>>> Erwan
 	max-width: 1600px;
 	padding: 200px 0 70px 0;
 	margin: 0 auto;
