@@ -7,9 +7,9 @@
 		$pdostat->execute(array("$auteur%"));
 		$aut = $pdostat->fetchAll();
 		foreach ($aut as $r) {
-			$images = "/bibliotheque_v1/img/couvertures/" . $r['isbn'] . ".png";
+			$images = "/bibliotheque/img/couvertures/" . $r['isbn'] . ".png";
 			?>
-			<a class="sea" href="/bibliotheque_v1/livres/details.php?isbn=<?php echo $r['isbn'];?>">
+			<a class="sea" href="/bibliotheque/livres/details.php?isbn=<?php echo $r['isbn'];?>">
 				<img src="<?php echo $images; ?>">
 				<p><?php echo $r['titre'] . "<br>" . $r['auteur'];?></p>
 			</a>
