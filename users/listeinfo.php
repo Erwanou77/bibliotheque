@@ -1,4 +1,5 @@
 <?php 
+	session_start();
 	require"../header/header.php";
 ?>
 <link rel="stylesheet" type="text/css" href="../css/listeinfo.css">
@@ -9,7 +10,7 @@
 				<a href="profil.php">
 					<img src="../img/Auteurs/avatar.png" width="50px">
 				</a>
-				<h2>Erwan LAUNAY</h2>
+				<h2><?php echo $_SESSION['idsession']; ?></h2>
 			</div>
 			<h3>Param&#232;tres</h3>
 			<ul>
