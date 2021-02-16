@@ -16,6 +16,5 @@
 			<ul>
 				<li><a href="voslivres.php">Vos livres</a></li>
 				<li><a href="profil.php">Votre profil</a></li>
-				<li><a href="">Ajoutez des livres</a></li>
 			</ul>
 		</div>
