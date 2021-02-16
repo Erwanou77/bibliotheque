@@ -1,6 +1,5 @@
 <?php
     session_start();
-    $idclient = stripslashes(htmlspecialchars($_POST['idclient']));
     $password = stripslashes(htmlspecialchars(md5($_POST['password'])));
 	if (isset($_POST['submit'])) {
         require"config.php";
