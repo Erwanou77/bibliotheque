@@ -1,6 +1,6 @@
 .bibliotheque{
 	background: url("../img/parchemin_fond.jpg");
-	background-size: 100%; 
+	background-size: 100%;
 	max-width: 1600px;
 	padding-top: 170px;
 	cursor: url("../img/book_close.png"), pointer;
@@ -17,7 +17,7 @@
 }
 .select button{
 	padding: 5px;
-	background:url('/bibliotheque/img/fond_cuir.jpg')no-repeat;
+	background:url('/Biblio/img/fond_cuir.jpg')no-repeat;
 	color: white;
 }
 .container{

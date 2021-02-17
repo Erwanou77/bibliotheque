@@ -24,8 +24,8 @@ p,a,em,dd,li{
 .navbar{
 	margin: 0 auto;
   	width: 100%;
-  	background:url('/bibliotheque/img/fond_cuir.jpg')no-repeat;
-  	background-size: 100%;  	
+  	background:url('/Biblio/img/fond_cuir.jpg')no-repeat;
+  	background-size: 100%;
   	left: 0;
 	right: 0;
   	max-width: 1600px;
@@ -153,7 +153,7 @@ input[type="search"]:focus{
 .navbar .menu{
 	display: none;
 	text-align: right;
-	margin:20px 0; 
+	margin:20px 0;
 }
 .navbar .menu li{
   	list-style: none;
@@ -163,7 +163,7 @@ input[type="search"]:focus{
   	color: white;
 	font-size:20px;
 	padding: 10px 50px;
-	border-right:1px solid #ddd; 
+	border-right:1px solid #ddd;
 }
 .navbar .menu li:last-child a{
 	border: none;
