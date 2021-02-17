@@ -47,6 +47,7 @@ require("../header/header.php")?>
 		<div class="resume">
 			<h2>Synopsis</h2>
 			<p><?php echo bbcode(htmlspecialchars($ligne['synopsis']));?></p>
+			<p class="reserver">Pour reserver ce livre <a href="../users/voslivresreserv.php">clique ici</a></p>
 		</div>
 	</div>
 <?php } ?>

@@ -1,7 +1,6 @@
 <?php
 
 $CONFIG = array("root_path"=>"/bibliotheque_v1");
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,6 +42,7 @@ $CONFIG = array("root_path"=>"/bibliotheque_v1");
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/auteur.php">Auteurs</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php">Biblioth&#232;que</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/accueil/accueil.php">Se connecter</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/users/profil.php">Profil</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/contact.php">Contact</a></li>
 		</ul>
 	</nav>

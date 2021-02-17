@@ -1,9 +1,12 @@
-<?php 
+<?php
 	session_start();
 	require"../bdd/config.php";
 	$select = $bdd->query("SELECT * FROM users");
 	$tab = $select->fetch();
 	require"../header/header.php";
+	if (empty($_SESSION['nom'])) {
+        header("location:../accueil/accueil.php");
+    }
 ?>
 <link rel="stylesheet" type="text/css" href="../css/listeinfo.css">
 <main class="principal">
@@ -17,7 +20,7 @@
 			</div>
 			<h3>Param&#232;tres</h3>
 			<ul>
-				<li><a href="profil.php">Votre profil et vos livres</a></li>
+				<li><a href="voslivres.php">Votre profil et vos livres</a></li>
 				<li><a href="../bdd/logout.php">Déconnexion</a></li>
 			</ul>
 		</div>
