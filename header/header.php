@@ -23,7 +23,7 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 		<div class="max-width">
 			<div class="resplogo">
 				<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site">
-				<h1>The Unknown Authors Library</h1>
+				<h1>OpenVia</h1>
 			</div>
 			<div class="respsearch">
 				<form method="GET" class="search">

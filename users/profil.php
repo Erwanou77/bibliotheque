@@ -10,18 +10,18 @@
 					<div class="flex">
 						<div class="input">
 							<label>Nom :</label>
-							<input class="form-control" type="text" name="nom">
+							<input class="form-control" type="text" name="nom" value="<?php echo $_SESSION['nom']; ?>">
 						</div>
 						<div class="input">
 							<label>Pr&#233;nom :</label>
-							<input class="form-control" type="text" name="prenom">
+							<input class="form-control" type="text" name="prenom" value="<?php echo $_SESSION['prenom']; ?>">
 						</div>
 														
 					</div>
 					<div class="flex">
 						<div class="input">
 							<label>Mail :</label>
-							<input class="form-control" type="mail" name="mail">
+							<input class="form-control" type="mail" name="mail" value="<?php echo $_SESSION['email']; ?>">
 						</div>
 						<div class="input">
 							<label>Mot de passe:</label>

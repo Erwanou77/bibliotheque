@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 15 fév. 2021 à 21:20
+-- Généré le : mer. 17 fév. 2021 à 09:08
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -190,21 +190,22 @@ INSERT INTO `livre` (`id`, `titre`, `auteur`, `editeur`, `date`, `isbn`, `genre`
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `idclient` int(11) NOT NULL,
   `nom` text NOT NULL,
   `prenom` text NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
+  `admin` tinyint(4) NOT NULL DEFAULT '0',
   `create_datetime` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `idclient`, `nom`, `prenom`, `email`, `password`, `create_datetime`) VALUES
-(1, 10000001, 'test', 'teste', 'test77@gmail.com', 'd40b31764c7f77dad3fa57e01d2c19fd', '2021-02-15 17:46:03');
+INSERT INTO `users` (`id`, `nom`, `prenom`, `email`, `password`, `admin`, `create_datetime`) VALUES
+(1, 'LAUNAY', 'Erwan', 'rocky77580@gmail.com', 'c8801fc9c02f394e27a97a5c698d0981', 1, '2021-02-16 21:57:52'),
+(2, 'Petit', 'Rémi', 'remipetit@gmail.com', 'b6edd10559b20cb0a3ddaeb15e5267cc', 0, '2021-02-16 22:28:21');
 
 --
 -- Contraintes pour les tables déchargées
