@@ -7,7 +7,7 @@ if (isset($_POST['trie'])) {
 	if ($_POST['trie']=="date") {
 		$pdostat = $bdd->query('SELECT * FROM livre ORDER BY date');
 	}elseif ($_POST['trie']=="auteur") {
-		$pdostat = $bdd->query('SELECT * FROM livre ORDER BY auteurs');
+		$pdostat = $bdd->query('SELECT * FROM livre ORDER BY auteur');
 	}else{
 		$pdostat = $bdd->query('SELECT * FROM livre ORDER BY id');
 	}

@@ -7,7 +7,7 @@
 	<form method="POST" class="select">
 		<select name="trie">
 			<option value="">Trier par :</option>
-			<option value="dates">Trier par date</option>
+			<option value="date">Trier par date</option>
 			<option value="auteur">Trier par auteur</option>
 		</select>
 		<button type="submit">Rafra&#238;chir</button>
