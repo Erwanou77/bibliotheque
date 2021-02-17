@@ -3,14 +3,14 @@
 	require('header/header.php');
 ?>
 <link rel="stylesheet" type="text/css" href="css/stylebiblio.css">
-<main class="bibliotheque">
+<main class="principal">
 	<form method="POST" class="select">
 		<select name="trie">
 			<option value="">Trier par :</option>
 			<option value="dates">Trier par date</option>
 			<option value="auteur">Trier par auteur</option>
 		</select>
-		<button type="submit">Rafraîchir</button>
+		<button type="submit">Rafra&#238;chir</button>
 	</form>
 	<div class="container">
 		<?php foreach ($pdostat as $ligne) {?>

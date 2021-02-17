@@ -4,6 +4,9 @@
 	text-decoration: none;
 	outline: none;
 }
+body{
+	background-color: gray;
+}
 h1,h2,h3,h4,h5,h6,dt,button{
 	font-family: Eras Bold ITC;
 }
@@ -162,13 +165,31 @@ input[type="search"]:focus{
 .navbar .menu li a{
   	color: white;
 	font-size:20px;
+<<<<<<< HEAD
 	padding: 10px 50px;
 	border-right:1px solid #ddd;
+=======
+	padding: 10px 30px;
+	border-right:1px solid #ddd;
+>>>>>>> 82f241cdec5a3a9cc324013378f560b1b299c124
 }
 .navbar .menu li:last-child a{
 	border: none;
 }
+
+/* Partie principal */
+
+.principal{
+	background: url("../img/parchemin_fond.jpg");
+	background-size: 100%;
+	max-width: 1600px;
+	padding: 200px 0 70px 0;
+	margin: 0 auto;
+}
 @media screen and (max-width: 800px){
+	.principal{
+		padding-top: 300px;
+	}
 	.navbar{
 		background-size: 100% 100%;
 	}

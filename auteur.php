@@ -4,7 +4,7 @@
 	require("bbcode.php");
 ?>
 <link rel="stylesheet" type="text/css" href="css/auteurstyle.css">
-<main class="auteur">
+<main class="principal">
 	<?php foreach ($pdostate as $ligne) {?>
 	<?php $images = "img/Auteurs/".$ligne['id'].".jpg";?>
 	<div class="position">

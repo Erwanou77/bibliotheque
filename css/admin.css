@@ -1,0 +1,39 @@
+.info {
+  background-color: #3f3c3c;
+  color: white;
+  width: 450px;
+  height: 250px;
+
+
+}
+.style{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.search_livre{
+  display: flex;
+  justify-content: center;
+}
+
+.modifier{
+  background-color: #3f3c3c;
+  color: white;
+  width: 150px;
+ height: 70px;
+}
+
+.modif_livre{
+  display: flex;
+  justify-content: center;
+}
+.search_user{
+  display: flex;
+  justify-content: center;
+}
+.modif_user{
+  display: flex;
+  justify-content: center;
+}

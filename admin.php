@@ -1,18 +1,12 @@
 <?php include('header/header.php');?>
-<link rel="stylesheet" type="text/css" href="css/styleindex.css">
-<main class="accueil">
-    <div class="index">
-        <div class="style">
-<button type="button"><a href="list_inscris.php">Liste des clients inscritent</a> </button><br>
-<label for="listing">Recherche: </label>
-<input type="search" id="listing" name="liste">
-<table>
 
-</table>
-<button type="button">Modifier</button><br>
+<link rel="stylesheet" type="text/css" href="css/admin.css">
+<main class="principal" >
 
+    <div class="style">
+<a href="liste_livre.php"><div><button class="info" type="button" title="Liste des livres">Livre </button></div></a>
+<a href="list_inscris.php"><div><button class="info" type="button" title="Liste des utilisateurs">Comptes</button></div></a>
 
-
-
-
+</div>
+</main>
 <?php include('Footer/footer.php');?>
