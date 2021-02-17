@@ -22,7 +22,7 @@ $CONFIG = array("root_path"=>"/bibliotheque/");
 	<nav class="navbar" id="navbar">
 		<div class="max-width">
 			<div class="resplogo">
-				<img src="<?php echo $CONFIG['root_path']; ?>img/logo1.png" alt="Logo du site">
+				<a href="index.php"><img src="<?php echo $CONFIG['root_path']; ?>img/logo1.png" alt="Logo du site"></a>
 				<h1>The Unknown Authors Library</h1>
 			</div>
 			<div class="respsearch">
