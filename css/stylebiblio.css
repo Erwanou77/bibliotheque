@@ -1,5 +1,5 @@
 .principal{
-	cursor: url("/bibliotheque/img/book_close.png"), pointer;
+	cursor: url("/bibliotheque_v1/img/book_close.png"), pointer;
 }
 .select{
 	display: flex;
@@ -12,7 +12,7 @@
 }
 .select button{
 	padding: 5px;
-	background:url('/bibliotheque_v2/img/fond_cuir.jpg')no-repeat;
+	background:url('/bibliotheque_v1/img/fond_cuir.jpg')no-repeat;
 	color: white;
 }
 .container{

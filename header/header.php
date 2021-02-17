@@ -1,6 +1,6 @@
 <?php
 
-$CONFIG = array("root_path"=>"/bibliotheque_v2");
+$CONFIG = array("root_path"=>"/bibliotheque_v1");
 
 ?>
 <!DOCTYPE html>
