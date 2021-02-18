@@ -3,7 +3,7 @@
 	padding:0;
 }
 footer{
-	background:url('/Biblio/img/fond_cuir.jpg')no-repeat;
+	background:url('/biblio/img/fond_cuir.jpg')no-repeat;
 	background-size: 100%;
 	width: 100%;
 	display: flex;

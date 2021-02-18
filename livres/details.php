@@ -1,4 +1,4 @@
-<?php 
+<?php
 require"../bdd/detailslivres.php";
 include("../bbcode.php");
 require("../header/header.php")?>
@@ -7,7 +7,7 @@ require("../header/header.php")?>
 	<?php foreach ($pdostat as $ligne) {?>
 	<?php $images = "../img/couvertures/".$ligne['isbn'].".png";?>
 	<div class="retour">
-		<p><a href="../bibliotheque.php">Biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;<?php echo htmlspecialchars($ligne['titres']); ?></p>
+		<p><a href="../bibliotheque.php">Biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;<?php echo htmlspecialchars($ligne['titre']); ?></p>
 	</div>
 	<div class="all">
 		<div class="centrage">
@@ -16,15 +16,15 @@ require("../header/header.php")?>
 				<h2>Caract&#233;ristiques d&#233;taill&#233;es</h2>
 				<dl>
 					<dt>Titre :</dt>
-					<dd><?php echo htmlspecialchars($ligne['titres']); ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['titre']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Auteurs :</dt>
-					<dd><?php echo htmlspecialchars($ligne['auteurs']); ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['auteur']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Editeurs :</dt>
-					<dd><?php echo htmlspecialchars($ligne['editeurs']); ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['editeur']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Date de publication :</dt>
@@ -47,6 +47,7 @@ require("../header/header.php")?>
 		<div class="resume">
 			<h2>Synopsis</h2>
 			<p><?php echo bbcode(htmlspecialchars($ligne['synopsis']));?></p>
+			<p class="reserver">Pour reserver ce livre <a href="../users/voslivresreserv.php">clique ici</a></p>
 		</div>
 	</div>
 <?php } ?>

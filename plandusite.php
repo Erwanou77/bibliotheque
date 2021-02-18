@@ -20,7 +20,7 @@
 			<li><a href="bibliotheque.php"><i class="fas fa-book-open"></i> Biblioth&#232;que</a><br><br>
 				<ul>
 					<?php foreach ($pdostat as $ligne) {?>
-					<li><a href="livres/details.php?isbn=<?php echo $ligne['isbn'];?>"><?php echo $ligne['titres']; ?></a></li>
+					<li><a href="livres/details.php?isbn=<?php echo $ligne['isbn'];?>"><?php echo $ligne['titre']; ?></a></li>
 					<?php } ?>
 				</ul>
 			</li><br>

@@ -1,39 +1,73 @@
-.info {
-  background-color: #3f3c3c;
-  color: white;
-  width: 450px;
-  height: 250px;
-
-
+.admin{
+	display: flex;
 }
-.style{
-  display: flex;
-  justify-content: space-around;
-  padding-top: 10px;
-  padding-bottom: 20px;
+.gauche{
+	background-color: rgb(121,121,121);
+	width: 300px;
+	color: white;
 }
-
-.search_livre{
-  display: flex;
-  justify-content: center;
+.gauche h2,.droit h2{
+	padding: 10px 0;
+	text-align: center;
 }
-
-.modifier{
-  background-color: #3f3c3c;
-  color: white;
-  width: 150px;
- height: 70px;
+.gauche .edition{
+	margin: 20px 0 20px 20px;
 }
-
-.modif_livre{
-  display: flex;
-  justify-content: center;
+.gauche .edition ul{
+	text-decoration: none;
+	list-style-type: none;
+	margin:10px 0 0 10px;
 }
-.search_user{
-  display: flex;
-  justify-content: center;
+.gauche .edition ul li{
+	padding: 5px 0;
 }
-.modif_user{
-  display: flex;
-  justify-content: center;
+.gauche .edition ul li a{
+	font-size: 18px;
+	color: black;
+}
+.gauche ul li a:hover{
+	text-decoration: underline;
+}
+.droit{
+	background-color: white;
+	width: 100%;
+}
+.form{
+	width: 100%;
+}
+.update{
+	display: flex;
+	flex-direction: column;
+}
+.group-input{
+	background-color: rgb(121,121,121,.6);
+	margin: 0 auto;
+	padding: 10px;
+	border-radius: 6px;
+	width: 30%;
+}
+.form-input{
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+.pres-input{
+	padding: 8px;
+	border-radius: 6px;
+	border: none;
+}
+.pres-input:focus{
+	border: 2px solid #F7F364;
+	box-shadow: 0px 0px 3px 2px #FFFCB4;
+}
+@media screen and (max-width: 600px){
+	.admin{
+		flex-direction: column;
+	}
+	.gauche{
+		width: auto;
+	}
+	.group-input{
+		width: 70%;
+	}
 }

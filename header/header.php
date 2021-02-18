@@ -1,7 +1,6 @@
 <?php
-
-$CONFIG = array("root_path"=>"/Biblio/");
-
+session_start();
+$CONFIG = array("root_path"=>"/biblio");
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,20 +9,21 @@ $CONFIG = array("root_path"=>"/Biblio/");
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<link rel="stylesheet" type="text/css" href="<?php echo $CONFIG['root_path']; ?>css/headerstyle.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo $CONFIG['root_path']; ?>/css/headerstyle.css">
 	<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-	<link rel="shortcut icon" href="<?php echo $CONFIG['root_path']; ?>img/logo1.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="<?php echo $CONFIG['root_path']; ?>/img/logo1.ico" type="image/x-icon">
 </head>
 <body>
 <header>
 	<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="top"><i class="fas fa-arrow-alt-circle-up"></i></button>
+
 	<nav class="navbar" id="navbar">
 		<div class="max-width">
 			<div class="resplogo">
-				<a href="index.php"><img src="<?php echo $CONFIG['root_path']; ?>img/logo1.png" alt="Logo du site"></a>
-				<h1>The Unknown Authors Library</h1>
+				<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site">
+				<h1>OpenVia</h1>
 			</div>
 			<div class="respsearch">
 				<form method="GET" class="search">
@@ -39,11 +39,20 @@ $CONFIG = array("root_path"=>"/Biblio/");
 			</div>
 		</div>
 		<ul class="menu">
-			<li><a href="<?php echo $CONFIG['root_path']; ?>index.php">Accueil</a></li>
-			<li><a href="<?php echo $CONFIG['root_path']; ?>auteur.php">Auteurs</a></li>
-			<li><a href="<?php echo $CONFIG['root_path']; ?>bibliotheque.php">Biblioth&#232;que</a></li>
-			<li><a href="<?php echo $CONFIG['root_path']; ?>connexion.php">Se connecter</a></li>
-			<li><a href="<?php echo $CONFIG['root_path']; ?>contact.php">Contact</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/index.php">Accueil</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/auteur.php">Auteurs</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php">Biblioth&#232;que</a></li>
+			<?php
+			if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 1) { ?>
+				<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/nouveaulivre.php">Admin</a></li>
+				<li><a href="<?php echo $CONFIG['root_path']; ?>/bdd/logout.php">Se déconnecter</a></li>
+			<?php
+			}elseif(isset($_SESSION['connecter']) && $_SESSION['admin'] == 0){
+			?>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/bdd/logout.php">Se déconnecter</a></li>
+		<?php }else{?>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/accueil/accueil.php">Se connecter</a></li><?php } ?>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/contact.php">Contact</a></li>
 		</ul>
 	</nav>
 	<script type="text/javascript">
@@ -74,7 +83,7 @@ $CONFIG = array("root_path"=>"/Biblio/");
 				if (auteur != "") {
 					$.ajax({
 						type: 'GET',
-						url: '<?php echo $CONFIG['root_path']; ?>bdd/search.php',
+						url: '<?php echo $CONFIG['root_path']; ?>/bdd/search.php',
 						data:'auteur=' + encodeURIComponent(auteur),
 						success: function(data){
 							if (data != "") {
