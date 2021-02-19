@@ -3,9 +3,9 @@
 <main class="principal">
     <div class="index">
         <div class="style">
-            <h1>Qu'est-ce que "The Unknown Authors Library" ?</h1>
+            <h1>Qu'est-ce que "OpenVia" ?</h1>
             <p>
-                The Unknown Authors Library est un site internet permettant de pouvoir faire figurer les livres de nouveaux écrivains pour qu'ils puissent se faire connaître partout en France. De plus, notre site a aussi de grand écrivains. De ce fait, les écrivains qui sont connus aujourd'hui pourront discuter avec les nouveaux écrivains pour leurs donner des conseils. 
+                OpenVia est un site internet permettant de pouvoir faire figurer les livres de nouveaux écrivains pour qu'ils puissent se faire connaître partout en France. De plus, notre site a aussi de grand écrivains. De ce fait, les écrivains qui sont connus aujourd'hui pourront discuter avec les nouveaux écrivains pour leurs donner des conseils. 
             </p>
         </div>
         <div class="img">

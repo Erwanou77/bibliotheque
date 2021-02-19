@@ -1,0 +1,34 @@
+.informations{
+	display: flex;
+	justify-content: space-between;
+}
+.menugauche{
+	width: 25%;
+	padding: 20px;
+	background-color: white;
+}
+.menugauche .avatar{
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.menugauche .avatar img{
+	border-radius: 50%;
+}
+.menugauche .avatar h2{
+	margin: 0 auto;
+}
+.menugauche ul{
+	list-style-type: none;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.menugauche ul li{
+	padding: 5px 0;
+}
+.menugauche ul li a{
+	color: black;
+}
+.menugauche ul li a:hover{
+	text-decoration: underline;
+}
