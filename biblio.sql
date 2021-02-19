@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 17 fév. 2021 à 09:08
+-- Généré le : ven. 19 fév. 2021 à 12:45
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -155,8 +155,8 @@ CREATE TABLE IF NOT EXISTS `livre` (
   `date` varchar(50) NOT NULL,
   `isbn` bigint(20) NOT NULL,
   `genre` varchar(50) NOT NULL,
-  `nbpage` int(11) NOT NULL,
-  `synopsis` varchar(10000) NOT NULL,
+  `nbpage` int(11) DEFAULT NULL,
+  `synopsis` varchar(10000) DEFAULT NULL,
   `id_auteur` int(11) NOT NULL,
   `id_users` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -170,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `livre` (
 
 INSERT INTO `livre` (`id`, `titre`, `auteur`, `editeur`, `date`, `isbn`, `genre`, `nbpage`, `synopsis`, `id_auteur`, `id_users`) VALUES
 (1, 'Juste une Ombre', 'Karine Giébel', 'Fleuve éditions', '2012', 2265096490, 'Roman ', 512, 'Tu te croyais forte. Invincible. Installée sur ton piédestal, tu imaginais pouvoir régenter le monde.[rl]Tu manipules? Tu deviendras une proie.[rl]Tu domines? Tu deviendras une esclave.[rl]Tu mènes une vie normale, banale, plutôt enviable. Tu as su t\'imposer dans ce monde, y trouver ta place.[rl]Et puis un jour.[rl]Un jour, tu te retournes et tu vois une ombre derrière toi.[rl]À partir de ce jour-là, elle te poursuit. Sans relâche.[rl]Juste une ombre.[rl]Sans visage, sans nom, sans mobile déclaré.[rl]On te suit dans la rue, on ouvre ton courrier, on ferme tes fenêtres.[rl]On t\'observe jusque dans les moments les plus intimes.[rl]Les flics te conseillent d\'aller consulter un psychiatre. Tes amis s\'écartent de toi.[rl]Personne ne te comprend, personne ne peut t\'aider. Tu es seule.[rl]Et l\'ombre est toujours là. Dans ta vie, dans ton dos.[rl]Ou seulement dans ta tête ?[rl]Le temps que tu comprennes, il sera peut-être trop tard.[rl]Tu commandes? Apprends l\'obéissance.[rl]Tu méprises? Apprends le respect.[rl]Tu veux vivre? Meurs en silence...', 1, NULL),
-(2, 'Maîtres du jeu', 'Karine Giébel', 'Pocket', '2013', 2266243004, 'Roman ', 128, 'Il y a des crimes parfaits. Il y a des meurtres gratuits.[rl]Folie sanguinaire ou machination diabolique, la peur est la même. Elle est là, partout : elle s\'insinue, elle vous étouffe... Pour lui, c\'est un nectar. Pour vous, une attente insoutenable. D\'où viendra le coup fatal ? De l\'ami ? De l\'amant ? De cet inconnu à l\'air inoffensif ? D\'outre-tombe, peut-être...', 1, NULL),
+(2, 'Maîtres du jeu', 'Karine Giébel', 'Pocket', '2013', 2266243004, 'Roman', 128, 'Il y a des crimes parfaits. Il y a des meurtres gratuits.[rl]Folie sanguinaire ou machination diabolique, la peur est la même. Elle est là, partout : elle s\'insinue, elle vous étouffe... Pour lui, c\'est un nectar. Pour vous, une attente insoutenable. D\'où viendra le coup fatal ? De l\'ami ? De l\'amant ? De cet inconnu à l\'air inoffensif ? D\'outre-tombe, peut-être...', 1, NULL),
 (3, 'Satan était un ange', 'Karine Giébel', 'Pocket', '2015', 2266258656, 'Roman', 384, 'Deux trajectoires, deux lignes de fuite.[rl]Hier encore, François était quelqu\'un. Un homme qu\'on regardait avec admiration, avec envie. Aujourd\'hui, il n\'est plus qu\'un fugitif tentant d\'échapper à son assassin. Qui le rattrapera, où qu\'il aille. Quoi qu\'il fasse.[rl]Paul regarde derrière lui ; il voit la cohorte des victimes qui hurlent vengeance. Il paye le prix de ses fautes. L\'échéance approche...[rl]Dans la même voiture, sur une même route, deux hommes que tout semble opposer, et qui pourtant fuient ensemble leur destin différent. Rouler droit devant. Faire ce qu\'ils n\'ont jamais fait.[rl]Puisque l\'horizon est bouché, autant tenter une dernière percée. Flamboyante.', 1, NULL),
 (4, 'Un lieu incertain', 'Fred Vargas', 'Viviane hamy', '2008', 2878582853, 'Roman', 386, '\" – Bien, dit Clyde-Fox en se rechaussant. Sale histoire. Faites votre job, Radstock, allez voir ça. C\'est un tas de vieilles chaussures posées sur le trottoir. Préparez votre âme. Il y en a une vingtaine peut-être, vous ne pouvez pas les manquer.[rl]– Ce n\'est pas mon job, Clyde-Fox.[rl]– Bien sûr que si. Elles sont alignées avec soin, les pointes dirigées vers le cimetière. Je vous parle évidemment de la vieille grille principale.[rl]– Le vieux cimetière est surveillé la nuit. Fermé pour les hommes et pour les chaussures des hommes.[rl]– Eh bien elles veulent entrer tout de même, et toute leur attitude est très déplaisante. Allez les regarder, faites votre job.[rl]– Clyde-Fox, je me fous que vos vieilles chaussures veuillent entrer là-dedans.[rl]– Vous avez tort, Radstock. Parce qu\'il y a les pieds dedans.[rl]Il y eut un silence, une onde de choc désagréable. Une petite plainte sortit de la gorge d\'Estalère, Danglard serra les bras. Adamsberg arrêta sa marche et leva la tête. \"', 2, NULL),
 (5, 'Temps glaciaires', 'Fred Vargas', 'J\'ai lu', '2016', 2290120332, 'Roman ', 480, 'Le printemps s\'annonça par un triolet de suicides. Une même signature laissée près des victimes, un étrange symbole en forme de guillotine. Pour le commissaire Adamsberg et ses adjoints Danglard et Retancourt, c\'est le début d\'une enquête débridée qui les conduira des arcanes d\'une étrange société, férue des écrits de Robespierre, aux terres lointaines et embrumées d\'Islande. Entre polar historique, tragédie et conte fantastique, Fred Vargas maîtrise à merveille le subtil équilibre des genres pour créer le sien, inimitable.', 2, NULL),

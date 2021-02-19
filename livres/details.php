@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<?php 
-=======
 <?php
->>>>>>> 43750d5256da08833c6a6682623056de8a4b2c34
 require"../bdd/detailslivres.php";
 include("../bbcode.php");
 require("../header/header.php")?>
@@ -51,7 +47,13 @@ require("../header/header.php")?>
 		<div class="resume">
 			<h2>Synopsis</h2>
 			<p><?php echo bbcode(htmlspecialchars($ligne['synopsis']));?></p>
+			<?php if (isset($_SESSION['connecter'])) { ?>
+				<div class="reserver">
+					<a href="">Pour r&#233;server ce livre cliquez ici</a>
+				</div>
+			<?php } ?>
 		</div>
+
 	</div>
 <?php } ?>
 </section>

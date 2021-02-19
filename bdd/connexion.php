@@ -10,11 +10,12 @@
         }
         $info = $select->fetch();
         if(isset($email) && $password == $info['password']){
-            
+            $_SESSION['connecter'] = true;
+            $_SESSION["admin"] = $info['admin'];
             $_SESSION["nom"] = $info['nom'];
             $_SESSION["prenom"] = $info['prenom'];
             $_SESSION["email"] = $info['email'];
-            header("location:../users/profil.php"); 
+            header("location:../bibliotheque.php"); 
         }else{
             header("location:../accueil/accueil.php");
         }
