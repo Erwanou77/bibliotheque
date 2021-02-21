@@ -17,9 +17,6 @@
     font-size : 22px;
     padding-bottom: 10px;
 }
-.index .img{
-    display: flex;
-}
 @media screen and (max-width: 800px){
   .index{
       flex-direction: column-reverse;

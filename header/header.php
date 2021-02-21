@@ -17,11 +17,11 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 	<style type="text/css">
 	footer,.select button,.navbar{
 		background:url('<?php echo $CONFIG['root_path']; ?>/img/fond_cuir.jpg')no-repeat;
-		background-size: 100%;
+		background-size: 100% 100%;
 	}
 	.principal{
 		background: url("<?php echo $CONFIG['root_path']; ?>/img/parchemin_fond.jpg");
-		background-size: 100%;
+		background-size: 100% 100%;
 	}
 	</style>
 </head>
@@ -32,7 +32,7 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 	<nav class="navbar" id="navbar">
 		<div class="max-width">
 			<div class="resplogo">
-				<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site">
+				<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site" width="150px" >
 				<h1>OpenVia</h1>
 			</div>
 			<div class="respsearch">

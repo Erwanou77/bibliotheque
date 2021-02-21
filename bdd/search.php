@@ -10,8 +10,8 @@
 			$images = "img/couvertures/" . $r['isbn'] . ".png";
 			?>
 			<a class="sea" href="livres/details.php?isbn=<?php echo $r['isbn'];?>">
-				<img src="<?php echo $images; ?>">
-				<p><?php echo $r['titre'] . "<br>" . $r['auteur'];?></p>
+				<img src="<?php echo $images; ?>" width="150px">
+				<p><?php echo $r['titre'] . "<br>" . "<b>" . $r['auteur'] . "</b>";?></p>
 			</a>
 		<?php }
 	}
