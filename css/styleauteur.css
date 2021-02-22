@@ -1,6 +1,7 @@
 .retour p{
 	text-align: center;
 	font-size: 15px;
+	padding: 20px 0;
 	background: white;
 	width: 350px;
 	border-radius: 0 20px 20px 0;
@@ -37,17 +38,20 @@
 .texte h4{
 	font-weight: normal;
 }
-.texte h1,h2,h4,p{
+.texte h1,.texte h2,.texte h4,.texte p{
 	padding: 20px 0;
 	text-align: center;
 }
 .biographie{
 	padding: 0 20px 20px 20px;
 	border-bottom: 2px solid #f2f2f2;
-	margin-bottom: 20px; 
+	margin-bottom: 20px;
 }
 h2{
 	text-align: center;
+}
+.biographie p{
+	padding: 20px 0;
 }
 .bibliographie{
 	padding: 0 40px;

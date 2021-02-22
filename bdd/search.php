@@ -1,17 +1,17 @@
-<?php 
+<?php
 	session_start();
-	require"config.php"; 
+	require"config.php";
 	if (isset($_GET['auteur'])) {
 		$auteur = (string) trim($_GET['auteur']);
-		$pdostat = $bdd->prepare("SELECT * FROM livres WHERE titres LIKE ? OR auteurs LIKE ?");
-		$pdostat->execute(array("$auteur%"));
-		$aut = $pdostat->fetchAll();
+		$pdosta = $bdd->prepare("SELECT * FROM livre WHERE titre LIKE ?");
+		$pdosta->execute(array("$auteur%"));
+		$aut = $pdosta->fetchAll();
 		foreach ($aut as $r) {
-			$images = "/bibliotheque/img/couvertures/" . $r['isbn'] . ".png";
-			?>		
-			<a class="sea" href="/bibliotheque/livres/details.php?isbn=<?php echo $r['isbn'];?>">
+			$images = "img/couvertures/" . $r['isbn'] . ".png";
+			?>
+			<a class="sea" href="livres/details.php?isbn=<?php echo $r['isbn'];?>">
 				<img src="<?php echo $images; ?>">
-				<p><?php echo $r['titres'] . "<br>" . $r['auteurs'];?></p>
+				<p><?php echo $r['titre'] . "<br>" . $r['auteur'];?></p>
 			</a>
 		<?php }
 	}
