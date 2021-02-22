@@ -7,8 +7,8 @@
 	<form method="POST" class="select">
 		<select name="trie">
 			<option value="">Trier par :</option>
-			<option value="date">Trier par date</option>
-			<option value="auteur">Trier par auteur</option>
+			<option value="annee">Trier par date</option>
+			<option value="nom">Trier par auteur</option>
 		</select>
 		<button type="submit">Rafra&#238;chir</button>
 	</form>
@@ -25,15 +25,17 @@
 						</dl>
 						<dl>
 							<dt>Auteurs :</dt>
-							<dd><?php echo $ligne['auteur']; ?></dd>
+							<dd>
+								<?php echo $ligne['nom'] . " " . $ligne['prenom']; ?>
+							</dd>
 						</dl>
 						<dl>
 							<dt>Editeurs :</dt>
 							<dd><?php echo $ligne['editeur']; ?></dd>
 						</dl>
 						<dl>
-							<dt>Date de publication :</dt>
-							<dd><?php echo $ligne['date']; ?></dd>
+							<dt>Année de publication :</dt>
+							<dd><?php echo $ligne['annee']; ?></dd>
 						</dl>
 						<dl>
 							<dt>ISBN :</dt>

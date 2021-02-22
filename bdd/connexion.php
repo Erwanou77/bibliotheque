@@ -1,15 +1,15 @@
 <?php
     session_start();
     $email = stripslashes(htmlspecialchars($_POST['email']));
-    $password = stripslashes(htmlspecialchars(md5($_POST['password'])));
+    $password = stripslashes(htmlspecialchars(md5($_POST['mdp'])));
 	if (isset($_POST['submit'])) {
         require"config.php";
-        $select=$bdd->prepare("SELECT * FROM users WHERE email = '$email'");        
+        $select=$bdd->prepare("SELECT * FROM utilisateur WHERE email = '$email'");        
         if (isset($email)) {
             $select->execute(array($email));
         }
         $info = $select->fetch();
-        if(isset($email) && $password == $info['password']){
+        if(isset($email) && $password == $info['mdp']){
             $_SESSION['connecter'] = true;
             $_SESSION["admin"] = $info['admin'];
             $_SESSION["nom"] = $info['nom'];

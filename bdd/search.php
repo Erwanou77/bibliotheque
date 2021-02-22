@@ -1,10 +1,10 @@
 <?php
 	session_start();
 	require"config.php";
-	if (isset($_GET['auteur'])) {
-		$auteur = (string) trim($_GET['auteur']);
-		$pdosta = $bdd->prepare("SELECT * FROM livre WHERE titre LIKE ?");
-		$pdosta->execute(array("$auteur%"));
+	if (isset($_GET['personne'])) {
+		$auteur = (string) trim($_GET['personne']);
+		$pdosta = $bdd->prepare("SELECT * FROM livre JOIN genre ON livre.genre = genre.id JOIN editeur ON livre.editeur = editeur.id JOIN auteur ON livre.isbn = auteur.idLivre JOIN personne ON auteur.idPersonne = personne.id WHERE titre LIKE ?");
+		$pdosta->execute(array("$personne%"));
 		$aut = $pdosta->fetchAll();
 		foreach ($aut as $r) {
 			$images = "img/couvertures/" . $r['isbn'] . ".png";
