@@ -1,6 +1,6 @@
 <?php
 session_start();
-$CONFIG = array("root_path"=>"/bibliotheque.test");
+$CONFIG = array("root_path"=>"/bibliotheque");
 ?>
 <!DOCTYPE html>
 <html>
