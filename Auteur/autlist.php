@@ -26,19 +26,11 @@
 					<!-- Appel du genre des auteurs depuis la bdd -->
 					<p><?php echo bbcode(htmlspecialchars($ligne['genre']))?></p>
 				</div>
-				<img src="<?php echo $images; ?>" alt="Portrait <?php echo bbcode(htmlspecialchars($ligne['prenom'])) . " " . bbcode(htmlspecialchars($ligne['nom']));?>">
+				<img src="<?php echo $images; ?>" alt="Portrait <?php echo bbcode(htmlspecialchars($ligne['nom'])) . " " . bbcode(htmlspecialchars($ligne['prenom']));?>">
 			</div>
 			<div class="biographie">
 				<h2>Biographie</h2>
 				<p><?php echo bbcode(htmlspecialchars($ligne['biographie']))?></p>
-			</div>
-			<div class="bibliographie">
-				<h2>Bibliographie</h2>
-				<ul>
-					<?php foreach ($pdostate as $lignes) {?>
-					<li><?php echo bbcode(htmlspecialchars($lignes['bibliographie']))?></li>
-					<?php } ?>
-				</ul>
 			</div>
 		</div>
 	</main>

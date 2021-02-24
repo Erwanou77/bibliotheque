@@ -3,7 +3,7 @@
 	$nom = stripslashes(htmlspecialchars($_POST['nom']));
 	$prenom = stripslashes(htmlspecialchars($_POST['prenom']));
 	$email = stripslashes(htmlspecialchars($_POST['email']));
-	$password = stripslashes(htmlspecialchars(md5($_POST['mdp'])));
+	$password = stripslashes(htmlspecialchars(md5($_POST['password'])));
 	$create_datetime = date("Y-m-d H:i:s");
 	if (isset($_POST['submit'])) {
 		if(empty($nom)) {

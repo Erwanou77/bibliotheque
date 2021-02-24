@@ -1,7 +1,7 @@
 <?php
     session_start();
     $email = stripslashes(htmlspecialchars($_POST['email']));
-    $password = stripslashes(htmlspecialchars(md5($_POST['mdp'])));
+    $password = stripslashes(htmlspecialchars(md5($_POST['password'])));
 	if (isset($_POST['submit'])) {
         require"config.php";
         $select=$bdd->prepare("SELECT * FROM utilisateur WHERE email = '$email'");        

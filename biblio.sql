@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 22 fév. 2021 à 21:30
+-- Généré le : mar. 23 fév. 2021 à 14:16
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -50,7 +50,7 @@ INSERT INTO `auteur` (`idPersonne`, `idLivre`, `idRole`) VALUES
 (4, '2266283782', 1),
 (4, '2374481905', 1),
 (5, '2253003964', 1),
-(6, '97827234345', 1),
+(6, '9782723434560', 1),
 (7, '2020347199', 1),
 (8, '9782412039601', 1),
 (9, '9782253044901', 1),
@@ -58,7 +58,7 @@ INSERT INTO `auteur` (`idPersonne`, `idLivre`, `idRole`) VALUES
 (11, '9782820337795', 1),
 (12, '2081382644', 1),
 (13, '9782377172191', 1),
-(14, '208139071X', 1),
+(14, '9782081390713', 1),
 (15, '9782290034002', 1),
 (16, '9782843449260', 1),
 (17, '9782843449253', 1),
@@ -70,68 +70,6 @@ INSERT INTO `auteur` (`idPersonne`, `idLivre`, `idRole`) VALUES
 (23, '9782277124276', 1),
 (24, '9791035801823', 1),
 (25, '9782290227268', 1);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `bibliographie`
---
-
-DROP TABLE IF EXISTS `bibliographie`;
-CREATE TABLE IF NOT EXISTS `bibliographie` (
-  `id_personne` int(11) NOT NULL,
-  `bibliographie` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `bibliographie`
---
-
-INSERT INTO `bibliographie` (`id_personne`, `bibliographie`) VALUES
-(1, 'Terminus Elicius, La Vie du rail, 2004 (réédition : Belfond, 2016).'),
-(1, 'Meurtres pour rédemption, La Vie du rail, 2006 (réédition : Fleuve noir, 2010).'),
-(1, 'Les Morsures de l\'ombre, Fleuve noir, 2007.'),
-(1, 'Chiens de sang, Fleuve noir, 2008.'),
-(1, 'Jusqu\'à ce que la mort nous unisse, Fleuve noir, 2009. Le téléfilm Jusqu\'à ce que la mort nous unisse, qui a reçu le Grand Prix 2018 du Film francophone de télévision au Festival Polar de Cognac, a  été diffusé pour la première fois sur France 3 le 27 novembre 2018.'),
-(1, 'Juste une ombre, Fleuve noir, 2012.'),
-(1, 'Purgatoire des innocents, Fleuve noir, 2013.'),
-(1, 'Post  Mortem, 12-21, 2013'),
-(1, 'Satan était un ange, Fleuve noir, 2014.'),
-(1, 'De force, Belfond, mars 2016.'),
-(1, 'Toutes blessent la dernière tue, Belfond, 2018.'),
-(1, 'Ce que tu as fait de moi, Belfond, 2019'),
-(2, 'L\'Homme aux cercles bleus, 1991 - Prix du festival de Saint-Nazaire 1992.'),
-(2, 'L\'Homme à l\'envers, 1999 - Grand prix du roman noir de Cognac 2000, Prix mystère de la critique 2000.'),
-(2, 'Pars vite et reviens tard, 2001 - Prix des libraires 2002, Prix des lectrices ELLE 2002, Deutscher Krimipreis.'),
-(2, 'Sous les vents de Neptune, 2004'),
-(2, 'Dans les bois éternels, 2006'),
-(2, 'Un lieu incertain, 2008'),
-(2, 'L\'Armée furieuse, 2011'),
-(2, 'Temps glaciaires, 2015 - Prix Landerneau polar 2015'),
-(2, 'Quand sort la recluse, 2017'),
-(3, 'Victim 2117, 2020'),
-(3, 'L\'Unité Alphabet, 2020'),
-(3, 'Selfies, 2019'),
-(3, 'Promesse, 2018'),
-(3, 'Promesse, 2018'),
-(3, 'L\'effet papillon, 2017'),
-(3, 'Dossier 64, 2016'),
-(3, 'Délivrance, 2015'),
-(3, 'Profanation, Édition noël, 2014'),
-(3, 'Profanation, 2014'),
-(3, 'Miséricorde, 2013'),
-(4, 'Glacé, XO éditions, 2011'),
-(4, 'Le Cercle, XO éditions, 2012'),
-(4, 'N\'éteins pas la lumière, XO éditions, 2014'),
-(4, 'Nuit, XO éditions, 2017'),
-(4, 'Sœurs, XO éditions, 2018'),
-(4, 'La Vallée, XO éditions, 2020'),
-(5, 'Miss Marple (1), lu par Michael Lonsdale, Éditions Thélème, Paris, 2004, 1 CD.'),
-(5, 'Miss Marple (2), lu par Michael Lonsdale, Éditions Thélème, Paris, 2004, 1 CD.'),
-(5, 'Miss Marple (3), lu par Guillaume Galienne, Éditions Thélème, Paris, 2004, 1 CD.'),
-(5, 'Miss Marple (4), lu par Xavier Gallais, Éditions Thélème, Paris, 2005, 1 CD.'),
-(5, 'Miss Marple (5), lu par Gabrièle Valensi, Éditions Thélème, Paris, 2005, 1 CD.'),
-(5, 'Miss Marple (6), lu par Thierry Hancisse, Éditions Thélème, Paris, 2005, 1 CD.');
 
 -- --------------------------------------------------------
 
@@ -261,7 +199,7 @@ CREATE TABLE IF NOT EXISTS `livre` (
 INSERT INTO `livre` (`isbn`, `titre`, `annee`, `nbpages`, `synopsis`, `date_retour`, `langue`, `genre`, `editeur`, `utilisateur`) VALUES
 ('2020347199', 'Les bûchers de bocanegra', 2008, NULL, NULL, NULL, 2, 2, 11, NULL),
 ('2081382644', 'Le Banquet', 2016, NULL, NULL, NULL, 2, 9, 2, NULL),
-('208139071X', 'Discours de la Méthode', 2016, NULL, NULL, NULL, 2, 9, 2, NULL),
+('9782081390713', 'Discours de la Méthode', 2016, 191, NULL, NULL, 2, 9, 2, NULL),
 ('2226319468', 'Promesse', 2016, 656, 'Plus de 13 millions d\'exemplaires vendus dans le monde, couronné par tous les grands prix du polar, dont le Grand Prix policier des lectrices de Elle, le Danois Jussi Adler Olsen est une figure incontournable du thriller scandinave.[rl][rl]Bornholm, une île danoise de la mer baltique, fin des années 1990. Le cadavre d\'une jeune fille est retrouvé dans un arbre, son vélo broyé au bord de la route. Aucune trace du chauffard : affaire classée. Sauf pour un inspecteur de la police locale qui finit dix-sept ans plus tard par demander l\'aide de l\'inspecteur Carl Mørck. Avant de se tirer une balle dans la tête.[rl][rl]À l\'initiative de Rose, l\'assistante du flegmatique Mørck, l\'insolite trio du Département V en charge des cold cases débarque sur l\'île de Bornholm. En remuant le passé, ils prennent le risque de réveiller de vieux démons...', NULL, 2, 2, 23, NULL),
 ('2253003964', 'Dix petits nègres', 1976, 224, 'En a-t-on parlé de l’Île du Nègre! Elle avait, selon certains, été achetée par une star de Hollywood. Des journaux avaient insinué que l’Amirauté britannique s’y livrait à des expériences ultrasecrètes. Bref, quand ils reçurent –sans savoir de qui– cette invitation à passer des vacances à l’Île du Nègre, tous les dix accoururent.', NULL, 2, 2, 24, NULL),
 ('2253184381', 'Délivrance', 2015, 744, 'Une bouteille jetée à la mer, repêchée et oubliée dans un commissariat des Highlands. A l’intérieur, un appel au secours écrit en lettres de sang et en danois. Lorsque le message échoue au Département V de la police de Copenhague, chargé des dossiers non élucidés, les années ont passé. L’imprévisible Carl Morck, Assad, son assistant syrien au flair infaillible, et Rose, la secrétaire punk, vont-ils prendre au sérieux ce SOS ?', NULL, 2, 2, 24, NULL),
@@ -318,26 +256,77 @@ INSERT INTO `personne` (`id`, `nom`, `prenom`, `date_naiss`, `ville_naiss`, `bio
 (3, 'Adler-Olsen', 'Jussi', '1950-08-02 00:00:00', 'Copenhague, Danemark', 'Depuis 2007, Jussi Adler-Olsen s\'est spécialisé dans une série de romans policiers dont Dossier 64, qui a été la meilleure vente de livres en 2010 au Danemark ; ainsi il a reçu cette année-là la distinction du meilleur prix littéraire danois, le prix du club des libraires : les boghandlernes gyldne laurbær ou « lauriers d\'or des libraires ».'),
 (4, 'Minier', 'Bernard', '1960-08-26 00:00:00', 'Béziers, Hérault, France', 'Bernard Minier grandit à Montréjeau au pied des Pyrénées, puis fait des études à Tarbes et à Toulouse avant de séjourner un an en Espagne. Il vit aujourd’hui en Île-de-France.[rl][rl]Il fait d\'abord carrière dans l\'administration des douanes comme contrôleur principal, tout en participant à des concours de nouvelles avant de franchir le pas et d\'envoyer un manuscrit de roman à des éditeurs.[rl][rl]Il publie son premier roman, Glacé, en 2011. Salué par la presse et Prix du meilleur roman francophone au Festival Polar de Cognac, Glacé a très vite connu un large succès public et a été traduit ou est en cours de traduction dans 22 langues, dont l’anglais. Il rencontre le même succès dans plusieurs pays européens. Glacé a été adapté en série télévisée par Gaumont Télévision et M6, diffusée sur M6 en 2017 et disponible sur Netflix depuis octobre 2017. En mai 2019, le Sunday Times le classe dans son Top 100 des meilleurs romans policiers depuis 1945.[rl][rl]Glacé a pour héros le commandant Martin Servaz, un policier de Toulouse profondément humain et lettré, confronté à une série de crimes aussi épouvantables qu’incompréhensibles dans les Pyrénées au cœur de l’hiver.[rl][rl]Le Cercle (2012), N’éteins pas la lumière (2014), Nuit (2017), Sœurs (2018) et La Vallée (2020) renouent avec le même personnage..[rl][rl]Il a également publié 2 unitaires : Une putain d’histoire (2015, prix du meilleur roman francophone du Festival Polar de Cognac), dont l’intrigue ancrée aux Etats-Unis évoque les dérives d\'Internet et les menaces sur les libertés individuelles, et M, le bord de l\'abîme (2019), dont l\'histoire se déroule à Hong-Kong et aborde la puissance de la technologie et de l\'Intelligence artificielle.[rl][rl]Ses livres, traduits en 22 langues, sont tous publiés aux Éditions XO et repris en format poche chez Pocket.[rl][rl]Il fait aussi partie du collectif d\'artistes la Ligue de l\'Imaginaire.'),
 (5, 'Christie', 'Agatha', '1890-09-15 00:00:00', 'Torquay', 'Créatrice du fameux détective belge Hercule Poirot, de la surannée Miss Marple et du duo infernal Tuppence et Berresford, Agatha Christie est encore considérée comme la reine du crime. Elevée dans un milieu bourgeois, la jeune Agatha se trouve vite orpheline de père, développant son aptitude à l\'écriture sous le regard bienveillant d\'une mère. Infirmière lors de la Deuxième Guerre mondiale, elle apprend l\'usage des drogues, ce qui lui sert plus tard lorsqu\'à la suite d\'un pari avec sa soeur, elle publie son premier roman en 1920 \'La Mystérieuse affaire de Styles\', où apparaît Hercule Poirot. Miss Jane Marple fait, quant à elle, son apparition dans \'L\'Affaire Prothéro\' en 1930, dénouant les énigmes le temps d\'un tricot, bien calée dans son fauteuil, très Old England, tasse de thé à la main. Suivant son deuxième mari archéologue lors de ses missions, Agatha Christie y puise l\'inspiration pour ses romans policiers, trouvant dans le mal du pays sur les dunes d\'Egypte où dans sa chambre du Winter Hotel, pour écrire des intrigues passionnantes se déroulant au pays de la Perfide Albion. Nombre de ses romans seront adaptés au cinéma et à la télévision : \'Mort sur le nil\', \'Le Crime de l\'Orient-Express\' où Pete Ustinov tient le rôle d\'Hercule Poirot... Elle pose les bases du roman policier, obéissant à un système toujours identique mais constamment renouvelé par la variété des histoires et surtout sa manière de capter le lecteur, l\'obligeant à essayer de découvrir le coupable avant qu\'il ne soit dévoilé. Ainsi, la folie, la soif de vengeance, la cupidité sont les causes récurrentes du meurtre, dénoncées habilement par Agatha Christie. Désormais honorable Lady pleine d\'humour, elle s\'éteint en 1976. Ses ventes phénoménales n\'ont pour seuls rivaux que Shakespeare ou la Bible.'),
-(6, 'Toriyama', 'Akira', NULL, NULL, NULL),
-(7, 'Pérez-Reverte', 'Arturo', NULL, NULL, NULL),
-(8, 'Lowe', 'Doug', NULL, NULL, NULL),
-(9, 'Süskind', 'Patrick', NULL, NULL, NULL),
-(10, 'Goscinny', 'René', NULL, NULL, NULL),
-(11, 'Shirai', 'Kaiu', NULL, NULL, NULL),
-(12, 'Platon', NULL, NULL, NULL, NULL),
-(13, 'Nagatsuki', 'Tappei', NULL, NULL, NULL),
-(14, 'Descartes', 'René', NULL, NULL, NULL),
+(6, 'Toriyama', 'Akira', NULL, NULL, 'Akira Toriyama est un mangaka et créateur de personnages japonais né à Kiyosu le 5 avril 1955. Il est réputé dans le monde entier pour son œuvre phare : Dragon Ball (1984-1995). Incontournable du genre shonen (mot qui désigne les mangas destinés aux garçons adolescents), Dragon Ball (1984) devient le deuxième manga le plus vendu de tous les temps. Adapté en dessin animé sous le titre Dragon Ball Z (1989), il participe grandement à la diffusion du 9e Art japonais en France. S’illustrant par un style graphique détaillé et un humour décalé, Akira Toriyama est aussi le créateur de Dr. Slump (1980) et des personnages du jeu vidéo Dragon Quest (1986).'),
+(7, 'Pérez-Reverte', 'Arturo', NULL, NULL, 'Issu d\'une famille de marins, Arturo Perez-Reverte a toujours été passionné par la mer. Dans sa jeunesse, il sèche les cours pour regarder les bateaux accoster. Licencié en sciences politiques et en journalisme, il travaille d\'abord comme matelot, puis devient grand reporter et correspondant de guerre pour la télévision espagnole, notamment pendant la crise du Golfe et en Bosnie. En 1986, Arturo Perez-Reverte débute son travail d\'écriture et sa vie d\'écrivain. Ses romans sont primés : "Le Tableau du maître flamand" reçoit le grand prix de littérature policière en 1993 et "La Peau du tambour" le prix Jean Monnet en 1997. Il publie de nombreux ouvrages, comme "Le Cimetière des bateaux sans nom" ou encore "Le Peintre de bataille" en 2007, qui connaissent tous des succès mondiaux et dont plusieurs ont été portés à l\'écran. Arturo Perez-Reverte partage sa vie entre l\'écriture et sa passion pour la mer et la navigation.'),
+(8, 'Lowe', 'Doug', NULL, NULL, 'Doug Lowe est considéré Outre-Atlantique comme un auteur vétéran avec plus de 40 titres écrits dans la collection pour les Nuls, ce qui lui a permis de vendre plus d\'un million d\'exemplaires de ses différents titres. Il a écrit de nombreux titres sur la suite Office et aussi des ouvrages de programmation comme ASP.NET pour les Nuls.'),
+(9, 'Süskind', 'Patrick', NULL, NULL, 'Patrick Süskind est un écrivain et scénariste allemand. Il est né le 26 mars 1949 à Ambach (code postal 82541) sur le lac de Starnberg (am Starnberger See), en Bavière près de Munich. Il étudie l\'histoire (histoire médiévale et contemporaine) et la littérature à Munich et à Aix-en-Provence. Il travaille ensuite comme scénariste pour la télévision.
+Il écrit une pièce théâtrale à un personnage : "La Contrebasse", qui sera jouée pour la première fois à Munich en 1981. Elle sera publiée en 1984. Cette pièce est jouée régulièrement depuis sa création en Allemagne et a été jouée à Paris avec Jacques Villeret, dans le rôle titre.
+Le Parfum est son premier roman édité pour la première fois en 1985 à Zurich, sous le titre Das Parfum, Die Geschichte eines Mörders, puis traduit en français par Bernard Lortholary en 1986 avant d\'être réédité par Fayard. Il vaut à son auteur un succès mondial. Il a d\'ailleurs fait l\'objet d\'une adaptation au cinéma en 2006 : Le Parfum, histoire d\'un meurtrier. Suskind nous fait part dans Le Parfum de son talent diabolique de la description, notamment celle des odeurs. Une écriture fine et fluide, un récit efficace sont les armes de cette ouvre, qui sans nul doute fait partie des chefs d\'ouvre du 20esiècle en matière de littérature. Un roman incontournable qui change notre perception du monde des odeurs!'),
+(10, 'Goscinny', 'René', NULL, NULL, 'Dessinateur et scénariste français de bande dessinée (1926-1977) père avec Uderzo d\'Astérix le Gaulois.
+René Goscinny, né le 14 août 1926 à Paris (Ve) et mort le 5 novembre 1977 dans la même ville (XVIIe), est un scénariste de bande dessinée, journaliste, écrivain et humoriste français, également réalisateur et scénariste de films.
+Il est l\'un des rédacteurs en chef de Pilote, alors l\'un des principaux journaux français de bande dessinée. Créateur d’Astérix, d’Iznogoud et du Petit Nicolas, scénariste de Lucky Luke durant une longue période, il est l’un des auteurs français les plus lus au monde : l’ensemble de son œuvre représente environ 500 millions d’ouvrages vendus'),
+(11, 'Shirai', 'Kaiu', NULL, NULL, 'Kaiu Shirai (白井カイウ) (un pseudonyme) est scénariste de manga.
+
+Après avoir obtenu son diplôme universitaire, il a travaillé dans une entreprise.
+
+Il a publié deux one-shots dont "Poppy\'s Wish" ("Poppy no Negai", 2016) avec la dessinatrice Posuka Demizu.
+
+Depuis 2016, il collabore avec Posuka Demizu sur la série "The Promised Neverland" ("Yakusoku no Neverland"), un manga publié dans le Weekly Shonen Jump.'),
+(12, 'Platon', NULL, NULL, NULL, 'Platon est un des philosophes majeurs de la pensée occidentale, et de l’Antiquité grecque en particulier. Son œuvre, essentiellement sous forme de dialogues, se présente comme une recherche rigoureuse de la vérité, sans limitation de domaine. Sa réflexion porte aussi bien sur la politique que sur la morale, l’esthétique ou la science.
+La confiance dans la capacité humaine de connaître la réalité est ce qui constitue l’unité de l’œuvre de Platon. Contre les sophistes, qui enseignent l’art de convaincre et de plaire, Platon pose la question du discours vrai. Le réel est connaissable ; l’homme n’est pas limité à ses impressions : par ce qu’il sent, il peut avoir accès à une réalité qui le dépasse. Son œuvre s’oriente ainsi dans deux directions complémentaires : d’une part, chercher la vérité à propos de réalités déterminées (la justice, le monde, par exemple) ; d’autre part, chercher à justifier la possibilité même de connaître la vérité.'),
+(13, 'Nagatsuki', 'Tappei', NULL, NULL, 'Tappei Nagatsuki publie son œuvre dès le 20 avril 20121 sur le site Shōsetsuka ni narō, sous forme de web novel. Media Factory acquiert par la suite les droits pour la publication du roman papier en tant que light novel, illustré par Shinichirou Otsuka. La version française des light novels est quant à elle publiée depuis le 15 juin 2017 par Ofelbe2 sous le titre Re:Zero – Re:vivre dans un autre monde à partir de zéro.
+
+En 2016, sa série a été adaptée en anime du 4 avril 2016 au 19 septembre 2016, pour un total de 25 épisodes regroupant les événements des trois premières parties de l’œuvre. En mars 2019, une seconde saison de l\'anime a été annoncée, le début de sa diffusion étant prévu pour juillet 2020.'),
+(14, 'Descartes', 'René', NULL, NULL, 'René Descartes, né à La Haye en Touraine (devenue Descartes) le 31 mars 1596 et mort à Stockholm (Suède) le 11 février 1650, est un mathématicien, physicien et philosophe français, considéré comme l\'un des fondateurs de la philosophie moderne selon les mots de Hegel.
+Sa conception de la méthode en philosophie, notamment la philosophie naturelle qui est  l\'ancêtre de la physique et de la biologie moderne au sens large, sera reprise par ses contemporains. En particulier, jointe à ses travaux en géométrie algébrique où il introduisit le système de coordonnées dit cartésien, elle servira de base avec les ouvrages de Galilée et Kepler aux travaux de Newton qui cependant ira beaucoup plus loin que Descartes, aussi bien en mathématique qu\'en physique.
+
+On doit à Descartes les lois de la réfraction en optique, qu\'il redécouvre indépendamment de Snell. Sa conception de l\'origine du système solaire sera reprise et étendu par Kant, Laplace et par Carl Friedrich Von Weizsäcker. Einstein fera remarquer que la conception de l\'espace dans la physique cartésienne, et son rôle dans celle-ci, étaient cependant en avance sur son temps par rapport à la conception de Newton, car elle anticipait d\'une certaine façon sur la relativité générale.'),
 (15, 'Kuhn', 'Matt', NULL, NULL, NULL),
-(16, 'Przybylski', 'Stéphane', '1970-01-01 00:00:00', NULL, NULL),
-(17, 'Landis', 'Geoffrey A', '1955-05-28 00:00:00', NULL, NULL),
-(18, 'Zelazny', 'Roger', '1937-05-13 00:00:00', NULL, NULL),
-(19, 'Catani', 'Vittorio', '1940-07-17 00:00:00', NULL, NULL),
-(20, 'Curval', 'Philippe', '1929-12-27 00:00:00', NULL, NULL),
-(21, 'Jemisin', 'NK', '1972-09-19 00:00:00', NULL, NULL),
-(22, 'Tarvel', 'Brice', '1946-08-05 00:00:00', NULL, NULL),
-(23, 'Keyes', 'Daniel', '1927-08-09 00:00:00', NULL, NULL),
-(24, 'Bradbury', 'Ray', '1920-08-22 00:00:00', NULL, NULL),
-(25, 'Asimov', 'Isaac', '1920-01-02 00:00:00', NULL, NULL);
+(16, 'Przybylski', 'Stéphane', '1970-01-01 00:00:00', NULL, 'Stéphane Przybylski est un écrivain, auteur d’ouvrages militaires et historiques.
+
+Il fait ses études à l\'Université de Metz, ville dans laquelle il réside toujours aujourd\'hui. Après des études en graphisme et une maîtrise en communication, il a travaillé pour un groupe de presse spécialisé dans l’histoire militaire, ainsi qu\'en agence publicitaire.
+
+Il se lance peu après dans la rédaction d’ouvrages historiques. Son premier livre, "La Campagne militaire de 1870", est paru en 2004 et a reçu le prix de l’Académie de Stanislas de Nancy l’année suivante.
+
+Trois autres ouvrages ont suivi, dont l\'"Atlas de la Guerre de 1870-1871", publié aux éditions des Paraiges en 2014.
+
+"Le Château des millions d’années" (2015) est son premier roman, premier volet d’une tétralogie, intitulée "Origines". Ce roman a été récompensé par le prix Révélation des Futuriales 2016 et a imposé d\'emblée une nouvelle signature dans le monde de l\'imaginaire, chose que les volumes suivants du cycle ont confirmé.'),
+(17, 'Landis', 'Geoffrey A', '1955-05-28 00:00:00', NULL, 'Geoffrey Alan Landis est un scientifique américain travaillant à la NASA sur les programmes d\'exploration de Mars et de Vénus et les techniques avancées associées1,2. Il a breveté huit modèles de cellules solaires et de dispositifs photovoltaïques3 et a donné des conférences à propos de la possibilité des voyages interstellaires, ainsi que sur celle d\'établir une base lunaire et martienne4.
+
+Il est également l\'auteur d\'ouvrages de science-fiction récompensés par plusieurs prix littéraires prestigieux'),
+(18, 'Zelazny', 'Roger', '1937-05-13 00:00:00', NULL, 'Roger Joseph Zelazny est un auteur des littératures de l\'imaginaire.
+
+Il est le fils d\'un immigré polonais et d\'une américaine d\'origine irlandaise. Au lycée, il devient rédacteur en chef du journal de son école et devient membre du Creative Writing Club. Il est publié pour la première fois dans le fanzine Thurban, en 1953, avec la première partie de l\'histoire "Conditional Benefit". Sa première publication professionnelle a lieu un an plus tard, avec une nouvelle d\'heroic fantasy intitulée "M. Fuller\'s Revolt".
+
+En automne 1955, il entre à l\'Université de Case Western Reserve et en sortira avec un B.A. (équivalent d\'une licence en France) en littérature en 1959. Il est ensuite admis à l\'Université Columbia à New York, où il se spécialise dans le théâtre élisabéthain et jacobéen, obtenant un M.A. en 1962.
+
+Ses débuts en tant qu\'écrivain professionnel sont marqués par la publication simultanée, en 1962, de deux nouvelles, "Passion Play" et "Horseman !". Il connait la célébrité en 1963 avec la nouvelle "Une rose pour l\'ecclésiaste", publiée dans "The Magazine of Fantasy & Science Fiction". Cette histoire sera par la suite rééditée dans un recueil de nouvelles portant le même nom. Il passe progressivement de courtes nouvelles à de plus longues, pour finalement écrire des romans en 1965.
+
+En 1966, il obtient le prix Hugo du meilleur roman pour "Toi l\'immortel" (This Immortal), ex æquo avec Frank Herbert pour son roman "Dune".
+
+Entre 1962 et 1969 il travaille pour la sécurité sociale de Cleveland, dans l\'Ohio, puis à Baltimore, dans le Maryland, passant ses soirées à écrire de la science-fiction. En 1969, Roger Zelazny abandonne définitivement son travail et devient écrivain à plein temps.
+
+Roger Zelazny a marqué la Fantasy avec son "Cycle des Princes d\'Ambre" (The Chronicles of Amber), une saga écrite à partir de 1970 et composée de deux séries de cinq romans. Il a obtenu durant sa carrière six prix Hugo et trois prix Nebula.
+
+Zelazny meurt à l\'âge de 58 ans d\'une insuffisance rénale faisant suite à un cancer du côlon. Il vit alors en colocation avec l\'auteure Jane Lindskold (1962). Peu avant son décès, il lui demande de terminer deux de ses romans inachevés : "Donnerjack", qu\'elle fait publier en 1997, et "Lord Demon", qui est édité en 1999.'),
+(19, 'Catani', 'Vittorio', '1940-07-17 00:00:00', NULL, 'Ancien employé de banque, Vittorio Catani a consacré sa vie et sa carrière à la littérature.
+
+Depuis la revue "Urania" où il publia ses premiers textes – et de qui il reçut ses premiers prix littéraires – jusqu’à son statut d’éditeur sur le site www.fantascienza.com, il est devenu l’un des piliers de la littérature italienne de science-fiction.
+
+Parmi son œuvre foisonnante, on trouve des recueils de nouvelles, des centaines de récits courts et de novelettes, plusieurs essais sur la science-fiction et des romans traduits en Europe parmi lesquels "Le Cinquième Principe" (Il Quinto Principio), paru en 2009.
+
+Aujourd’hui retraité, Catani n’a de cesse d’encourager les littératures de l’Imaginaire, qu’elles se nomment fiction spéculative, transfiction, ou science-fiction.'),
+(20, 'Curval', 'Philippe', '1929-12-27 00:00:00', NULL, 'Philippe Curval est né à Paris. Dans sa petite enfance où il est initié à la science-fiction par son frère, il a traversé trois événements majeurs du XXe siècle, la première grande crise économique mondiale, la guerre contre le nazisme, l’éclatement de la première bombe atomique d’Hiroshima. À dix-sept ans, il abandonne ses études secondaires en même temps qu’il quitte le domicile familial. Après de multiples emplois, il devient photographe professionnel. Il se fait réformer du service militaire après désertion. Au début des années 1950, il participe au mouvement littéraire souterrain qui fonde la science-fiction française, avec notamment Gérard Klein, Jacques Sternberg, Pierre Versins, Georges H. Gallet. Il vend sa collection de « romans extraordinaires » à Valérie Schmidt qui vient d’ouvrir la première librairie de science-fiction À la Balance 2, rue des Beaux-Arts en plein cœur de Saint-Germain-des-Prés. Devenu son assistant, il participe à la première exposition du genre, Présence du futur, en même temps que Jacques Bergier, Boris Vian, etc.
+
+Il publie alors des nouvelles dans Fiction et Satellite, des textes critiques, réalise des collages pour les couvertures de Fiction. De 1955 à 1958, il fait paraître en compagnie de Jacques Sternberg Le Petit Silence Illustré, fanzine précurseur en France de la presse underground à tirage limité. Par goût du nomadisme, il devient visiteur médical, parcourt la France, l’Allemagne et l’Italie à Solex et fait paraître deux romans dont Le Ressac de l’Espace qui reçoit le prix Jules-Verne en 1962.'),
+(21, 'Jemisin', 'NK', '1972-09-19 00:00:00', NULL, 'Nora Jemisin est née à Iowa City, dans l\'Iowa et a grandi à New York et Mobile, en Alabama. Elle a vécu dix ans dans le Massachusetts et déménagé ensuite à New York. Elle a fréquenté l\'université Tulane de 1990 à 1994, où elle a obtenu une licence en psychologie. Elle a continué ses études avec une formation de conseillère d\'orientation et obtenu un Master en éducation à l\'université du Maryland. En 2002, elle participe aux ateliers d\'écriture Viable Paradise (en) avant d\'être publiée pour la première fois en 2004. Sa nouvelle Non-Zero Probabilities est nommée au prix Nebula de la meilleure nouvelle courte 2009 et au prix Hugo de la meilleure nouvelle courte 2010. Puis en 2010 est publié Les Cent Mille Royaumes, qui reçoit le prix Locus du meilleur premier roman 2011. En 2016, 2017 et 2018 les trois romans de sa trilogie des Livres de la terre fracturée obtiennent chacun le prix Hugo du meilleur roman, en plus d\'autres prix prestigieux comme le prix Locus du meilleur roman de fantasy ou le prix Nebula du meilleur roman.'),
+(22, 'Tarvel', 'Brice', '1946-08-05 00:00:00', NULL, 'Brice Tarvel est né à Reims en 1946 et réside toujours dans cette ville. Autodidacte, possédé dès le plus jeune âge par la passion de lire et d’écrire, il parvient rapidement à publier des nouvelles de tous genres dans bon nombre de magazines et d’anthologies, auxquelles viennent bientôt s’ajouter une centaine de scénarios de BD écrits pour les Editions Fleurus. En 1990, les Editions du Vaisseau d’Argent lui permettent de réaliser un album avec Edouard Aidans, puis de débuter la série “Sylve” avec Aouamri, série qui, traduite en plusieurs langues, sera reprise par les Editions Arboris. Début 1994, c’est Soleil Productions qui lui ouvre ses portes, donnant naissance, toujours avec Aouamri, à la série “Mortepierre” et à l’album “l’Amour Clés en Main”. Réalisé avec le dessinateur Fabien Rypert, son album “L’Etang qui Rétrécissait”, Editions Coeur de Loup, a obtenu l’Alph-Art Jeunesse à Angoulême en 1997. L’année suivante, toujours sous le label Coeur de Loup, il démarre la série Les Robinsons d’Outre-Monde avec Didier Pagot. Fin 1999 s’ajoute la série “Les Traînes-Ténèbres” chez Soleil, dessinée par Peter Nielsen, puis paraissent plusieurs livres illustrés pour enfants. Parallèlement, sous le pseudonyme de François Sarkel, il a écrit cinq romans pour différentes collections des Éditions Fleuve Noir. '),
+(23, 'Keyes', 'Daniel', '1927-08-09 00:00:00', NULL, 'Daniel Keyes s’est engagé dans la marine marchande à l’âge de dix-sept ans avant de reprendre ses études, jusqu’à l’obtention d’un diplôme en psychologie. Après une première expérience dans l’édition (chez Marvel), il écrit plusieurs scénarios pour des comics publiés par Marvel, puis par EC Comics. C’est finalement vers l’enseignement qu’il s’oriente, puisqu’il devient professeur d’anglais, de littérature américaine et d’écriture à l’université de l\'Ohio. En parallèle, Keyes s’essaie à l’écriture, en publiant en 1966 Des fleurs pour Algernon, dont le succès ne se démentira jamais : considéré comme un classique, ce livre a été traduit à ce jour dans près de trente pays, vendu à cinq millions d’exemplaires et adapté pour le grand écran, ce qui vaudra à son auteur une réputation internationale. 
+Daniel Keyes est décédé le 15 juin 2014 des suites d\'une pneumonie dans sa demeure du sud de la Floride.'),
+(24, 'Bradbury', 'Ray', '1920-08-22 00:00:00', NULL, 'Ray Bradbury est un monstre sacré de la science-fiction et du fantastique. Né en 1920 dans l\'Illinois, il commence à écrire très tôt. Un temps vendeur de journaux et rédacteur de fanzine, il se met à l\'écriture à plein temps après avoir été exempté de l\'armée. Ray Bradbury excelle dans la nouvelle et en publiera plusieurs recueils. Son premier, Le Pays d\'Octobre (dans Trois automnes fantastiques), sera reconnu, mais c\'est avec ses Chroniques martiennes, devenu un classique, qu\'il accède à la notoriété mondiale. Marqués par une poésie mélancolique et humaniste, ses romans et nouvelles (L\'Homme illustré, La Foire des ténèbres dans Trois automnes fantastiques) sont une expérience de lecture inoubliable.
+Son ouvre la plus célèbre avec les Chroniques martiennes est sans doute Fahrenheit 451, cette histoire d\'un pompier contraint de brûler les livres, à ranger aux côtés du 1984 d\'Orwell ou du Meilleur des mondes d\'Huxley, a été portée à l\'écran par François Truffaut, et a inspiré à Michael Moore le titre de son documentaire Fahrenheit 9/11.
+Bradbury a exercé ses talents d\'écrivain dans de nombreux domaines, le théâtre, l\'opéra, le polar, l\'autobiographie, le scénario (il est l\'auteur de celui du Moby Dick de John Huston). Ses nouvelles ont été adaptées dans La Quatrième Dimension, Alfred Hitchcock présente ou le Ray Bradbury Theater. Il a aussi travaillé avec l\'illustrateur Charles Addams, père de la famille du même nom, auquel il rend un vibrant hommage dans son roman De la poussière à la chair.'),
+(25, 'Asimov', 'Isaac', '1920-01-02 00:00:00', NULL, 'Docteur en biochimie, Isaac Asimov écrit des livres de vulgarisation scientifique et enseigne à l\'université, mais c\'est surtout ses récits de science-fiction qui feront sa célébrité. Il écrit ses premières nouvelles pendant ses études, dans la revue Astounding Stories et grâce à la simplicité de son écriture et à son imagination débordante, il devient rapidement un grand auteur de science-fiction. En 1958, il décide de se consacrer entièrement à l\'écriture et publiera des centaines d\'ouvrages scientifiques et de fiction jusqu\'à sa mort, en 1992. Parmi ses oeuvres les plus célèbres, on peut citer la trilogie Fondation (1951, 1953, 1982) ou le recueil de nouvelles Les Robots (1950).');
 
 -- --------------------------------------------------------
 
