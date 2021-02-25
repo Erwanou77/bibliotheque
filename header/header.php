@@ -32,7 +32,9 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 	<nav class="navbar" id="navbar">
 		<div class="max-width">
 			<div class="resplogo">
-				<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site">
+				<a href="<?php echo $CONFIG['root_path']; ?>">
+					<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site">
+				</a>
 				<h1>OpenVia</h1>
 			</div>
 			<div class="respsearch">
@@ -49,7 +51,7 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 			</div>
 		</div>
 		<ul class="menu">
-			<li><a href="<?php echo $CONFIG['root_path']; ?>/index.php">Accueil</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>">Accueil</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/auteur.php">Auteurs</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php">Biblioth&#232;que</a></li>
 			<?php 
