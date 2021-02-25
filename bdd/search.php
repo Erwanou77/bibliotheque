@@ -1,17 +1,17 @@
 <?php
 	session_start();
 	require"config.php";
-	if (isset($_GET['auteur'])) {
-		$auteur = (string) trim($_GET['auteur']);
-		$pdostat = $bdd->prepare("SELECT * FROM livre WHERE titre LIKE ? OR auteur LIKE ?");
-		$pdostat->execute(array("$auteur%"));
-		$aut = $pdostat->fetchAll();
+	if (isset($_GET['personne'])) {
+		$personne = (string) trim($_GET['personne']);
+		$pdosta = $bdd->prepare("SELECT * FROM livre JOIN auteur ON livre.isbn = auteur.idLivre JOIN personne ON auteur.idPersonne = personne.id WHERE titre LIKE ?");
+		$pdosta->execute(array("$personne%"));
+		$aut = $pdosta->fetchAll();
 		foreach ($aut as $r) {
-			$images = "/bibliotheque_v1/img/couvertures/" . $r['isbn'] . ".png";
+			$images = "img/couvertures/" . $r['isbn'] . ".png";
 			?>
-			<a class="sea" href="/bibliotheque_v1/livres/details.php?isbn=<?php echo $r['isbn'];?>">
+			<a class="sea" href="livres/details.php?isbn=<?php echo $r['isbn'];?>">
 				<img src="<?php echo $images; ?>">
-				<p><?php echo $r['titre'] . "<br>" . $r['auteur'];?></p>
+				<p><?php echo $r['titre'] . "<br><b>" . $r['nom'] . " " . $r['prenom'] . "</b>" ;?></p>
 			</a>
 		<?php }
 	}

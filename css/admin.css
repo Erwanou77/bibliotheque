@@ -1,0 +1,114 @@
+.admin{
+	display: flex;
+}
+.gauche{
+	background-color: rgb(121,121,121);
+	width: 300px;
+	color: white;
+}
+.gauche h2,.droit h2{
+	padding: 10px 0;
+	text-align: center;
+}
+.gauche .edition{
+	margin: 20px 0 20px 20px;
+}
+.gauche .edition ul{
+	text-decoration: none;
+	list-style-type: none;
+	margin:10px 0 0 10px;
+}
+.gauche .edition ul li{
+	padding: 5px 0;
+}
+.gauche .edition ul li a{
+	font-size: 18px;
+	color: black;
+}
+.gauche ul li a:hover{
+	text-decoration: underline;
+}
+.droit{
+	background-color: white;
+	width: 100%;
+}
+.update{
+	display: flex;
+	flex-direction: column;
+}
+.group-input{
+	background-color: rgb(121,121,121,.6);
+	margin: 0 auto;
+	padding: 10px;
+	border-radius: 6px;
+	width: 30%;
+}
+.form-input{
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+.pres-input{
+	padding: 8px;
+	border-radius: 6px;
+	border: none;
+}
+.pres-input:focus{
+	border: 2px solid #F7F364;
+	box-shadow: 0px 0px 3px 2px #FFFCB4;
+}
+table{
+	margin: 0 auto;
+	border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+}
+thead,tfoot{
+    background-color: black;
+    color: #fff;
+}
+tbody{
+    background-color: white;
+}
+td,th{
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px 20px;
+    text-align: center;
+}
+.titre{
+	flex-direction: column;
+	text-align: center;
+	font-size: 30px;
+}
+.fond{
+	background-color: rgb(121,121,121,.6);
+	margin: 0 auto;
+	padding: 10px;
+	width: 25%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.main h1{
+	display: flex;
+	text-align: center;
+}
+@media screen and (max-width: 600px){
+	.admin{
+		flex-direction: column;
+	}
+	.gauche{
+		width: auto;
+	}
+	.group-input{
+		width: 70%;
+	}
+	.fond{
+		padding: 60px;
+	}
+	.image{
+		display: block;
+		margin-left: -88%;
+	}
+}

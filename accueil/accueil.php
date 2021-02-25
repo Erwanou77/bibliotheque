@@ -13,8 +13,8 @@
         <h1 class="login-title">Login</h1>
         <input type="email" class="login-input" name="email" placeholder="Votre mail" required>
         <input type="password" class="login-input" name="password" placeholder="Votre mot de passe" required>
-        <input type="submit" value="Connexion" name="submit" class="login-button"/>
-        <p class="link">Vous n'avez pas de compte ? <a href="registration.php">Clique ici</a></p>
+        <input type="submit" value="Login" name="submit" class="login-button"/>
+        <p class="link">Vous n'avez pas de compte ? <a href="registration.php">S'enregistrer</a></p>
     </form>
 </body>
 </html>

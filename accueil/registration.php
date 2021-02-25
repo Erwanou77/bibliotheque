@@ -1,4 +1,4 @@
-<?php
+<?php 
     session_start();
 ?>
 <!DOCTYPE html>
@@ -15,8 +15,8 @@
         <input type="text" class="login-input" name="prenom" placeholder="Prenom" required />
         <input type="email" class="login-input" name="email" placeholder="Votre adresse mail" required>
         <input type="password" class="login-input" name="password" placeholder="Votre mot de passe" required minlength="6">
-        <input type="submit" name="submit" value="Connexion" class="login-button">
-        <p class="link">Vous avez déjà un compte ? <a href="accueil.php">Clique ici</a></p>
+        <input type="submit" name="submit" value="Register" class="login-button">
+        <p class="link">Vous avez déjà un compte ? <a href="accueil.php">Se connecter ici</a></p>
     </form>
 </body>
 </html>
