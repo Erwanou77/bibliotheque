@@ -44,7 +44,7 @@ p,a,em,dd,li{
   	border: none;
   	transition: .5s;
   	outline: none;
-  	background-color: white;
+  	background-color: #ddd;
   	color: black;
   	cursor: pointer;
   	padding: 15px;
@@ -75,7 +75,7 @@ p,a,em,dd,li{
 }
 .navbar h1{
 	color: white;
-	text-align: center;
+	margin: 0 auto;
 }
 
 /* Barre de recherche */
@@ -112,6 +112,8 @@ input[type="search"]:focus{
 	width: calc(37% - 1%);
 	margin: 0 auto;
 	position: absolute;
+	max-height: 345px;
+	overflow-y: scroll;
 	z-index: -8;
 	right: calc(10.5% - 1%);
 	top: 105px;

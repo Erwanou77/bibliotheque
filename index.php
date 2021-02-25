@@ -5,7 +5,8 @@
         <div class="style">
             <h1>Qu'est-ce que "OpenVia" ?</h1>
             <p>
-                OpenVia est un site internet permettant de pouvoir faire figurer les livres de nouveaux écrivains pour qu'ils puissent se faire connaître partout en France. De plus, notre site a aussi de grand écrivains. De ce fait, les écrivains qui sont connus aujourd'hui pourront discuter avec les nouveaux écrivains pour leurs donner des conseils. 
+                OpenVia, une bibliothèque réunissant plusieurs genres de livres allant de mangas, BD aux romans et livres philosophique.
+                Comme nous le disons, tout les chemins mènent à OpenVia... 
             </p>
         </div>
         <div class="img">

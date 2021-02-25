@@ -40,13 +40,14 @@
 	background-color: rgb(121,121,121,.6);
 	margin: 0 auto;
 	padding: 10px;
-	border-radius: 6px;
-	width: 30%;
+	border-radius: 6px 6px 0 0;
+	width: 35%;
 }
 .form-input{
 	display: flex;
 	flex-direction: column;
-	margin: 10px;
+	margin: 10px auto;
+	width: 100%;
 }
 .pres-input{
 	padding: 8px;
@@ -64,6 +65,7 @@ table{
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;
+    width: 100%;
 }
 thead,tfoot{
     background-color: black;
@@ -74,7 +76,7 @@ tbody{
 }
 td,th{
     border: 1px solid rgb(190, 190, 190);
-    padding: 10px 20px;
+    padding: 10px;
     text-align: center;
 }
 .titre{
@@ -93,6 +95,19 @@ td,th{
 .main h1{
 	display: flex;
 	text-align: center;
+}
+@media screen and (max-width: 1100px){
+	.group-input{
+		width: 45%;
+	}
+	td,th{
+		padding: 8px;
+	}
+}
+@media screen and (max-width: 800px){
+	.group-input{
+		width: 70%;
+	}
 }
 @media screen and (max-width: 600px){
 	.admin{

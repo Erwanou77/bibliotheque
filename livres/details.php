@@ -20,7 +20,8 @@ require("../header/header.php")?>
 				</dl>
 				<dl>
 					<dt>Auteurs :</dt>
-					<dd><?php echo htmlspecialchars($ligne['auteur']); ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['prenom']); ?>
+						<?php echo htmlspecialchars($ligne['nom']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Editeurs :</dt>
@@ -28,7 +29,7 @@ require("../header/header.php")?>
 				</dl>
 				<dl>
 					<dt>Date de publication :</dt>
-					<dd><?php echo htmlspecialchars($ligne['date']); ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['annee']); ?></dd>
 				</dl>
 				<dl>
 					<dt>ISBN :</dt>
@@ -40,7 +41,7 @@ require("../header/header.php")?>
 				</dl>
 				<dl>
 					<dt>Nombre de pages :</dt>
-					<dd><?php echo htmlspecialchars($ligne['nbpage']); ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['nbpages']); ?></dd>
 				</dl>
 			</div>
 		</div>

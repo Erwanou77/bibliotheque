@@ -7,8 +7,9 @@
 	<form method="POST" class="select">
 		<select name="trie">
 			<option value="">Trier par :</option>
-			<option value="date">Trier par date</option>
-			<option value="auteur">Trier par auteur</option>
+			<option value="titre">Trier par titre</option>
+			<option value="nom">Trier par auteur</option>
+			<option value="annee">Trier par date</option>			
 		</select>
 		<button type="submit">Rafra&#238;chir</button>
 	</form>
@@ -21,19 +22,28 @@
 						<img src="<?php echo $images ?>" alt="Image de couvertures">
 						<dl>
 							<dt>Titre :</dt>
-							<dd><?php echo $ligne['titre']; ?></dd>
+							<?php if (isset($_POST['trie']) && $_POST['trie'] == 'titre') {?>
+								<dd style="color: red;"><?php echo $ligne['titre']; ?></dd>
+							<?php }else{ ?>
+							<dd><?php echo $ligne['titre']; ?></dd><?php } ?>
 						</dl>
 						<dl>
 							<dt>Auteurs :</dt>
-							<dd><?php echo $ligne['auteur']; ?></dd>
+							<?php if (isset($_POST['trie']) && $_POST['trie'] == 'nom') {?>
+								<dd style="color: red;"><?php echo $ligne['nom'] . " " . $ligne['prenom']; ?></dd>
+							<?php }else{ ?>
+							<dd><?php echo $ligne['nom'] . " " . $ligne['prenom']; ?></dd><?php } ?>
 						</dl>
 						<dl>
 							<dt>Editeurs :</dt>
-							<dd><?php echo $ligne['editeur']; ?></dd>
+							<dd><?php echo $ligne['editeurs']; ?></dd>
 						</dl>
 						<dl>
-							<dt>Date de publication :</dt>
-							<dd><?php echo $ligne['date']; ?></dd>
+							<dt>Année de publication :</dt>
+							<?php if (isset($_POST['trie']) && $_POST['trie'] == 'annee') {?>
+								<dd style="color: red;"><?php echo $ligne['annee']; ?></dd>
+							<?php }else{ ?>
+							<dd><?php echo $ligne['annee']; ?></dd><?php } ?>
 						</dl>
 						<dl>
 							<dt>ISBN :</dt>

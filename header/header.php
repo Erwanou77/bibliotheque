@@ -89,12 +89,12 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 	    		});
 			$('#searchs').keyup(function() {
 				$('#resultat').html('');
-				var auteur = $(this).val();
-				if (auteur != "") {
+				var personne = $(this).val();
+				if (personne != "") {
 					$.ajax({
 						type: 'GET',
 						url: '<?php echo $CONFIG['root_path']; ?>/bdd/search.php',
-						data:'auteur=' + encodeURIComponent(auteur),
+						data:'personne=' + encodeURIComponent(personne),
 						success: function(data){
 							if (data != "") {
 								$('#resultat').append(data);
