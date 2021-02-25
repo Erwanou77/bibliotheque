@@ -6,8 +6,7 @@
 			<div class="main">
 			<h1>Vous avez reserver :</h1>
 			<div class="fond">
-			<?php $pdostat = $bdd->query('SELECT isbn, titre FROM livre');
-						$pdostat = $bdd->query('SELECT * FROM utilisateur JOIN livre ON utilisateur.idUtilisateur = livre.utilisateur WHERE livre.utilisateur IS NOT NULL');
+			<?php 	$pdostat = $bdd->query('SELECT * FROM utilisateur JOIN livre ON utilisateur.idUtilisateur = livre.utilisateur WHERE livre.utilisateur IS NOT NULL');
 					foreach ($pdostat as $ligne) {
 						$images = "../img/couvertures/".$ligne['isbn'].".png";?>
 
