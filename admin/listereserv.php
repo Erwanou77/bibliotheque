@@ -43,6 +43,10 @@
 								<th style="background-color: black; color:white;">Réservé par :</th>
 								<td><?php echo $ligne['noms'] . " " . $ligne['prenoms']; ?></td>
 							</tr>
+							<tr>
+								<th style="background-color: black; color:white;">Temps restant :</th>
+								<td>Le temps</td>
+							</tr>
 						</table>
 					</div>
 				<?php } ?>
