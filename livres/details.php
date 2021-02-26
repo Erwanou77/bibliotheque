@@ -20,7 +20,8 @@ require("../header/header.php")?>
 				</dl>
 				<dl>
 					<dt>Auteurs :</dt>
-					<dd><?php echo htmlspecialchars($ligne['auteur']); ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['prenom']); ?>
+						<?php echo htmlspecialchars($ligne['nom']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Editeurs :</dt>
@@ -28,7 +29,7 @@ require("../header/header.php")?>
 				</dl>
 				<dl>
 					<dt>Date de publication :</dt>
-					<dd><?php echo htmlspecialchars($ligne['date']); ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['annee']); ?></dd>
 				</dl>
 				<dl>
 					<dt>ISBN :</dt>
@@ -40,14 +41,18 @@ require("../header/header.php")?>
 				</dl>
 				<dl>
 					<dt>Nombre de pages :</dt>
-					<dd><?php echo htmlspecialchars($ligne['nbpage']); ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['nbpages']); ?></dd>
 				</dl>
 			</div>
 		</div>
 		<div class="resume">
 			<h2>Synopsis</h2>
+			<?php if ($ligne['synopsis'] == NULL) {?>
+				<h1 style="text-align: center; font-size: 26px; font-weight: bold; color: red;">Il n'y a pas encore de synopsis</h1>
+			<?php }else{ ?>
 			<p><?php echo bbcode(htmlspecialchars($ligne['synopsis']));?></p>
-			<?php if (isset($_SESSION['connecter'])) { ?>
+			<?php } ?>
+			<?php if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 0) { ?>
 				<div class="reserver">
 					<a href="">Pour r&#233;server ce livre cliquez ici</a>
 				</div>

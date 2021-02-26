@@ -64,8 +64,8 @@ p,a,em,dd,li{
 /* Logo du site */
 
 .navbar h1{
-	margin: 0 auto;
 	color: white;
+	margin: 0 auto;
 }
 
 /* Barre de recherche */
@@ -102,6 +102,8 @@ input[type="search"]:focus{
 	width: calc(37% - 1%);
 	margin: 0 auto;
 	position: absolute;
+	max-height: 345px;
+	overflow-y: scroll;
 	z-index: -8;
 	right: calc(10.5% - 1%);
 	top: 105px;
@@ -163,15 +165,6 @@ input[type="search"]:focus{
 /* Partie principal */
 
 .principal{
-<<<<<<< HEAD
-	background: url("/bibliotheque/img/parchemin_fond.jpg");
-<<<<<<< HEAD
-	background-size: 100%;
-=======
-	background-size: 100%; 
->>>>>>> Erwan
-=======
->>>>>>> Erwan
 	max-width: 1600px;
 	padding: 200px 0 70px 0;
 	margin: 0 auto;

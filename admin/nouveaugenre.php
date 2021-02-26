@@ -1,33 +1,34 @@
 <?php require"../admin.php";
-	/*$genres = stripslashes(htmlspecialchars($_POST['genres']));
 	if (isset($_POST['submit'])) {
+		$genres = stripslashes(htmlspecialchars($_POST['genres']));
 		if (empty($genres)) {
 			header('location:nouveaugenre.php');
 		}else{
-			$update = $bdd->prepare('UPDATE livre SET genre = $genres');
-			$update->execute();
+			$insert = $bdd->prepare('INSERT INTO genre (libelle) VALUES (:genre)');
+			$insert->bindParam(':genre', $genres);
+			$insert->execute();
 		}
-	}*/
+	}
 ?>
 		<div class="droit">
-			<h2>Entrez votre genre</h2>
+			<h2>Entrez votre nouveau genre</h2>
 			<form method="POST" class="update">
 				<div class="group-input">
 					<div class="form-input">
-						<label for="genres">genre :</label>
+						<label for="genres">Genre :</label>
 						<input type="text" class="pres-input" name="genres">
 					</div>
 					<div class="form-input">
-						<button type="submit">Envoyer</button>
+						<input type="submit" name="submit">
 					</div>
 					<table>
 						<thead>
 							<th>Genre</th>
 						</thead>
 						<tbody>
-							<?php foreach ($pdostat2 as $ligne) {?>
+							<?php foreach ($resgenres as $ligne) {?>
 							<tr>
-								<td><?php echo $ligne['genre'] ?></td>
+								<td><?php echo $ligne['libelle'] ?></td>
 							</tr>
 							<?php } ?>
 						</tbody>

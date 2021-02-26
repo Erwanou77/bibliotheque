@@ -20,7 +20,7 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 		background-size: 100% 100%;
 	}
 	.principal{
-		background: url("<?php echo $CONFIG['root_path']; ?>/img/parchemin_fond.jpg");
+		background: url("<?php echo $CONFIG['root_path']; ?>/img/parchemin_fond.jpg") no-repeat;
 		background-size: 100% 100%;
 	}
 	</style>
@@ -32,7 +32,9 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 	<nav class="navbar" id="navbar">
 		<div class="max-width">
 			<div class="resplogo">
-				<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site" width="150px" >
+				<a href="<?php echo $CONFIG['root_path']; ?>">
+					<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site" width="150px">
+				</a>
 				<h1>OpenVia</h1>
 			</div>
 			<div class="respsearch">
@@ -49,7 +51,7 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 			</div>
 		</div>
 		<ul class="menu">
-			<li><a href="<?php echo $CONFIG['root_path']; ?>/index.php">Accueil</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>">Accueil</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/auteur.php">Auteurs</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php">Biblioth&#232;que</a></li>
 			<?php 
@@ -89,12 +91,12 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 	    		});
 			$('#searchs').keyup(function() {
 				$('#resultat').html('');
-				var auteur = $(this).val();
-				if (auteur != "") {
+				var personne = $(this).val();
+				if (personne != "") {
 					$.ajax({
 						type: 'GET',
 						url: '<?php echo $CONFIG['root_path']; ?>/bdd/search.php',
-						data:'auteur=' + encodeURIComponent(auteur),
+						data:'personne=' + encodeURIComponent(personne),
 						success: function(data){
 							if (data != "") {
 								$('#resultat').append(data);
