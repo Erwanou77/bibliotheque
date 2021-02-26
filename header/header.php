@@ -33,7 +33,7 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 		<div class="max-width">
 			<div class="resplogo">
 				<a href="<?php echo $CONFIG['root_path']; ?>">
-					<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site">
+					<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site" width="150px">
 				</a>
 				<h1>OpenVia</h1>
 			</div>
