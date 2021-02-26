@@ -11,7 +11,6 @@
 <body>
     <form class="form" action="../bdd/verification.php" method="post">
         <h1 class="login-title">Inscription</h1>
-        <input type="text" class="login-input" name="idclient" placeholder="Numéro de client" required />
         <input type="text" class="login-input" name="nom" placeholder="Nom" required />
         <input type="text" class="login-input" name="prenom" placeholder="Prenom" required />
         <input type="email" class="login-input" name="email" placeholder="Votre adresse mail" required>

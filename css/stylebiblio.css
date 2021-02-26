@@ -1,8 +1,12 @@
 .principal{
 <<<<<<< HEAD
+<<<<<<< HEAD
 	cursor: url("../img/book_close.png"), pointer;
 =======
 	cursor: url("/bibliotheque/img/book_close.png"), pointer;
+>>>>>>> Erwan
+=======
+	cursor: url("../img/book_close.png"), pointer;
 >>>>>>> Erwan
 }
 .select{
@@ -17,9 +21,12 @@
 .select button{
 	padding: 5px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	background:url('../img/fond_cuir.jpg')no-repeat;
 =======
 	background:url('/bibliotheque/img/fond_cuir.jpg')no-repeat;
+>>>>>>> Erwan
+=======
 >>>>>>> Erwan
 	color: white;
 }

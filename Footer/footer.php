@@ -10,7 +10,16 @@
 			<a href="<?php echo $CONFIG['root_path']; ?>/index.php">Accueil</a>
 			<a href="<?php echo $CONFIG['root_path']; ?>/auteur.php">Auteurs</a>
 			<a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php">Biblioth&#232;que</a>
-			<a href="<?php echo $CONFIG['root_path']; ?>/accueil/accueil.php">Se connecter</a>
+			<?php 
+			if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 1) { ?>
+				<a href="<?php echo $CONFIG['root_path']; ?>/admin/nouveaulivre.php">Admin</a>
+				<a href="<?php echo $CONFIG['root_path']; ?>/bdd/logout.php">Se déconnecter</a>
+			<?php
+			}elseif(isset($_SESSION['connecter']) && $_SESSION['admin'] == 0){
+			?>
+			<a href="<?php echo $CONFIG['root_path']; ?>/bdd/logout.php">Se déconnecter</a>
+		<?php }else{?>
+			<a href="<?php echo $CONFIG['root_path']; ?>/accueil/accueil.php">Se connecter</a><?php } ?>
 			<a href="<?php echo $CONFIG['root_path']; ?>/contact.php">Contact</a>
 		</div>
 		<div class="contact">

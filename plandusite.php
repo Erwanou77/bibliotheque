@@ -13,7 +13,7 @@
 			<li><a href="auteur.php"><i class="fas fa-user"></i> Auteurs</a><br><br>
 				<ul>
 					<?php foreach ($pdostate as $aut) {?>
-					<li><a href="Auteur/autlist.php?id=<?php echo $aut['id'];?>"><?php echo bbcode(htmlspecialchars($aut['prenom'])) . " " . bbcode(htmlspecialchars($aut['nom']));?></a></li>
+					<li><a href="Auteur/autlist.php?id=<?php echo $aut['id'];?>"><?php echo bbcode(htmlspecialchars($aut['nom'])) . " " . bbcode(htmlspecialchars($aut['prenom']));?></a></li>
 					<?php } ?>
 				</ul>
 			</li><br>

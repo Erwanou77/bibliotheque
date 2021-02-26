@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 15 fév. 2021 à 21:20
+-- Généré le : ven. 19 fév. 2021 à 12:45
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -155,8 +155,8 @@ CREATE TABLE IF NOT EXISTS `livre` (
   `date` varchar(50) NOT NULL,
   `isbn` bigint(20) NOT NULL,
   `genre` varchar(50) NOT NULL,
-  `nbpage` int(11) NOT NULL,
-  `synopsis` varchar(10000) NOT NULL,
+  `nbpage` int(11) DEFAULT NULL,
+  `synopsis` varchar(10000) DEFAULT NULL,
   `id_auteur` int(11) NOT NULL,
   `id_users` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -170,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `livre` (
 
 INSERT INTO `livre` (`id`, `titre`, `auteur`, `editeur`, `date`, `isbn`, `genre`, `nbpage`, `synopsis`, `id_auteur`, `id_users`) VALUES
 (1, 'Juste une Ombre', 'Karine Giébel', 'Fleuve éditions', '2012', 2265096490, 'Roman ', 512, 'Tu te croyais forte. Invincible. Installée sur ton piédestal, tu imaginais pouvoir régenter le monde.[rl]Tu manipules? Tu deviendras une proie.[rl]Tu domines? Tu deviendras une esclave.[rl]Tu mènes une vie normale, banale, plutôt enviable. Tu as su t\'imposer dans ce monde, y trouver ta place.[rl]Et puis un jour.[rl]Un jour, tu te retournes et tu vois une ombre derrière toi.[rl]À partir de ce jour-là, elle te poursuit. Sans relâche.[rl]Juste une ombre.[rl]Sans visage, sans nom, sans mobile déclaré.[rl]On te suit dans la rue, on ouvre ton courrier, on ferme tes fenêtres.[rl]On t\'observe jusque dans les moments les plus intimes.[rl]Les flics te conseillent d\'aller consulter un psychiatre. Tes amis s\'écartent de toi.[rl]Personne ne te comprend, personne ne peut t\'aider. Tu es seule.[rl]Et l\'ombre est toujours là. Dans ta vie, dans ton dos.[rl]Ou seulement dans ta tête ?[rl]Le temps que tu comprennes, il sera peut-être trop tard.[rl]Tu commandes? Apprends l\'obéissance.[rl]Tu méprises? Apprends le respect.[rl]Tu veux vivre? Meurs en silence...', 1, NULL),
-(2, 'Maîtres du jeu', 'Karine Giébel', 'Pocket', '2013', 2266243004, 'Roman ', 128, 'Il y a des crimes parfaits. Il y a des meurtres gratuits.[rl]Folie sanguinaire ou machination diabolique, la peur est la même. Elle est là, partout : elle s\'insinue, elle vous étouffe... Pour lui, c\'est un nectar. Pour vous, une attente insoutenable. D\'où viendra le coup fatal ? De l\'ami ? De l\'amant ? De cet inconnu à l\'air inoffensif ? D\'outre-tombe, peut-être...', 1, NULL),
+(2, 'Maîtres du jeu', 'Karine Giébel', 'Pocket', '2013', 2266243004, 'Roman', 128, 'Il y a des crimes parfaits. Il y a des meurtres gratuits.[rl]Folie sanguinaire ou machination diabolique, la peur est la même. Elle est là, partout : elle s\'insinue, elle vous étouffe... Pour lui, c\'est un nectar. Pour vous, une attente insoutenable. D\'où viendra le coup fatal ? De l\'ami ? De l\'amant ? De cet inconnu à l\'air inoffensif ? D\'outre-tombe, peut-être...', 1, NULL),
 (3, 'Satan était un ange', 'Karine Giébel', 'Pocket', '2015', 2266258656, 'Roman', 384, 'Deux trajectoires, deux lignes de fuite.[rl]Hier encore, François était quelqu\'un. Un homme qu\'on regardait avec admiration, avec envie. Aujourd\'hui, il n\'est plus qu\'un fugitif tentant d\'échapper à son assassin. Qui le rattrapera, où qu\'il aille. Quoi qu\'il fasse.[rl]Paul regarde derrière lui ; il voit la cohorte des victimes qui hurlent vengeance. Il paye le prix de ses fautes. L\'échéance approche...[rl]Dans la même voiture, sur une même route, deux hommes que tout semble opposer, et qui pourtant fuient ensemble leur destin différent. Rouler droit devant. Faire ce qu\'ils n\'ont jamais fait.[rl]Puisque l\'horizon est bouché, autant tenter une dernière percée. Flamboyante.', 1, NULL),
 (4, 'Un lieu incertain', 'Fred Vargas', 'Viviane hamy', '2008', 2878582853, 'Roman', 386, '\" – Bien, dit Clyde-Fox en se rechaussant. Sale histoire. Faites votre job, Radstock, allez voir ça. C\'est un tas de vieilles chaussures posées sur le trottoir. Préparez votre âme. Il y en a une vingtaine peut-être, vous ne pouvez pas les manquer.[rl]– Ce n\'est pas mon job, Clyde-Fox.[rl]– Bien sûr que si. Elles sont alignées avec soin, les pointes dirigées vers le cimetière. Je vous parle évidemment de la vieille grille principale.[rl]– Le vieux cimetière est surveillé la nuit. Fermé pour les hommes et pour les chaussures des hommes.[rl]– Eh bien elles veulent entrer tout de même, et toute leur attitude est très déplaisante. Allez les regarder, faites votre job.[rl]– Clyde-Fox, je me fous que vos vieilles chaussures veuillent entrer là-dedans.[rl]– Vous avez tort, Radstock. Parce qu\'il y a les pieds dedans.[rl]Il y eut un silence, une onde de choc désagréable. Une petite plainte sortit de la gorge d\'Estalère, Danglard serra les bras. Adamsberg arrêta sa marche et leva la tête. \"', 2, NULL),
 (5, 'Temps glaciaires', 'Fred Vargas', 'J\'ai lu', '2016', 2290120332, 'Roman ', 480, 'Le printemps s\'annonça par un triolet de suicides. Une même signature laissée près des victimes, un étrange symbole en forme de guillotine. Pour le commissaire Adamsberg et ses adjoints Danglard et Retancourt, c\'est le début d\'une enquête débridée qui les conduira des arcanes d\'une étrange société, férue des écrits de Robespierre, aux terres lointaines et embrumées d\'Islande. Entre polar historique, tragédie et conte fantastique, Fred Vargas maîtrise à merveille le subtil équilibre des genres pour créer le sien, inimitable.', 2, NULL),
@@ -190,21 +190,22 @@ INSERT INTO `livre` (`id`, `titre`, `auteur`, `editeur`, `date`, `isbn`, `genre`
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `idclient` int(11) NOT NULL,
   `nom` text NOT NULL,
   `prenom` text NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
+  `admin` tinyint(4) NOT NULL DEFAULT '0',
   `create_datetime` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `idclient`, `nom`, `prenom`, `email`, `password`, `create_datetime`) VALUES
-(1, 10000001, 'test', 'teste', 'test77@gmail.com', 'd40b31764c7f77dad3fa57e01d2c19fd', '2021-02-15 17:46:03');
+INSERT INTO `users` (`id`, `nom`, `prenom`, `email`, `password`, `admin`, `create_datetime`) VALUES
+(1, 'LAUNAY', 'Erwan', 'rocky77580@gmail.com', 'c8801fc9c02f394e27a97a5c698d0981', 1, '2021-02-16 21:57:52'),
+(2, 'Petit', 'Rémi', 'remipetit@gmail.com', 'b6edd10559b20cb0a3ddaeb15e5267cc', 0, '2021-02-16 22:28:21');
 
 --
 -- Contraintes pour les tables déchargées
