@@ -61,6 +61,7 @@ $CONFIG = array("root_path"=>"/bibliotheque");
 			<?php
 			}elseif(isset($_SESSION['connecter']) && $_SESSION['admin'] == 0){
 			?>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/utilisateurs/profil.php">Votre espace</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/bdd/logout.php">Se déconnecter</a></li>
 		<?php }else{?>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/accueil/accueil.php">Se connecter</a></li><?php } ?>

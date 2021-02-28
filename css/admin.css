@@ -32,16 +32,15 @@
 	background-color: white;
 	width: 100%;
 }
-.update{
-	display: flex;
-	flex-direction: column;
-}
 .group-input{
 	background-color: rgb(121,121,121,.6);
 	margin: 0 auto;
 	padding: 10px;
 	border-radius: 6px 6px 0 0;
 	width: 35%;
+}
+.group-input span{
+	color: red;
 }
 .form-input{
 	display: flex;
@@ -96,7 +95,18 @@ td,th{
 	display: flex;
 	text-align: center;
 }
-
+.renouvel hr{
+	border: none;
+	margin: 5px 0;
+	border-bottom: 2px solid #ddd;
+}
+.erreur{
+	margin: 5px 0;
+	background-color: #ddd;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 4px;
+}
 /* test biblio */
 
 .container{
@@ -110,6 +120,7 @@ td,th{
 	color: red;
 }
 .desktop{
+	max-width: 340px;
 	margin: 50px 20px;
 	border: 2px solid rgb(200, 200, 200);
 }

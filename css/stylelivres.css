@@ -22,8 +22,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-bottom: 20px;
-	border-bottom: 4px solid #f2f2f2; 
+	padding-bottom: 20px; 
 }
 .centrage img{
 	transition: .3s;
@@ -31,6 +30,16 @@
 .centrage img:hover{
 	transform: scale(1.1);
 	transition: .3s;
+}
+.centrage span{
+	color: red;
+}
+.erreur{
+	margin: 5px 0;
+	background-color: #ddd;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 4px;
 }
 .tableau{
 	margin: 0 auto;
@@ -51,6 +60,14 @@ dl{
 .tableau dl a{
 	color: black;
 	text-decoration: underline;
+}
+.tableau input[type="submit"]{
+	margin: 10px 0;
+}
+.synopsis input{
+	width: 15%;
+	margin: 0 auto;
+	padding: 8px; 
 }
 .resume{
 	width: 60%;

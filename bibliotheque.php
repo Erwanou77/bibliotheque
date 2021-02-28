@@ -14,6 +14,15 @@
 		<button type="submit">Rafra&#238;chir</button>
 	</form>
 	<div class="container">
+		<?php if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 1) {?>
+			<div class="desktop">
+				<a href="nouveaulivre.php">
+					<div class="nouveau">
+						<p>+</p>
+					</div>
+				</a>
+			</div>
+		<?php }?>
 		<?php foreach ($pdostat as $ligne) {?>
 			<?php $images = "img/couvertures/".$ligne['isbn'].".png";?>
 			<div class="desktop">

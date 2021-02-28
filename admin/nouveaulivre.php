@@ -1,4 +1,5 @@
 <?php require"../admin.php";
+	$erreur = "Entrez vos informations";
 	if (isset($_POST['submit'])) {
 		$titre = stripslashes(htmlspecialchars($_POST['titre']));
 		$editeur = stripslashes(htmlspecialchars($_POST['editeur']));
@@ -6,6 +7,7 @@
 		$isbn = stripslashes(htmlspecialchars($_POST['isbn']));
 		$langue = stripslashes(htmlspecialchars($_POST['langue']));
 		$genres = stripslashes(htmlspecialchars($_POST['genres']));
+		$nbpage = stripslashes(htmlspecialchars($_POST['nbpage']));
 
 		if (empty($titre)) {
 			$erreur = "Vous devez mettre un titre";
@@ -16,68 +18,81 @@
 		}elseif (empty($isbn)) {
 			$erreur = "Vous devez mettre un isbn";
 		}elseif (empty($langue)) {
+			$erreur = "Vous devez choisir une langue";
+		}elseif (empty($genres)) {
 			$erreur = "Vous devez mettre un genre";
-		}elseif (empty($genre)) {
-			$erreur = "Vous devez mettre un genre";
+		}elseif (empty($nbpage)) {
+			$erreur = "Vous devez mettre le nombre de page";
 		}else{
-			$insert=$bdd->prepare("INSERT INTO livre (isbn,titre,annee,langue,genre,editeur) VALUES (:isbn,:titre,:annee,:langue,:genre,:editeur)");
+			$insert=$bdd->prepare("INSERT INTO livre (isbn,titre,annee,langue,genre,editeur,nbpages) VALUES (:isbn,:titre,:annee,:langue,:genre,:editeur,:nbpage)");
 			$insert->bindParam(':isbn', $isbn);
         	$insert->bindParam(':titre', $titre);
         	$insert->bindParam(':annee', $annee);
         	$insert->bindParam(':langue', $langue);
         	$insert->bindParam(':genre', $genres);
         	$insert->bindParam(':editeur', $editeur);
+        	$insert->bindParam(':nbpage', $nbpage);
 			$insert->execute();
+			$erreur = "Votre livre a bien été enregistré";
 		}
 	}
 ?>
 		<div class="droit">
 			<h2>Entrez les informations de votre livre</h2>
-			<div class="form">
-				<form method="POST" class="update">
-					<div class="group-input">
-						<div class="form-input">
-							<label>Titre :</label>
-							<input type="text" class="pres-input" name="titre">
-						</div>
-						<div class="form-input">
-							<select class="pres-input" name="editeur">
-								<option value="">Editeur</option>
-								<?php foreach ($resedit as $edits) { ?>
-									<option value="<?php echo $edits['id'] ?>"><?php echo $edits['libelle'] ?></option>
-								<?php } ?>
-							</select>
-						</div>
-						<div class="form-input">
-							<label>Année :</label>
-							<input type="text" class="pres-input" name="annee">
-						</div>
-						<div class="form-input">
-							<label>ISBN :</label>
-							<input type="text" class="pres-input" name="isbn">
-						</div>
-						<div class="form-input">
-							<select class="pres-input" name="langue">
-								<option value="">Langue</option>
-								<?php foreach ($reslangs as $langs) { ?>
-									<option value="<?php echo $langs['id'] ?>"><?php echo $langs['libelle'] ?></option>
-								<?php } ?>
-							</select>
-						</div>
-						<div class="form-input">
-							<select class="pres-input" name="genres">
-								<option value="">Genre</option>
-								<?php foreach ($resgenres as $genres) { ?>
-									<option value="<?php echo $genres['id'] ?>"><?php echo $genres['libelle'] ?></option>
-								<?php } ?>
-							</select>
-						</div>
-						<div class="form-input">
-							<input type="submit" name="submit">
-						</div>
+			<form method="POST" class="update">
+				<div class="group-input">
+					<p><span>Eléments obligatoires : *</span></p>
+					<div class="erreur">
+						<h3><?php echo $erreur; ?></h3>
 					</div>
-				</form>
-			</div>
+					<div class="form-input">
+						<label>Titre : <span>*</span></label>
+						<input type="text" class="pres-input" name="titre">
+					</div>
+					<div class="form-input">
+						<label>Editeur : <span>*</span></label>
+						<select class="pres-input" name="editeur">
+							<option value="">Editeur</option>
+							<?php foreach ($resedit as $edits) { ?>
+								<option value="<?php echo $edits['id'] ?>"><?php echo $edits['libelle'] ?></option>
+							<?php } ?>
+						</select>
+					</div>
+					<div class="form-input">
+						<label>Année : <span>*</span></label>
+						<input type="number" class="pres-input" name="annee" min="0" max="2500">
+					</div>
+					<div class="form-input">
+						<label>ISBN : <span>*</span></label>
+						<input type="text" class="pres-input" name="isbn">
+					</div>
+					<div class="form-input">
+						<label>Langue : <span>*</span></label>
+						<select class="pres-input" name="langue">
+							<option value="">Langue</option>
+							<?php foreach ($reslangs as $langs) { ?>
+								<option value="<?php echo $langs['id'] ?>"><?php echo $langs['libelle'] ?></option>
+							<?php } ?>
+						</select>
+					</div>
+					<div class="form-input">
+						<label>Genre : <span>*</span></label>
+						<select class="pres-input" name="genres">
+							<option value="">Genre</option>
+							<?php foreach ($resgenres as $genres) { ?>
+								<option value="<?php echo $genres['id'] ?>"><?php echo $genres['libelle'] ?></option>
+							<?php } ?>
+						</select>
+					</div>
+					<div class="form-input">
+						<label>Nombre de page : <span>*</span></label>
+						<input type="number" class="pres-input" name="nbpage" min="0" max="2500">
+					</div>
+					<div class="form-input">
+						<input type="submit" name="submit">
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </main>

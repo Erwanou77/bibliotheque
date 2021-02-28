@@ -12,6 +12,7 @@
         if(isset($email) && $password == $info['mdp']){
             $_SESSION['connecter'] = true;
             $_SESSION["admin"] = $info['admin'];
+            $_SESSION["idUtilisateur"] = $info['idUtilisateur'];
             $_SESSION["nom"] = $info['nom'];
             $_SESSION["prenom"] = $info['prenom'];
             $_SESSION["email"] = $info['email'];

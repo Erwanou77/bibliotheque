@@ -1,13 +1,5 @@
 .principal{
-<<<<<<< HEAD
-<<<<<<< HEAD
 	cursor: url("../img/book_close.png"), pointer;
-=======
-	cursor: url("/bibliotheque/img/book_close.png"), pointer;
->>>>>>> Erwan
-=======
-	cursor: url("../img/book_close.png"), pointer;
->>>>>>> Erwan
 }
 .select{
 	display: flex;
@@ -20,14 +12,6 @@
 }
 .select button{
 	padding: 5px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-	background:url('../img/fond_cuir.jpg')no-repeat;
-=======
-	background:url('/bibliotheque/img/fond_cuir.jpg')no-repeat;
->>>>>>> Erwan
-=======
->>>>>>> Erwan
 	color: white;
 }
 .container{
@@ -54,6 +38,17 @@
 .position:hover{
 	background: white;
 	cursor: url("../img/livre_ouvert.png"), pointer;
+}
+.nouveau{
+	width: 340px;
+	height: 340px;
+	background: gray;
+	color: white;
+	border-radius: 6px;
+	font-size: 120px;
+}
+.nouveau p{
+	padding-top: 100px;
 }
 .position img{
 	width: 340px;
