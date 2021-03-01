@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 01 mars 2021 à 23:43
+-- Généré le : lun. 01 mars 2021 à 23:47
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -273,7 +273,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `email` varchar(50) NOT NULL,
   `mdp` varchar(50) NOT NULL,
   PRIMARY KEY (`idUtilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateur`
@@ -281,10 +281,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 
 INSERT INTO `utilisateur` (`idUtilisateur`, `admin`, `nom`, `prenom`, `email`, `mdp`) VALUES
 (1, 1, 'LAUNAY', 'Erwan', 'rocky77580@gmail.com', 'c8801fc9c02f394e27a97a5c698d0981'),
-(2, 0, 'Petit', 'Rémi', 'remipetit@gmail.com', 'b6edd10559b20cb0a3ddaeb15e5267cc'),
-(3, NULL, 'test', 'test2', 'erwanetrocky77@gmail.com', 'f02368945726d5fc2a14eb576f7276c0'),
-(4, NULL, 'test', 'test2', 'erwanetrocky77@gmail.com', 'f02368945726d5fc2a14eb576f7276c0'),
-(5, NULL, 'test', 'test2', 'erwanetrocky77@gmail.com', 'f02368945726d5fc2a14eb576f7276c0');
+(2, 0, 'Petit', 'Rémi', 'remipetit@gmail.com', 'b6edd10559b20cb0a3ddaeb15e5267cc');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
