@@ -14,21 +14,18 @@
 		<button type="submit">Rafra&#238;chir</button>
 	</form>
 	<div class="container">
-		<?php if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 1) {?>
-			<div class="desktop">
-				<a href="nouveaulivre.php">
-					<div class="nouveau">
-						<p>+</p>
-					</div>
-				</a>
-			</div>
-		<?php }?>
 		<?php foreach ($pdostat as $ligne) {?>
-			<?php $images = "img/couvertures/".$ligne['isbn'].".png";?>
+			<?php $images = "img/couvertures/".$ligne['isbn'].".png";
+				$defaut = "img/couvertures/defaut.png";
+			?>
 			<div class="desktop">
 				<a href="livres/details.php?isbn=<?php echo $ligne['isbn'];?>">
 					<div class="position">
+						<?php if (file_exists($images)) { ?>
 						<img src="<?php echo $images ?>" alt="Image de couvertures">
+						<?php }else{ ?>
+						<img src="<?php echo $defaut ?>" alt="Image de couvertures">
+						<?php } ?>
 						<dl>
 							<dt>Titre :</dt>
 							<?php if (isset($_POST['trie']) && $_POST['trie'] == 'titre') {?>

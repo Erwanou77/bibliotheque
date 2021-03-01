@@ -39,17 +39,6 @@
 	background: white;
 	cursor: url("../img/livre_ouvert.png"), pointer;
 }
-.nouveau{
-	width: 340px;
-	height: 340px;
-	background: gray;
-	color: white;
-	border-radius: 6px;
-	font-size: 120px;
-}
-.nouveau p{
-	padding-top: 100px;
-}
 .position img{
 	width: 340px;
 	height: 340px;

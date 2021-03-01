@@ -1,9 +1,29 @@
 		<?php require "../users.php";
 		$resliste = $pdostat->fetchALL();
 		$datefmt = new IntlDateFormatter('fr_FR', NULL, NULL, NULL, NULL, 'dd MMMM yyyy');
+		if (isset($_POST['submit'])) {
+			$renouvel = stripslashes(htmlspecialchars($_POST['renouvel']));
+			$reslistes = $pdostat->fetch();			
+			$renouvelle = 1;		
+	        $select=$bdd->prepare("UPDATE livre SET date_retour = :retour, renouvellement = :renouvel WHERE isbn=".$renouvel);
+	        $select->bindParam(':retour', $retour);
+	        $select->bindParam(':renouvel', $renouvelle);
+			$select->execute();
+		}
 		?>
 		<div class="droit">
-			<h1>Liste des livres réservés :</h1>					
+			<h1>Liste des livres réservés :</h1>			
+			<form method="POST">
+				<select name="renouvel">
+				<?php 
+					foreach ($resliste as $ligne) {						
+						if ($ligne['renouvellement'] == 0) {?>
+					<option value="<?php echo $ligne['isbn']; ?>"><?php echo $ligne['titre']; ?></option>
+					<?php } ?>
+				<?php } ?>
+				</select>
+				<input type="submit" name="submit">
+			</form>				
 			<div class="container">
 				<?php if (empty($resliste)) {?>
 					<h1>Il n'y a aucun livre de réservé</h1>
@@ -11,10 +31,9 @@
 				<?php foreach ($resliste as $ligne) {?>
 				<?php
 					$date1 = date_create($ligne['date_retour']);
-					$date2 = date_create(date('d-m-Y'));	
-					$interval = date_diff($date2,$date1);
-					$renouvel = 1;
+					$date2 = date_create(date('d-m-Y'));
 					$retour = date('Y-m-d',strtotime($ligne['date_retour'] . '+15days'));
+					$interval = date_diff($date2,$date1);
 					$images = "../img/couvertures/".$ligne['isbn'].".png";?>
 					<div class="desktop">
 						<a href="../livres/details.php?isbn=<?php echo $ligne['isbn'];?>">
@@ -57,21 +76,11 @@
 							<p>Vous avez jusqu'au <b><?php echo $datefmt->format($date1); ?></b> pour lire votre livre</p>
 							<hr>
 							<label>Appuyez sur <b>Envoyer</b> pour effectuer votre unique renouvellement de 15 jours<br></label>
-							<form method="POST">
-								<input type="submit" name="submit">
-							</form>
+							
 						</div>
 					</div>
 				<?php } ?>
 			<?php } ?>
-			<?php
-			if (isset($_POST['submit'])) {
-			require'../bdd/config.php';			
-	        $select=$bdd->prepare("UPDATE livre SET date_retour = :retour, renouvellement = :renouvel WHERE isbn=".$ligne['isbn']);
-	        $select->bindParam(':retour', $retour);
-	        $select->bindParam(':renouvel', $renouvel);
-			$select->execute();
-		}?>
 			</div>
 		</div>
 	</div>
