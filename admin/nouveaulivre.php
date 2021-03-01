@@ -7,12 +7,13 @@
 		$isbn = stripslashes(htmlspecialchars($_POST['isbn']));
 		$langue = stripslashes(htmlspecialchars($_POST['langue']));
 		$genres = stripslashes(htmlspecialchars($_POST['genres']));
+		$auteur = stripslashes(htmlspecialchars($_POST['auteur']));
 		$nbpage = stripslashes(htmlspecialchars($_POST['nbpage']));
 
 		if (empty($titre)) {
 			$erreur = "Vous devez mettre un titre";
 		}elseif (empty($editeur)) {
-			$erreur = "Vous devez mettre un editeur";
+			$erreur = "Vous devez choisir un editeur";
 		}elseif (empty($annee)) {
 			$erreur = "Vous devez mettre une année";
 		}elseif (empty($isbn)) {
@@ -20,16 +21,19 @@
 		}elseif (empty($langue)) {
 			$erreur = "Vous devez choisir une langue";
 		}elseif (empty($genres)) {
-			$erreur = "Vous devez mettre un genre";
+			$erreur = "Vous devez choisir un genre";
+		}elseif (empty($auteur)) {
+			$erreur = "Vous devez choisir un auteur";
 		}elseif (empty($nbpage)) {
 			$erreur = "Vous devez mettre le nombre de page";
 		}else{
-			$insert=$bdd->prepare("INSERT INTO livre (isbn,titre,annee,langue,genre,editeur,nbpages) VALUES (:isbn,:titre,:annee,:langue,:genre,:editeur,:nbpage)");
+			$insert=$bdd->prepare("INSERT INTO livre (isbn,titre,annee,langue,genre,editeur,idPersonne,nbpages) VALUES (:isbn,:titre,:annee,:langue,:genre,:auteur,:editeur,:nbpage)");
 			$insert->bindParam(':isbn', $isbn);
         	$insert->bindParam(':titre', $titre);
         	$insert->bindParam(':annee', $annee);
         	$insert->bindParam(':langue', $langue);
         	$insert->bindParam(':genre', $genres);
+        	$insert->bindParam(':auteur', $auteur);
         	$insert->bindParam(':editeur', $editeur);
         	$insert->bindParam(':nbpage', $nbpage);
 			$insert->execute();
@@ -52,7 +56,7 @@
 					<div class="form-input">
 						<label>Editeur : <span>*</span></label>
 						<select class="pres-input" name="editeur">
-							<option value="">Editeur</option>
+							<option value="" selected>Editeur</option>
 							<?php foreach ($resedit as $edits) { ?>
 								<option value="<?php echo $edits['id'] ?>"><?php echo $edits['libelle'] ?></option>
 							<?php } ?>
@@ -69,7 +73,7 @@
 					<div class="form-input">
 						<label>Langue : <span>*</span></label>
 						<select class="pres-input" name="langue">
-							<option value="">Langue</option>
+							<option value="" selected>Langue</option>
 							<?php foreach ($reslangs as $langs) { ?>
 								<option value="<?php echo $langs['id'] ?>"><?php echo $langs['libelle'] ?></option>
 							<?php } ?>
@@ -81,6 +85,15 @@
 							<option value="">Genre</option>
 							<?php foreach ($resgenres as $genres) { ?>
 								<option value="<?php echo $genres['id'] ?>"><?php echo $genres['libelle'] ?></option>
+							<?php } ?>
+						</select>
+					</div>
+					<div class="form-input">
+						<label>Auteur : <span>*</span></label>
+						<select class="pres-input" name="auteur">
+							<option value="">Auteur</option>
+							<?php foreach ($resperso as $respersos) { ?>
+								<option value="<?php echo $respersos['id'] ?>"><?php echo $respersos['nom'] . " " . $respersos['prenom']; ?></option>
 							<?php } ?>
 						</select>
 					</div>

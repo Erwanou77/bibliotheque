@@ -18,7 +18,7 @@
 	$reqperso->setFetchMode(PDO::FETCH_ASSOC);
 	$resperso = $reqperso->fetchALL();
 
-	$pdostat = $bdd->query('SELECT *, editeur.libelle AS editeurs, utilisateur.nom AS noms, utilisateur.prenom AS prenoms FROM utilisateur JOIN livre ON utilisateur.idUtilisateur = livre.utilisateur JOIN editeur ON livre.editeur = editeur.id JOIN auteur ON livre.isbn = auteur.idLivre JOIN personne ON auteur.idPersonne = personne.id WHERE livre.utilisateur =' . $_SESSION['idUtilisateur']);
+	$pdostat = $bdd->query('SELECT *, editeur.libelle AS editeurs, utilisateur.nom AS noms, utilisateur.prenom AS prenoms FROM utilisateur JOIN livre ON utilisateur.idUtilisateur = livre.utilisateur JOIN editeur ON livre.editeur = editeur.id JOIN personne ON livre.idPersonne = personne.id WHERE livre.utilisateur =' . $_SESSION['idUtilisateur']);
 		$pdostat->setFetchMode(PDO::FETCH_ASSOC);
 
 	if (empty($_SESSION['connecter'])) {

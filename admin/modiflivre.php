@@ -18,7 +18,7 @@
 		}elseif (empty($isbn)) {
 			$erreur = "Vous devez mettre un isbn";
 		}elseif (empty($langue)) {
-			$erreur = "Vous devez mettre un genre";
+			$erreur = "Vous devez mettre un langue";
 		}elseif (empty($genre)) {
 			$erreur = "Vous devez mettre un genre";
 		}else{
@@ -42,13 +42,13 @@
 							<label>Titre :</label>
 							<select class="pres-input" name="titre">
 								<?php foreach ($modiflivre as $modifs) { ?>
-								<option><?php echo $modifs['titre']; ?></option>
+								<option value="<?php echo $modifs['isbn']; ?>"><?php echo $modifs['titre']; ?></option>
 								<?php } ?>
 							</select>
 						</div>
 						<div class="form-input">
 							<label>Editeur :</label>
-							<select class="pres-input" name="editeur">
+							<select class="pres-input" name="editeur" selected>
 								<option>Editeur</option>
 								<?php foreach ($resedit as $edits) { ?>
 									<option value="<?php echo $edits['id'] ?>"><?php echo $edits['libelle'] ?></option>

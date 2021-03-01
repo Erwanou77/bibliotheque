@@ -3,23 +3,26 @@
 		$datefmt = new IntlDateFormatter('fr_FR', NULL, NULL, NULL, NULL, 'dd MMMM yyyy');
 		if (isset($_POST['submit'])) {
 			$renouvel = stripslashes(htmlspecialchars($_POST['renouvel']));
-			$reslistes = $pdostat->fetch();			
-			$renouvelle = 1;		
-	        $select=$bdd->prepare("UPDATE livre SET date_retour = :retour, renouvellement = :renouvel WHERE isbn=".$renouvel);
-	        $select->bindParam(':retour', $retour);
-	        $select->bindParam(':renouvel', $renouvelle);
-			$select->execute();
+			if (empty($renouvel)) {
+				header('location:voslivres.php');
+			}else{	
+				$renouvelle = 1;		
+		        $insert=$bdd->prepare("UPDATE livre SET date_retour = date_retour + INTERVAL 15 DAY, renouvellement = :renouvel WHERE isbn=".$renouvel);
+		        $insert->bindParam(':renouvel', $renouvelle);
+				$insert->execute();
+				header('location:voslivres.php');
+			}
 		}
 		?>
 		<div class="droit">
 			<h1>Liste des livres réservés :</h1>			
 			<form method="POST">
-				<select name="renouvel">
+				<select name="renouvel">					
 				<?php 
 					foreach ($resliste as $ligne) {						
-						if ($ligne['renouvellement'] == 0) {?>
+					if ($ligne['renouvellement'] == 0) {?>
 					<option value="<?php echo $ligne['isbn']; ?>"><?php echo $ligne['titre']; ?></option>
-					<?php } ?>
+					<?php }?>
 				<?php } ?>
 				</select>
 				<input type="submit" name="submit">
@@ -32,7 +35,6 @@
 				<?php
 					$date1 = date_create($ligne['date_retour']);
 					$date2 = date_create(date('d-m-Y'));
-					$retour = date('Y-m-d',strtotime($ligne['date_retour'] . '+15days'));
 					$interval = date_diff($date2,$date1);
 					$images = "../img/couvertures/".$ligne['isbn'].".png";?>
 					<div class="desktop">
@@ -62,7 +64,6 @@
 							</div>
 						</a>
 						<div class="renouvel">
-							<p><?php echo $retour; ?></p>
 							<table>
 								<tr>
 									<th style="background-color: black; color:white;">Temps restant :</th>

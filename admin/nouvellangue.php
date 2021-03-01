@@ -1,20 +1,19 @@
 <?php require"../admin.php";
-	$erreur = "Entrez votre genre";
+	$erreur = "Entrez votre langue";
 	if (isset($_POST['submit'])) {
-		$genres = stripslashes(htmlspecialchars($_POST['genres']));
-		$resgenr = $reqgenre->fetch();
-		if (empty($genres)) {
-			$erreur = "Vous devez mettre un genre";
+		$langue = stripslashes(htmlspecialchars($_POST['langue']));
+		if (empty($langue)) {
+			$erreur = "Vous devez mettre une langue";
 		}else{
-			$insert = $bdd->prepare('INSERT INTO genre (libelle) VALUES (:genre)');
-			$insert->bindParam(':genre', $genres);
+			$insert = $bdd->prepare('INSERT INTO langue (libelle) VALUES (:langue)');
+			$insert->bindParam(':langue', $langue);
 			$insert->execute();
-			$erreur = "Votre genre a bien été enregistré";
+			$erreur = "Votre langue a bien été enregistré";
 		}
 	}
 ?>
 		<div class="droit">
-			<h2>Entrez votre nouveau genre</h2>
+			<h2>Entrez votre nouvelle langue</h2>
 			<form method="POST" class="update">
 				<div class="group-input">
 					<p><span>Eléments obligatoires : *</span></p>
@@ -22,20 +21,20 @@
 						<h3><?php echo $erreur; ?></h3>
 					</div>
 					<div class="form-input">
-						<label for="genres">Genre : <span>*</span></label>
-						<input type="text" class="pres-input" name="genres">
+						<label for="langue">Langue : <span>*</span></label>
+						<input type="text" class="pres-input" name="langue">
 					</div>
 					<div class="form-input">
 						<input type="submit" name="submit">
 					</div>
 					<table>
 						<thead>
-							<th>Genre</th>
+							<th>Langues</th>
 						</thead>
 						<tbody>
-							<?php foreach ($resgenres as $ligne) {?>
+							<?php foreach ($reslangs as $reslang) {?>
 							<tr>
-								<td><?php echo $ligne['libelle'] ?></td>
+								<td><?php echo $reslang['libelle'] ?></td>
 							</tr>
 							<?php } ?>
 						</tbody>
