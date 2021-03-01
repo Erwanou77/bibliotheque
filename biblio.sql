@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 25 fév. 2021 à 22:21
+-- Généré le : lun. 01 mars 2021 à 23:43
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -24,52 +24,30 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `auteur`
+-- Structure de la table `contact`
 --
 
-DROP TABLE IF EXISTS `auteur`;
-CREATE TABLE IF NOT EXISTS `auteur` (
-  `idPersonne` int(11) NOT NULL,
-  `idLivre` varchar(15) NOT NULL,
-  `idRole` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `contact`;
+CREATE TABLE IF NOT EXISTS `contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `prenom` varchar(50) NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `mail` varchar(150) NOT NULL,
+  `sujet` varchar(256) NOT NULL,
+  `message` varchar(2048) NOT NULL,
+  `date` date NOT NULL,
+  `telephone` int(11) NOT NULL,
+  `idPersonne` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `contact_utilisateur_FK` (`idPersonne`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `auteur`
+-- Déchargement des données de la table `contact`
 --
 
-INSERT INTO `auteur` (`idPersonne`, `idLivre`, `idRole`) VALUES
-(1, '2265096490', 1),
-(1, '2266243004', 1),
-(1, '2266258656', 1),
-(2, '2878582853', 1),
-(2, '2290120332', 1),
-(3, '2226319468', 1),
-(3, '2253184381', 1),
-(3, '9781786486202', 1),
-(4, '2266283782', 1),
-(4, '2374481905', 1),
-(5, '2253003964', 1),
-(6, '9782723434560', 1),
-(7, '2020347199', 1),
-(8, '9782412039601', 1),
-(9, '9782253044901', 1),
-(10, '9782012101333', 1),
-(11, '9782820337795', 1),
-(12, '2081382644', 1),
-(13, '9782377172191', 1),
-(14, '9782081390713', 1),
-(15, '9782290034002', 1),
-(16, '9782843449260', 1),
-(17, '9782843449253', 1),
-(18, '9782843449246', 1),
-(19, '9782370490476', 1),
-(20, '9782370490506', 1),
-(21, '97822090172841', 1),
-(22, '9782361833619', 1),
-(23, '9782277124276', 1),
-(24, '9791035801823', 1),
-(25, '9782290227268', 1);
+INSERT INTO `contact` (`id`, `prenom`, `nom`, `mail`, `sujet`, `message`, `date`, `telephone`, `idPersonne`) VALUES
+(1, 'test', 'test', 'test@gmail.com', 'opt2', 'cc', '2021-02-13', 665601439, NULL);
 
 -- --------------------------------------------------------
 
@@ -189,6 +167,8 @@ CREATE TABLE IF NOT EXISTS `livre` (
   `genre` int(11) DEFAULT NULL,
   `editeur` int(11) NOT NULL,
   `utilisateur` int(11) DEFAULT NULL,
+  `idPersonne` int(11) DEFAULT NULL,
+  `renouvellement` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`isbn`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -196,38 +176,39 @@ CREATE TABLE IF NOT EXISTS `livre` (
 -- Déchargement des données de la table `livre`
 --
 
-INSERT INTO `livre` (`isbn`, `titre`, `annee`, `nbpages`, `synopsis`, `date_retour`, `langue`, `genre`, `editeur`, `utilisateur`) VALUES
-('2020347199', 'Les bûchers de bocanegra', 2008, NULL, NULL, NULL, 2, 2, 11, NULL),
-('2081382644', 'Le Banquet', 2016, NULL, NULL, NULL, 2, 9, 2, NULL),
-('9782081390713', 'Discours de la Méthode', 2016, 191, NULL, NULL, 2, 9, 2, NULL),
-('2226319468', 'Promesse', 2016, 656, 'Plus de 13 millions d\'exemplaires vendus dans le monde, couronné par tous les grands prix du polar, dont le Grand Prix policier des lectrices de Elle, le Danois Jussi Adler Olsen est une figure incontournable du thriller scandinave.[rl][rl]Bornholm, une île danoise de la mer baltique, fin des années 1990. Le cadavre d\'une jeune fille est retrouvé dans un arbre, son vélo broyé au bord de la route. Aucune trace du chauffard : affaire classée. Sauf pour un inspecteur de la police locale qui finit dix-sept ans plus tard par demander l\'aide de l\'inspecteur Carl Mørck. Avant de se tirer une balle dans la tête.[rl][rl]À l\'initiative de Rose, l\'assistante du flegmatique Mørck, l\'insolite trio du Département V en charge des cold cases débarque sur l\'île de Bornholm. En remuant le passé, ils prennent le risque de réveiller de vieux démons...', NULL, 2, 2, 23, NULL),
-('2253003964', 'Dix petits nègres', 1976, 224, 'En a-t-on parlé de l’Île du Nègre! Elle avait, selon certains, été achetée par une star de Hollywood. Des journaux avaient insinué que l’Amirauté britannique s’y livrait à des expériences ultrasecrètes. Bref, quand ils reçurent –sans savoir de qui– cette invitation à passer des vacances à l’Île du Nègre, tous les dix accoururent.', NULL, 2, 2, 24, NULL),
-('2253184381', 'Délivrance', 2015, 744, 'Une bouteille jetée à la mer, repêchée et oubliée dans un commissariat des Highlands. A l’intérieur, un appel au secours écrit en lettres de sang et en danois. Lorsque le message échoue au Département V de la police de Copenhague, chargé des dossiers non élucidés, les années ont passé. L’imprévisible Carl Morck, Assad, son assistant syrien au flair infaillible, et Rose, la secrétaire punk, vont-ils prendre au sérieux ce SOS ?', NULL, 2, 2, 24, NULL),
-('2265096490', 'Juste une Ombre', 2012, 512, 'Tu te croyais forte. Invincible. Installée sur ton piédestal, tu imaginais pouvoir régenter le monde.[rl]Tu manipules? Tu deviendras une proie.[rl]Tu domines? Tu deviendras une esclave.[rl]Tu mènes une vie normale, banale, plutôt enviable. Tu as su t\'imposer dans ce monde, y trouver ta place.[rl]Et puis un jour.[rl]Un jour, tu te retournes et tu vois une ombre derrière toi.[rl]À partir de ce jour-là, elle te poursuit. Sans relâche.[rl]Juste une ombre.[rl]Sans visage, sans nom, sans mobile déclaré.[rl]On te suit dans la rue, on ouvre ton courrier, on ferme tes fenêtres.[rl]On t\'observe jusque dans les moments les plus intimes.[rl]Les flics te conseillent d\'aller consulter un psychiatre. Tes amis s\'écartent de toi.[rl]Personne ne te comprend, personne ne peut t\'aider. Tu es seule.[rl]Et l\'ombre est toujours là. Dans ta vie, dans ton dos.[rl]Ou seulement dans ta tête ?[rl]Le temps que tu comprennes, il sera peut-être trop tard.[rl]Tu commandes? Apprends l\'obéissance.[rl]Tu méprises? Apprends le respect.[rl]Tu veux vivre? Meurs en silence...', NULL, 2, 2, 21, NULL),
-('2266243004', 'Maîtres du jeu', 2013, 128, 'Il y a des crimes parfaits. Il y a des meurtres gratuits.[rl]Folie sanguinaire ou machination diabolique, la peur est la même. Elle est là, partout : elle s\'insinue, elle vous étouffe... Pour lui, c\'est un nectar. Pour vous, une attente insoutenable. D\'où viendra le coup fatal ? De l\'ami ? De l\'amant ? De cet inconnu à l\'air inoffensif ? D\'outre-tombe, peut-être...', NULL, 2, 2, 4, NULL),
-('2266258656', 'Satan était un ange', 2015, 384, 'Deux trajectoires, deux lignes de fuite.[rl]Hier encore, François était quelqu\'un. Un homme qu\'on regardait avec admiration, avec envie. Aujourd\'hui, il n\'est plus qu\'un fugitif tentant d\'échapper à son assassin. Qui le rattrapera, où qu\'il aille. Quoi qu\'il fasse.[rl]Paul regarde derrière lui ; il voit la cohorte des victimes qui hurlent vengeance. Il paye le prix de ses fautes. L\'échéance approche...[rl]Dans la même voiture, sur une même route, deux hommes que tout semble opposer, et qui pourtant fuient ensemble leur destin différent. Rouler droit devant. Faire ce qu\'ils n\'ont jamais fait.[rl]Puisque l\'horizon est bouché, autant tenter une dernière percée. Flamboyante.', NULL, 2, 2, 4, NULL),
-('2266283782', 'Nuit', 2018, 608, 'Nuit de tempête en mer du Nord. Secoué par des vents violents, l\'hélicoptère dépose Kirsten Nigaard sur la plate-forme pétrolière. L\'inspectrice norvégienne enquête sur le meurtre d\'une technicienne de la base offshore. Un homme manque à l\'appel. En fouillant sa cabine, Kirsten découvre une série de photos. Quelques jours plus tard, elle est dans le bureau de Martin Servaz. L\'absent s\'appelle Julian Hirtmann, le tueur retors et insaisissable que le policier poursuit depuis des années. Etrangement, sur plusieurs clichés, Martin Servaz apparaît. Kirsten lui tend alors une autre photo. Celle d\'un enfant. Au dos, juste un prénom : Gustav. Pour Kirsten et Martin, c\'est le début d\'un voyage terrifiant. Avec, au bout de la nuit, le plus redoutable des ennemis.', NULL, 2, 2, 4, NULL),
-('2290120332', 'Temps glaciaires', 2016, 480, 'Le printemps s\'annonça par un triolet de suicides. Une même signature laissée près des victimes, un étrange symbole en forme de guillotine. Pour le commissaire Adamsberg et ses adjoints Danglard et Retancourt, c\'est le début d\'une enquête débridée qui les conduira des arcanes d\'une étrange société, férue des écrits de Robespierre, aux terres lointaines et embrumées d\'Islande. Entre polar historique, tragédie et conte fantastique, Fred Vargas maîtrise à merveille le subtil équilibre des genres pour créer le sien, inimitable.', NULL, 2, 2, 3, NULL),
-('2374481905', 'La Vallée', 2020, 522, ' \'Je crois que quelqu\'un est en train d\'agir comme s\'il se prenait pour Dieu... \'[rl][rl]Un appel au secours au milieu de la nuit[rl]Une vallée coupée du monde[rl]Une abbaye pleine de secrets[rl]Une forêt mystérieuse[rl]Une série de meurtres épouvantables[rl]Une population terrifiée qui veut se faire justice[rl]Un corbeau qui accuse[rl]Une communauté au bord du chaos[rl]Une nouvelle enquête de Martin Servaz[rl][rl]\' Avec La Vallée, Martin Servaz, le flic emblématique de Bernard Minier, fait un retour tonitruant ! \'[rl]Bernard Lehut, RTL[rl][rl]\' D\'une efficacité redoutable. Addictif !\'[rl]François Busnel, La Grande Librairie[rl][rl]\" Un suspense et un style parfaitement maîtrisés, des personnages touchants, et une fois encore une \'putain d\'histoire\'. \'[rl]Fabrice Drouzy, Libération[rl][rl]\' Tout en menant de main de maître son histoire, Minier poursuit une réflexion sur le mal qui nous concerne tous. \'[rl]Bruno Corty, Le Figaro littéraire[rl][rl]\" un roman brillant ! \'[rl]Olivier Bureau, Le Parisien[rl][rl]\" On le dévore pour l\'efficacité de son scénario et pour la sincérité avec laquelle il dénonce l\'hyper-moralisation d\'une société moderne qui conduit au manichéisme. \'[rl]Jean-Rémi Barland, La Provence[rl][rl]\' Magnifiquement mené vers une fin spectaculaire. \"[rl]Stéphanie Janicot, Notre Temps[rl][rl]\' En matière de thriller, La Vallée est un modèle du genre. Impossible à lâcher, diablement addictif, et furieusement humain. \'[rl]Yvan, EmOtionS – blog littéraire', NULL, 2, 2, 26, NULL),
-('2878582853', 'Un lieu incertain', 2008, 386, ' – Bien, dit Clyde-Fox en se rechaussant. Sale histoire. Faites votre job, Radstock, allez voir ça. C\'est un tas de vieilles chaussures posées sur le trottoir. Préparez votre âme. Il y en a une vingtaine peut-être, vous ne pouvez pas les manquer.[rl]– Ce n\'est pas mon job, Clyde-Fox.[rl]– Bien sûr que si. Elles sont alignées avec soin, les pointes dirigées vers le cimetière. Je vous parle évidemment de la vieille grille principale.[rl]– Le vieux cimetière est surveillé la nuit. Fermé pour les hommes et pour les chaussures des hommes.[rl]– Eh bien elles veulent entrer tout de même, et toute leur attitude est très déplaisante. Allez les regarder, faites votre job.[rl]– Clyde-Fox, je me fous que vos vieilles chaussures veuillent entrer là-dedans.[rl]– Vous avez tort, Radstock. Parce qu\'il y a les pieds dedans.[rl]Il y eut un silence, une onde de choc désagréable. Une petite plainte sortit de la gorge d\'Estalère, Danglard serra les bras. Adamsberg arrêta sa marche et leva la tête. ', NULL, 2, 2, 22, NULL),
-('9781786486202', 'Victim 2117', 2020, 480, 'In the heart-pounding new installment of the No.1 bestselling Department Q series, a terrifying international investigation reveals the complex backstory of one of the department\'s own - the enigmatic Assad.[rl][rl]The newspaper refers to the dead body only as Victim 2117 - the two thousand, one hundred and seventeenth refugee to die in the Mediterranean Sea.[rl][rl]But to three people, the victim is so much more, and the death sets off a chain of events that throws Department Q, Copenhagen\'s cold cases division led by Detective Carl Mørck, into a deeply dangerous - and deeply personal - case: a case that not only reveals dark secrets about the past, but has deadly implications for the future.[rl][rl]For a troubled Danish teen, the death of Victim 2117 becomes a symbol of everything he resents and is the perfect excuse to unleash his murderous impulses. For Ghallib, a brutal tormentor from the notorious prison Abu Ghraib, the death of Victim 2117 was the first step in a terrorist plot, years in the making. And for Department Q\'s Assad, Victim 2117 is a link to his buried past and to the family he assumed was long dead.', NULL, 2, 2, 25, NULL),
-('9782012101333', 'Astérix le gaulois', 1960, NULL, NULL, NULL, 2, 8, 13, NULL),
-('97822090172841', 'La Cinquième Saison', 2019, 480, NULL, NULL, 2, 2, 3, NULL),
-('9782253044901', 'Le Parfum', 1985, NULL, NULL, NULL, 2, 2, 6, NULL),
-('9782277124276', 'Des fleurs pour Algernon', 2012, 252, NULL, NULL, 2, 2, 3, NULL),
-('9782290034002', 'Le Bro Code', 2013, 193, NULL, NULL, 2, 10, 16, NULL),
-('9782290227268', 'Les Robots', 2020, 285, NULL, NULL, 2, 2, 3, NULL),
-('9782361833619', 'Pierre Fendre', 2017, 270, NULL, NULL, 2, 2, 5, NULL),
-('9782370490476', 'Le Cinquième Principe', 2017, 564, NULL, NULL, 2, 2, 2, NULL),
-('9782370490506', 'On est bien seul dans l\'univers', 2017, 508, NULL, NULL, 2, 2, 2, NULL),
-('9782377172191', 'Re:Zero (Tome 5)', 2019, 140, NULL, NULL, 2, 6, 15, NULL),
-('9782412039601', 'Les réseaux pour les nuls', 2018, NULL, NULL, NULL, 2, 7, 12, NULL),
-('9782723434560', 'Dragon Ball', 1984, NULL, NULL, NULL, 2, 6, 10, NULL),
-('9782820337795', 'The Promised Neverland', 2020, 189, NULL, NULL, 2, 6, 14, NULL),
-('9782843449246', '24 vues du Mont Fuji', 2017, 136, NULL, NULL, 2, 2, 1, NULL),
-('9782843449253', 'Le Sultan des nuages', 2017, 120, NULL, NULL, 2, 2, 1, NULL),
-('9782843449260', 'Le Crépuscule des dieux', 2019, 480, NULL, NULL, 2, 2, 4, NULL),
-('9791035801823', 'Fahrenheit 451 ', 2018, 256, NULL, NULL, 2, 2, 6, NULL);
+INSERT INTO `livre` (`isbn`, `titre`, `annee`, `nbpages`, `synopsis`, `date_retour`, `langue`, `genre`, `editeur`, `utilisateur`, `idPersonne`, `renouvellement`) VALUES
+('2020347199', 'Les bûchers de bocanegra', 2008, NULL, NULL, NULL, 2, 2, 11, 1, 7, NULL),
+('2081382644', 'Le Banquet', 2016, NULL, NULL, '2021-03-24', 2, 9, 2, 2, 12, 1),
+('9782081390713', 'Discours de la Méthode', 2016, 191, NULL, '2021-03-27', 2, 9, 2, 1, 14, 1),
+('2226319468', 'Promesse', 2016, 656, 'Plus de 13 millions d\'exemplaires vendus dans le monde, couronné par tous les grands prix du polar, dont le Grand Prix policier des lectrices de Elle, le Danois Jussi Adler Olsen est une figure incontournable du thriller scandinave.[rl][rl]Bornholm, une île danoise de la mer baltique, fin des années 1990. Le cadavre d\'une jeune fille est retrouvé dans un arbre, son vélo broyé au bord de la route. Aucune trace du chauffard : affaire classée. Sauf pour un inspecteur de la police locale qui finit dix-sept ans plus tard par demander l\'aide de l\'inspecteur Carl Mørck. Avant de se tirer une balle dans la tête.[rl][rl]À l\'initiative de Rose, l\'assistante du flegmatique Mørck, l\'insolite trio du Département V en charge des cold cases débarque sur l\'île de Bornholm. En remuant le passé, ils prennent le risque de réveiller de vieux démons...', NULL, 2, 2, 23, NULL, 3, NULL),
+('2253003964', 'Dix petits nègres', 1976, 224, 'En a-t-on parlé de l’Île du Nègre! Elle avait, selon certains, été achetée par une star de Hollywood. Des journaux avaient insinué que l’Amirauté britannique s’y livrait à des expériences ultrasecrètes. Bref, quand ils reçurent –sans savoir de qui– cette invitation à passer des vacances à l’Île du Nègre, tous les dix accoururent.', NULL, 2, 2, 24, NULL, 5, NULL),
+('2253184381', 'Délivrance', 2015, 744, 'Une bouteille jetée à la mer, repêchée et oubliée dans un commissariat des Highlands. A l’intérieur, un appel au secours écrit en lettres de sang et en danois. Lorsque le message échoue au Département V de la police de Copenhague, chargé des dossiers non élucidés, les années ont passé. L’imprévisible Carl Morck, Assad, son assistant syrien au flair infaillible, et Rose, la secrétaire punk, vont-ils prendre au sérieux ce SOS ?', NULL, 2, 2, 24, NULL, 3, NULL),
+('2265096490', 'Juste une Ombre', 2012, 512, 'Tu te croyais forte. Invincible. Installée sur ton piédestal, tu imaginais pouvoir régenter le monde.[rl]Tu manipules? Tu deviendras une proie.[rl]Tu domines? Tu deviendras une esclave.[rl]Tu mènes une vie normale, banale, plutôt enviable. Tu as su t\'imposer dans ce monde, y trouver ta place.[rl]Et puis un jour.[rl]Un jour, tu te retournes et tu vois une ombre derrière toi.[rl]À partir de ce jour-là, elle te poursuit. Sans relâche.[rl]Juste une ombre.[rl]Sans visage, sans nom, sans mobile déclaré.[rl]On te suit dans la rue, on ouvre ton courrier, on ferme tes fenêtres.[rl]On t\'observe jusque dans les moments les plus intimes.[rl]Les flics te conseillent d\'aller consulter un psychiatre. Tes amis s\'écartent de toi.[rl]Personne ne te comprend, personne ne peut t\'aider. Tu es seule.[rl]Et l\'ombre est toujours là. Dans ta vie, dans ton dos.[rl]Ou seulement dans ta tête ?[rl]Le temps que tu comprennes, il sera peut-être trop tard.[rl]Tu commandes? Apprends l\'obéissance.[rl]Tu méprises? Apprends le respect.[rl]Tu veux vivre? Meurs en silence...', NULL, 2, 2, 21, NULL, 1, NULL),
+('2266243004', 'Maîtres du jeu', 2013, 128, 'Il y a des crimes parfaits. Il y a des meurtres gratuits.[rl]Folie sanguinaire ou machination diabolique, la peur est la même. Elle est là, partout : elle s\'insinue, elle vous étouffe... Pour lui, c\'est un nectar. Pour vous, une attente insoutenable. D\'où viendra le coup fatal ? De l\'ami ? De l\'amant ? De cet inconnu à l\'air inoffensif ? D\'outre-tombe, peut-être...', NULL, 2, 2, 4, NULL, 1, NULL),
+('2266258656', 'Satan était un ange', 2015, 384, 'Deux trajectoires, deux lignes de fuite.[rl]Hier encore, François était quelqu\'un. Un homme qu\'on regardait avec admiration, avec envie. Aujourd\'hui, il n\'est plus qu\'un fugitif tentant d\'échapper à son assassin. Qui le rattrapera, où qu\'il aille. Quoi qu\'il fasse.[rl]Paul regarde derrière lui ; il voit la cohorte des victimes qui hurlent vengeance. Il paye le prix de ses fautes. L\'échéance approche...[rl]Dans la même voiture, sur une même route, deux hommes que tout semble opposer, et qui pourtant fuient ensemble leur destin différent. Rouler droit devant. Faire ce qu\'ils n\'ont jamais fait.[rl]Puisque l\'horizon est bouché, autant tenter une dernière percée. Flamboyante.', NULL, 2, 2, 4, NULL, 1, NULL),
+('2266283782', 'Nuit', 2018, 608, 'Nuit de tempête en mer du Nord. Secoué par des vents violents, l\'hélicoptère dépose Kirsten Nigaard sur la plate-forme pétrolière. L\'inspectrice norvégienne enquête sur le meurtre d\'une technicienne de la base offshore. Un homme manque à l\'appel. En fouillant sa cabine, Kirsten découvre une série de photos. Quelques jours plus tard, elle est dans le bureau de Martin Servaz. L\'absent s\'appelle Julian Hirtmann, le tueur retors et insaisissable que le policier poursuit depuis des années. Etrangement, sur plusieurs clichés, Martin Servaz apparaît. Kirsten lui tend alors une autre photo. Celle d\'un enfant. Au dos, juste un prénom : Gustav. Pour Kirsten et Martin, c\'est le début d\'un voyage terrifiant. Avec, au bout de la nuit, le plus redoutable des ennemis.', NULL, 2, 2, 4, NULL, 4, NULL),
+('2290120332', 'Temps glaciaires', 2016, 480, 'Le printemps s\'annonça par un triolet de suicides. Une même signature laissée près des victimes, un étrange symbole en forme de guillotine. Pour le commissaire Adamsberg et ses adjoints Danglard et Retancourt, c\'est le début d\'une enquête débridée qui les conduira des arcanes d\'une étrange société, férue des écrits de Robespierre, aux terres lointaines et embrumées d\'Islande. Entre polar historique, tragédie et conte fantastique, Fred Vargas maîtrise à merveille le subtil équilibre des genres pour créer le sien, inimitable.', NULL, 2, 2, 3, NULL, 2, NULL),
+('2374481905', 'La Vallée', 2020, 522, ' \'Je crois que quelqu\'un est en train d\'agir comme s\'il se prenait pour Dieu... \'[rl][rl]Un appel au secours au milieu de la nuit[rl]Une vallée coupée du monde[rl]Une abbaye pleine de secrets[rl]Une forêt mystérieuse[rl]Une série de meurtres épouvantables[rl]Une population terrifiée qui veut se faire justice[rl]Un corbeau qui accuse[rl]Une communauté au bord du chaos[rl]Une nouvelle enquête de Martin Servaz[rl][rl]\' Avec La Vallée, Martin Servaz, le flic emblématique de Bernard Minier, fait un retour tonitruant ! \'[rl]Bernard Lehut, RTL[rl][rl]\' D\'une efficacité redoutable. Addictif !\'[rl]François Busnel, La Grande Librairie[rl][rl]\" Un suspense et un style parfaitement maîtrisés, des personnages touchants, et une fois encore une \'putain d\'histoire\'. \'[rl]Fabrice Drouzy, Libération[rl][rl]\' Tout en menant de main de maître son histoire, Minier poursuit une réflexion sur le mal qui nous concerne tous. \'[rl]Bruno Corty, Le Figaro littéraire[rl][rl]\" un roman brillant ! \'[rl]Olivier Bureau, Le Parisien[rl][rl]\" On le dévore pour l\'efficacité de son scénario et pour la sincérité avec laquelle il dénonce l\'hyper-moralisation d\'une société moderne qui conduit au manichéisme. \'[rl]Jean-Rémi Barland, La Provence[rl][rl]\' Magnifiquement mené vers une fin spectaculaire. \"[rl]Stéphanie Janicot, Notre Temps[rl][rl]\' En matière de thriller, La Vallée est un modèle du genre. Impossible à lâcher, diablement addictif, et furieusement humain. \'[rl]Yvan, EmOtionS – blog littéraire', NULL, 2, 2, 26, NULL, 4, NULL),
+('2878582853', 'Un lieu incertain', 2008, 386, ' – Bien, dit Clyde-Fox en se rechaussant. Sale histoire. Faites votre job, Radstock, allez voir ça. C\'est un tas de vieilles chaussures posées sur le trottoir. Préparez votre âme. Il y en a une vingtaine peut-être, vous ne pouvez pas les manquer.[rl]– Ce n\'est pas mon job, Clyde-Fox.[rl]– Bien sûr que si. Elles sont alignées avec soin, les pointes dirigées vers le cimetière. Je vous parle évidemment de la vieille grille principale.[rl]– Le vieux cimetière est surveillé la nuit. Fermé pour les hommes et pour les chaussures des hommes.[rl]– Eh bien elles veulent entrer tout de même, et toute leur attitude est très déplaisante. Allez les regarder, faites votre job.[rl]– Clyde-Fox, je me fous que vos vieilles chaussures veuillent entrer là-dedans.[rl]– Vous avez tort, Radstock. Parce qu\'il y a les pieds dedans.[rl]Il y eut un silence, une onde de choc désagréable. Une petite plainte sortit de la gorge d\'Estalère, Danglard serra les bras. Adamsberg arrêta sa marche et leva la tête. ', NULL, 2, 2, 22, NULL, 2, NULL),
+('9781786486202', 'Victim 2117', 2020, 480, 'In the heart-pounding new installment of the No.1 bestselling Department Q series, a terrifying international investigation reveals the complex backstory of one of the department\'s own - the enigmatic Assad.[rl][rl]The newspaper refers to the dead body only as Victim 2117 - the two thousand, one hundred and seventeenth refugee to die in the Mediterranean Sea.[rl][rl]But to three people, the victim is so much more, and the death sets off a chain of events that throws Department Q, Copenhagen\'s cold cases division led by Detective Carl Mørck, into a deeply dangerous - and deeply personal - case: a case that not only reveals dark secrets about the past, but has deadly implications for the future.[rl][rl]For a troubled Danish teen, the death of Victim 2117 becomes a symbol of everything he resents and is the perfect excuse to unleash his murderous impulses. For Ghallib, a brutal tormentor from the notorious prison Abu Ghraib, the death of Victim 2117 was the first step in a terrorist plot, years in the making. And for Department Q\'s Assad, Victim 2117 is a link to his buried past and to the family he assumed was long dead.', NULL, 2, 2, 25, NULL, 3, NULL),
+('9782012101333', 'Astérix le gaulois', 1960, NULL, NULL, NULL, 2, 8, 13, NULL, 10, NULL),
+('97822090172841', 'La Cinquième Saison', 2019, 480, NULL, NULL, 2, 2, 3, NULL, 21, NULL),
+('9782253044901', 'Le Parfum', 1985, NULL, NULL, NULL, 2, 2, 6, NULL, 9, NULL),
+('9782277124276', 'Des fleurs pour Algernon', 2012, 252, NULL, NULL, 2, 2, 3, NULL, 23, NULL),
+('9782290034002', 'Le Bro Code', 2013, 193, NULL, NULL, 2, 10, 16, NULL, 15, NULL),
+('9782290227268', 'Les Robots', 2020, 285, NULL, NULL, 2, 2, 3, NULL, 25, NULL),
+('9782361833619', 'Pierre Fendre', 2017, 270, NULL, NULL, 2, 2, 5, NULL, 22, NULL),
+('9782370490476', 'Le Cinquième Principe', 2017, 564, NULL, NULL, 2, 2, 2, NULL, 19, NULL),
+('9782370490506', 'On est bien seul dans l\'univers', 2017, 508, NULL, NULL, 2, 2, 2, NULL, 20, NULL),
+('9782377172191', 'Re:Zero (Tome 5)', 2019, 140, NULL, NULL, 2, 6, 15, NULL, 13, NULL),
+('9782412039601', 'Les réseaux pour les nuls', 2018, NULL, NULL, NULL, 2, 7, 12, NULL, 8, NULL),
+('9782723434560', 'Dragon Ball', 1984, NULL, NULL, NULL, 2, 6, 10, NULL, 6, NULL),
+('9782820337795', 'The Promised Neverland', 2020, 189, NULL, NULL, 2, 6, 14, NULL, 11, NULL),
+('9782843449246', '24 vues du Mont Fuji', 2017, 136, NULL, NULL, 2, 2, 1, NULL, 18, NULL),
+('9782843449253', 'Le Sultan des nuages', 2017, 120, NULL, NULL, 2, 2, 1, NULL, 17, NULL),
+('9782843449260', 'Le Crépuscule des dieux', 2019, 480, NULL, NULL, 2, 2, 4, NULL, 16, NULL),
+('9791035801823', 'Fahrenheit 451 ', 2018, 256, NULL, NULL, 2, 2, 6, NULL, 24, NULL),
+('2233445566', 'Essai', 1970, 666, NULL, NULL, 1, 11, 25, NULL, 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -280,29 +261,6 @@ INSERT INTO `personne` (`id`, `nom`, `prenom`, `date_naiss`, `ville_naiss`, `bio
 -- --------------------------------------------------------
 
 --
--- Structure de la table `role`
---
-
-DROP TABLE IF EXISTS `role`;
-CREATE TABLE IF NOT EXISTS `role` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `libelle` varchar(150) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `role`
---
-
-INSERT INTO `role` (`id`, `libelle`) VALUES
-(1, 'Ecrivain'),
-(2, 'Illustrateur'),
-(3, 'Traducteur'),
-(4, 'Préface');
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `utilisateur`
 --
 
@@ -315,7 +273,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `email` varchar(50) NOT NULL,
   `mdp` varchar(50) NOT NULL,
   PRIMARY KEY (`idUtilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateur`
@@ -324,7 +282,9 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 INSERT INTO `utilisateur` (`idUtilisateur`, `admin`, `nom`, `prenom`, `email`, `mdp`) VALUES
 (1, 1, 'LAUNAY', 'Erwan', 'rocky77580@gmail.com', 'c8801fc9c02f394e27a97a5c698d0981'),
 (2, 0, 'Petit', 'Rémi', 'remipetit@gmail.com', 'b6edd10559b20cb0a3ddaeb15e5267cc'),
-(3, 1, 'LAUNAY', 'Thierry', 'thierry@launay.org', 'c8801fc9c02f394e27a97a5c698d0981');
+(3, NULL, 'test', 'test2', 'erwanetrocky77@gmail.com', 'f02368945726d5fc2a14eb576f7276c0'),
+(4, NULL, 'test', 'test2', 'erwanetrocky77@gmail.com', 'f02368945726d5fc2a14eb576f7276c0'),
+(5, NULL, 'test', 'test2', 'erwanetrocky77@gmail.com', 'f02368945726d5fc2a14eb576f7276c0');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

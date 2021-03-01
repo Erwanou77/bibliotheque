@@ -29,7 +29,7 @@
 		<div class="gauche">
 			<h2><?php echo $_SESSION['nom'] . " " . $_SESSION['prenom']; ?></h2>
 			<div class="edition">
-				<h3>Param&#232;tres</h3>
+				<h3>Param&#232;tres livres</h3>
 				<ul>
 					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/nouveaulivre.php">Ajouter un livre</a></li>
 					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/nouveaugenre.php">Ajouter un genre</a></li>
@@ -37,7 +37,13 @@
 					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/nouvellangue.php">Ajouter une langue</a></li>
 					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/nouvelauteur.php">Ajouter un auteur</a></li>
 					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/listereserv.php">Liste des réservations</a></li>
-					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/modiflivre.php">Modifier vos livres</a></li>
+					<li><em><a href="../endeveloppement.php">Modifier vos livres</a><br><span style="font-size: 12px">En cours de développement</span></em></li>
+				</ul>
+				<h3>Param&#232;tres utilisateurs</h3>
+				<ul>
+					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/nouveaucompte.php">Ajouter un compte</a></li>
+					<li><em><a href="../endeveloppement.php">Modifier un compte</a><br><span style="font-size: 12px">En cours de développement</span></em></li>
+					<li><em><a href="../endeveloppement.php">Supprimer un compte</a><br><span style="font-size: 12px">En cours de développement</span></em></li>
 				</ul>
 			</div>
 		</div>

@@ -15,9 +15,10 @@
 		}
 		?>
 		<div class="droit">
-			<h1>Liste des livres réservés :</h1>			
-			<form method="POST">
-				<select name="renouvel">					
+			<h2>Liste des livres réservés :</h2>			
+			<form method="POST" class="erreur post">
+				<p>Appuyez sur <b>Envoyer</b> pour effectuer votre unique renouvellement de 15 jours<br></p>
+				<select name="renouvel" class="pres-input">					
 				<?php 
 					foreach ($resliste as $ligne) {						
 					if ($ligne['renouvellement'] == 0) {?>
@@ -74,10 +75,7 @@
 									<?php } ?>
 								</tr>
 							</table>						
-							<p>Vous avez jusqu'au <b><?php echo $datefmt->format($date1); ?></b> pour lire votre livre</p>
-							<hr>
-							<label>Appuyez sur <b>Envoyer</b> pour effectuer votre unique renouvellement de 15 jours<br></label>
-							
+							<p>Vous avez jusqu'au <b><?php echo $datefmt->format($date1); ?></b> pour lire votre livre</p>												
 						</div>
 					</div>
 				<?php } ?>
