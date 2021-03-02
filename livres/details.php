@@ -5,13 +5,19 @@ require("../header/header.php")?>
 <link rel="stylesheet" type="text/css" href="../css/stylelivres.css">
 <section class="principal">
 	<?php foreach ($pdostat as $ligne) {?>
-	<?php $images = "../img/couvertures/".$ligne['isbn'].".png";?>
+	<?php $images = "../img/couvertures/".$ligne['isbn'].".png";
+			$defaut = "../img/couvertures/defaut.png";
+	?>
 	<div class="retour">
 		<p><a href="../bibliotheque.php">Biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;<?php echo htmlspecialchars($ligne['titre']); ?></p>
 	</div>
 	<div class="all">
 		<div class="centrage">
-			<img src="<?php echo htmlspecialchars($images); ?>" alt="Couverture du livre">
+			<?php if (file_exists($images)) { ?>
+				<img src="<?php echo $images ?>" alt="Image de couvertures">
+			<?php }else{ ?>
+				<img src="<?php echo $defaut ?>" alt="Image de couvertures">
+			<?php } ?>
 			<div class="tableau">
 				<h2>Caract&#233;ristiques d&#233;taill&#233;es</h2>
 				<dl>

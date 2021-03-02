@@ -15,10 +15,12 @@
 		}
 		?>
 		<div class="droit">
-			<h2>Liste des livres réservés :</h2>			
+			<h2>Liste des livres réservés :</h2>
+			<?php if (!empty($resliste)) { ?>
 			<form method="POST" class="erreur post">
 				<p>Appuyez sur <b>Envoyer</b> pour effectuer votre unique renouvellement de 15 jours<br></p>
-				<select name="renouvel" class="pres-input">					
+				<select name="renouvel" class="pres-input">	
+				<option value="">-- Choisissez votre livre --</option>				
 				<?php 
 					foreach ($resliste as $ligne) {						
 					if ($ligne['renouvellement'] == 0) {?>
@@ -27,7 +29,8 @@
 				<?php } ?>
 				</select>
 				<input type="submit" name="submit">
-			</form>				
+			</form>
+			<?php } ?>	
 			<div class="container">
 				<?php if (empty($resliste)) {?>
 					<h1>Il n'y a aucun livre de réservé</h1>
