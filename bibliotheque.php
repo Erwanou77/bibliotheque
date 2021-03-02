@@ -15,11 +15,17 @@
 	</form>
 	<div class="container">
 		<?php foreach ($pdostat as $ligne) {?>
-			<?php $images = "img/couvertures/".$ligne['isbn'].".png";?>
+			<?php $images = "img/couvertures/".$ligne['isbn'].".png";
+				$defaut = "img/couvertures/defaut.png";
+			?>
 			<div class="desktop">
 				<a href="livres/details.php?isbn=<?php echo $ligne['isbn'];?>">
 					<div class="position">
+						<?php if (file_exists($images)) { ?>
 						<img src="<?php echo $images ?>" alt="Image de couvertures">
+						<?php }else{ ?>
+						<img src="<?php echo $defaut ?>" alt="Image de couvertures">
+						<?php } ?>
 						<dl>
 							<dt>Titre :</dt>
 							<?php if (isset($_POST['trie']) && $_POST['trie'] == 'titre') {?>

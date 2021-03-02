@@ -47,7 +47,11 @@ require("../header/header.php")?>
 		</div>
 		<div class="resume">
 			<h2>Synopsis</h2>
+			<?php if ($ligne['synopsis'] == NULL) {?>
+				<h1 style="text-align: center; font-size: 26px; font-weight: bold; color: red;">Il n'y a pas encore de synopsis</h1>
+			<?php }else{ ?>
 			<p><?php echo bbcode(htmlspecialchars($ligne['synopsis']));?></p>
+			<?php } ?>
 			<?php if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 0) { ?>
 				<div class="reserver">
 					<a href="">Pour r&#233;server ce livre cliquez ici</a>

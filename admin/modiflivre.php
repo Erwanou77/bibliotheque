@@ -1,4 +1,6 @@
 <?php require"../admin.php";
+	$modiflivre = $bdd->query('SELECT *, e.libelle AS editeurs, g.libelle AS genres, la.libelle AS langues FROM livre l JOIN editeur e ON l.editeur = e.id JOIN genre g ON l.genre = g.id JOIN langue la ON l.langue = la.id');
+	$modiflivre->setFetchMode(PDO::FETCH_ASSOC);
 	if (isset($_POST['submit'])) {
 		$titre = stripslashes(htmlspecialchars($_POST['titre']));
 		$editeur = stripslashes(htmlspecialchars($_POST['editeur']));
@@ -16,11 +18,11 @@
 		}elseif (empty($isbn)) {
 			$erreur = "Vous devez mettre un isbn";
 		}elseif (empty($langue)) {
-			$erreur = "Vous devez mettre un genre";
+			$erreur = "Vous devez mettre un langue";
 		}elseif (empty($genre)) {
 			$erreur = "Vous devez mettre un genre";
 		}else{
-			$insert=$bdd->prepare("INSERT INTO livre (isbn,titre,annee,langue,genre,editeur) VALUES (:isbn,:titre,:annee,:langue,:genre,:editeur)");
+			$insert=$bdd->prepare("UPDATE livre SET isbn = :isbn,titre = :titre, annee = :annee, langue = :langue, genre = :genre, editeur = :editeur WHERE");
 			$insert->bindParam(':isbn', $isbn);
         	$insert->bindParam(':titre', $titre);
         	$insert->bindParam(':annee', $annee);
@@ -38,11 +40,16 @@
 					<div class="group-input">
 						<div class="form-input">
 							<label>Titre :</label>
-							<input type="text" class="pres-input" name="titre">
+							<select class="pres-input" name="titre">
+								<?php foreach ($modiflivre as $modifs) { ?>
+								<option value="<?php echo $modifs['isbn']; ?>"><?php echo $modifs['titre']; ?></option>
+								<?php } ?>
+							</select>
 						</div>
 						<div class="form-input">
-							<select class="pres-input" name="editeur">
-								<option value="">Editeur</option>
+							<label>Editeur :</label>
+							<select class="pres-input" name="editeur" selected>
+								<option>Editeur</option>
 								<?php foreach ($resedit as $edits) { ?>
 									<option value="<?php echo $edits['id'] ?>"><?php echo $edits['libelle'] ?></option>
 								<?php } ?>

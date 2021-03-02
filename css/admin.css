@@ -32,21 +32,21 @@
 	background-color: white;
 	width: 100%;
 }
-.update{
-	display: flex;
-	flex-direction: column;
-}
 .group-input{
 	background-color: rgb(121,121,121,.6);
 	margin: 0 auto;
 	padding: 10px;
 	border-radius: 6px;
-	width: 30%;
+	width: 35%;
+}
+.group-input span{
+	color: red;
 }
 .form-input{
 	display: flex;
 	flex-direction: column;
-	margin: 10px;
+	margin: 10px auto;
+	width: 100%;
 }
 .pres-input{
 	padding: 8px;
@@ -64,6 +64,7 @@ table{
     letter-spacing: 1px;
     font-family: sans-serif;
     font-size: .8rem;
+    width: 100%;
 }
 thead,tfoot{
     background-color: black;
@@ -74,7 +75,7 @@ tbody{
 }
 td,th{
     border: 1px solid rgb(190, 190, 190);
-    padding: 10px 20px;
+    padding: 10px;
     text-align: center;
 }
 .titre{
@@ -94,6 +95,87 @@ td,th{
 	display: flex;
 	text-align: center;
 }
+.renouvel hr{
+	border: none;
+	margin: 5px 0;
+	border-bottom: 2px solid #ddd;
+}
+.erreur{
+	margin: 5px 0;
+	background-color: #ddd;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 4px;
+}
+.post{
+	width: 340px;
+	margin: 20px auto 0 auto;
+}
+/* test biblio */
+
+.container{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	text-align: center;
+}
+.container h1{
+	padding-top: 100px;
+	color: red;
+}
+.desktop{
+	max-width: 340px;
+	margin: 50px 20px;
+	border: 2px solid rgb(200, 200, 200);
+}
+.desktop a{
+	color: black;
+}
+.position{
+	width: 340px;
+	height: 340px;
+	transition: .5s;
+	overflow: hidden;
+}
+.position:hover{
+	background-color: rgb(121,121,121,.6);
+}
+.position img{
+	width: 340px;
+	height: 340px;
+	transition: .5s;
+}
+.position:hover img{
+	width: 120px;
+	height: 120px;
+	background: none;
+	margin: 0 0 30px 0;
+}
+dl{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 30px;
+}
+dt{
+	font-size: 18px;
+	padding-bottom: 20px;
+	font-weight: bold;
+}
+/* Fin biblio */
+
+@media screen and (max-width: 1100px){
+	.group-input{
+		width: 45%;
+	}
+	td,th{
+		padding: 8px;
+	}
+}
+@media screen and (max-width: 800px){
+	.group-input{
+		width: 70%;
+	}
+}
 @media screen and (max-width: 600px){
 	.admin{
 		flex-direction: column;
@@ -104,11 +186,7 @@ td,th{
 	.group-input{
 		width: 70%;
 	}
-	.fond{
-		padding: 60px;
-	}
-	.image{
-		display: block;
-		margin-left: -88%;
+	.container h1{
+		padding: 20px 0;
 	}
 }

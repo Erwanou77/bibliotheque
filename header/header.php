@@ -1,6 +1,6 @@
 <?php
 session_start();
-$CONFIG = array("root_path"=>"/bibliotheque_v1");
+$CONFIG = array("root_path"=>"/bibliotheque");
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,7 +32,9 @@ $CONFIG = array("root_path"=>"/bibliotheque_v1");
 	<nav class="navbar" id="navbar">
 		<div class="max-width">
 			<div class="resplogo">
-				<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site">
+				<a href="<?php echo $CONFIG['root_path']; ?>">
+					<img src="<?php echo $CONFIG['root_path']; ?>/img/logo1.png" alt="Logo du site" width="150px">
+				</a>
 				<h1>OpenVia</h1>
 			</div>
 			<div class="respsearch">
@@ -49,16 +51,17 @@ $CONFIG = array("root_path"=>"/bibliotheque_v1");
 			</div>
 		</div>
 		<ul class="menu">
-			<li><a href="<?php echo $CONFIG['root_path']; ?>/index.php">Accueil</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>">Accueil</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/auteur.php">Auteurs</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php">Biblioth&#232;que</a></li>
-			<?php
+			<?php 
 			if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 1) { ?>
 				<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/nouveaulivre.php">Admin</a></li>
 				<li><a href="<?php echo $CONFIG['root_path']; ?>/bdd/logout.php">Se déconnecter</a></li>
 			<?php
 			}elseif(isset($_SESSION['connecter']) && $_SESSION['admin'] == 0){
 			?>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/utilisateurs/profil.php">Votre espace</a></li>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/bdd/logout.php">Se déconnecter</a></li>
 		<?php }else{?>
 			<li><a href="<?php echo $CONFIG['root_path']; ?>/accueil/accueil.php">Se connecter</a></li><?php } ?>

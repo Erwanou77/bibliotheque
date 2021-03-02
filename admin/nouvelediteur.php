@@ -1,20 +1,19 @@
 <?php require"../admin.php";
-	$erreur = "Entrez votre genre";
+	$erreur = "Entrez votre éditeur";
 	if (isset($_POST['submit'])) {
-		$genres = stripslashes(htmlspecialchars($_POST['genres']));
-		$resgenr = $reqgenre->fetch();
-		if (empty($genres)) {
-			$erreur = "Vous devez mettre un genre";
+		$editeur = stripslashes(htmlspecialchars($_POST['editeur']));
+		if (empty($editeur)) {
+			$erreur = "Vous devez mettre un éditeur";
 		}else{
-			$insert = $bdd->prepare('INSERT INTO genre (libelle) VALUES (:genre)');
-			$insert->bindParam(':genre', $genres);
+			$insert = $bdd->prepare('INSERT INTO editeur (libelle) VALUES (:editeur)');
+			$insert->bindParam(':editeur', $editeur);
 			$insert->execute();
-			$erreur = "Votre genre a bien été enregistré";
+			$erreur = "Votre éditeur a bien été enregistré";
 		}
 	}
 ?>
 		<div class="droit">
-			<h2>Entrez votre nouveau genre</h2>
+			<h2>Entrez votre nouvel editeur</h2>
 			<form method="POST" class="update">
 				<div class="group-input">
 					<p><span>Eléments obligatoires : *</span></p>
@@ -22,20 +21,20 @@
 						<h3><?php echo $erreur; ?></h3>
 					</div>
 					<div class="form-input">
-						<label for="genres">Genre : <span>*</span></label>
-						<input type="text" class="pres-input" name="genres">
+						<label for="editeur">Editeurs : <span>*</span></label>
+						<input type="text" class="pres-input" name="editeur">
 					</div>
 					<div class="form-input">
 						<input type="submit" name="submit">
 					</div>
 					<table>
 						<thead>
-							<th>Genre</th>
+							<th>Editeurs</th>
 						</thead>
 						<tbody>
-							<?php foreach ($resgenres as $ligne) {?>
+							<?php foreach ($resedit as $resediteur) {?>
 							<tr>
-								<td><?php echo $ligne['libelle'] ?></td>
+								<td><?php echo $resediteur['libelle'] ?></td>
 							</tr>
 							<?php } ?>
 						</tbody>

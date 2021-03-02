@@ -33,13 +33,11 @@ p,a,em,dd,li{
 	position: fixed;
   	padding: 10px 0;
   	transition: .3s;
-  	z-index: 1;
 }
 #top {
   	position: fixed;
   	bottom: 20px;
   	right: 30px;
-  	z-index: 2;
   	font-size: 20px;
   	border: none;
   	transition: .5s;
@@ -65,14 +63,6 @@ p,a,em,dd,li{
 }
 /* Logo du site */
 
-.navbar img{
-  	width: 150px;
-  	margin: 0 40px 0 0;
-  	display: flex;
-}
-.navbar img[alt]{
-	color: white;
-}
 .navbar h1{
 	color: white;
 	margin: 0 auto;

@@ -1,10 +1,9 @@
 <?php
-
-	$nom = stripslashes(htmlspecialchars($_POST['nom']));
-	$prenom = stripslashes(htmlspecialchars($_POST['prenom']));
-	$email = stripslashes(htmlspecialchars($_POST['email']));
-	$password = stripslashes(htmlspecialchars(md5($_POST['password'])));
 	if (isset($_POST['submit'])) {
+		$nom = stripslashes(htmlspecialchars($_POST['nom']));
+		$prenom = stripslashes(htmlspecialchars($_POST['prenom']));
+		$email = stripslashes(htmlspecialchars($_POST['email']));
+		$password = stripslashes(htmlspecialchars(md5($_POST['password'])));
 		if(empty($nom)) {
 			$erreur = "Vous devez mettre un nom";
 		}elseif (empty($prenom)) {
