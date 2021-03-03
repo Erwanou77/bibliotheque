@@ -58,11 +58,6 @@ require("../header/header.php")?>
 			<?php }else{ ?>
 			<p><?php echo bbcode(htmlspecialchars($ligne['synopsis']));?></p>
 			<?php } ?>
-			<?php if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 0) { ?>
-				<div class="reserver">
-					<a href="">Pour r&#233;server ce livre cliquez ici</a>
-				</div>
-			<?php } ?>
 		</div>
 
 	</div>

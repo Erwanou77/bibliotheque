@@ -33,6 +33,7 @@ p,a,em,dd,li{
 	position: fixed;
   	padding: 10px 0;
   	transition: .3s;
+  	z-index: 1;
 }
 #top {
   	position: fixed;
@@ -158,6 +159,11 @@ input[type="search"]:focus{
 	padding: 10px 30px;
 	border-right:1px solid #ddd;
 }
+.navbar .menu li a:hover{
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}
 .navbar .menu li:last-child a{
 	border: none;
 }
@@ -168,6 +174,14 @@ input[type="search"]:focus{
 	max-width: 1600px;
 	padding: 200px 0 70px 0;
 	margin: 0 auto;
+}
+@media screen and (max-width: 1000px){
+	.navbar .menu li{		
+		margin-top : 10px;
+	}
+	.navbar .menu li a{
+		padding: 10px 20px;
+	}
 }
 @media screen and (max-width: 800px){
 	.principal{
@@ -229,8 +243,5 @@ input[type="search"]:focus{
 		display: block;
 		border: none;
 		padding: 10px 0;
-	}
-	.navbar .menu li a:hover{
-		text-decoration: underline;
 	}
 }
