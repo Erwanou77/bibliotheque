@@ -27,7 +27,7 @@
 		}elseif (empty($nbpage)) {
 			$erreur = "Vous devez mettre le nombre de page";
 		}else{
-			$insert=$bdd->prepare("INSERT INTO livre (isbn,titre,annee,langue,genre,editeur,idPersonne,nbpages) VALUES (:isbn,:titre,:annee,:langue,:genre,:auteur,:editeur,:nbpage)");
+			$insert=$bdd->prepare("INSERT INTO livre (isbn,titre,annee,langue,genre,editeur,idPersonne,nbpages) VALUES (:isbn,:titre,:annee,:langue,:genre,:editeur,:auteur,:nbpage)");
 			$insert->bindParam(':isbn', $isbn);
         	$insert->bindParam(':titre', $titre);
         	$insert->bindParam(':annee', $annee);

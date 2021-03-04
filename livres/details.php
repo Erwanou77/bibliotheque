@@ -5,13 +5,19 @@ require("../header/header.php")?>
 <link rel="stylesheet" type="text/css" href="../css/stylelivres.css">
 <section class="principal">
 	<?php foreach ($pdostat as $ligne) {?>
-	<?php $images = "../img/couvertures/".$ligne['isbn'].".png";?>
+	<?php $images = "../img/couvertures/".$ligne['isbn'].".png";
+			$defaut = "../img/couvertures/defaut.png";
+	?>
 	<div class="retour">
 		<p><a href="../bibliotheque.php">Biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;<?php echo htmlspecialchars($ligne['titre']); ?></p>
 	</div>
 	<div class="all">
 		<div class="centrage">
-			<img src="<?php echo htmlspecialchars($images); ?>" alt="Couverture du livre">
+			<?php if (file_exists($images)) { ?>
+				<img src="<?php echo $images ?>" alt="Image de couvertures">
+			<?php }else{ ?>
+				<img src="<?php echo $defaut ?>" alt="Image de couvertures">
+			<?php } ?>
 			<div class="tableau">
 				<h2>Caract&#233;ristiques d&#233;taill&#233;es</h2>
 				<dl>
@@ -51,11 +57,6 @@ require("../header/header.php")?>
 				<h1 style="text-align: center; font-size: 26px; font-weight: bold; color: red;">Il n'y a pas encore de synopsis</h1>
 			<?php }else{ ?>
 			<p><?php echo bbcode(htmlspecialchars($ligne['synopsis']));?></p>
-			<?php } ?>
-			<?php if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 0) { ?>
-				<div class="reserver">
-					<a href="">Pour r&#233;server ce livre cliquez ici</a>
-				</div>
 			<?php } ?>
 		</div>
 

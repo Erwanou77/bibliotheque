@@ -17,7 +17,7 @@
 				<div class="texte">
 					<h1>Informations sur l'auteur</h1>
 					<h2><?php echo bbcode(htmlspecialchars($ligne['nom'])) . " " . bbcode(htmlspecialchars($ligne['prenom']));?></h2>
-					<h4><?php echo bbcode(htmlspecialchars($datefmt->format($date1))) ?> <br> <?php echo bbcode(htmlspecialchars($ligne['ville_naiss'])) ?></h4>
+					<h4><?php if($ligne['date_naiss'] != NULL) echo bbcode(htmlspecialchars($datefmt->format($date1))); ?> <br> <?php echo bbcode(htmlspecialchars($ligne['ville_naiss'])) ?></h4>
 					<p><?php echo bbcode(htmlspecialchars($ligne['genre']))?></p>
 				</div>
 			</div>

@@ -1,5 +1,5 @@
 <?php 
-	require"header/header.php";
+	require"../header/header.php";
 	require'bdd/config.php';
 	
 	$reqgenre = $bdd->query('SELECT * FROM genre');

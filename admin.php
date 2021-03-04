@@ -5,7 +5,6 @@
 	$reqgenre = $bdd->query('SELECT * FROM genre');
 	$reqgenre->setFetchMode(PDO::FETCH_ASSOC);
 	$resgenres = $reqgenre->fetchALL();
-	$resgenr = $reqgenre->fetch();
 
 	$reqedit = $bdd->query('SELECT * FROM editeur');
 	$reqedit->setFetchMode(PDO::FETCH_ASSOC);

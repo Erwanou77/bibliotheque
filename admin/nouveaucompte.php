@@ -25,7 +25,7 @@
 	}
 ?>
 		<div class="droit">
-			<h2>Ajoutez un client</h2>
+			<h2>Ajoutez un utilisateur</h2>
 			<form method="POST">
 				<div class="group-input">
 					<p><span>Eléments obligatoires : *</span></p>

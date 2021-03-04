@@ -2,7 +2,6 @@
 	$erreur = "Entrez votre genre";
 	if (isset($_POST['submit'])) {
 		$genres = stripslashes(htmlspecialchars($_POST['genres']));
-		$resgenr = $reqgenre->fetch();
 		if (empty($genres)) {
 			$erreur = "Vous devez mettre un genre";
 		}else{
