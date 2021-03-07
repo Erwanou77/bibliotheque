@@ -18,6 +18,10 @@
 	$reqperso->setFetchMode(PDO::FETCH_ASSOC);
 	$resperso = $reqperso->fetchALL();
 
+	$requser = $bdd->query('SELECT * FROM utilisateur');
+	$requser->setFetchMode(PDO::FETCH_ASSOC);
+	$resuser = $requser->fetchALL();
+
 	if (empty($_SESSION['connecter']) || $_SESSION['admin'] == 0) {
 		header("location:../index.php");
 	}
@@ -36,13 +40,11 @@
 					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/nouvellangue.php">Ajouter une langue</a></li>
 					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/nouvelauteur.php">Ajouter un auteur</a></li>
 					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/listereserv.php">Liste des réservations</a></li>
-					<li><em><a href="../endeveloppement.php">Modifier vos livres</a><br><span style="font-size: 12px">En cours de développement</span></em></li>
 				</ul>
 				<h3>Param&#232;tres utilisateurs</h3>
 				<ul>
 					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/nouveaucompte.php">Ajouter un compte</a></li>
-					<li><em><a href="../endeveloppement.php">Modifier un compte</a><br><span style="font-size: 12px">En cours de développement</span></em></li>
-					<li><em><a href="../endeveloppement.php">Supprimer un compte</a><br><span style="font-size: 12px">En cours de développement</span></em></li>
+					<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/listecompte.php">Liste des comptes</a></li>
 				</ul>
 			</div>
 		</div>

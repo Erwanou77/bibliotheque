@@ -1,5 +1,10 @@
-<?php require "../users.php";
+<?php require "../admin.php";
 	$erreur = "Entrez vos informations";
+	if (isset($_GET['id'])) {
+		$requsers = $bdd->query('SELECT * FROM utilisateur WHERE idUtilisateur = ' . $_GET['id']);
+		$requsers->setFetchMode(PDO::FETCH_ASSOC);
+		$resusers = $requsers->fetch();
+	}
 	if (isset($_POST['submit'])) {
 		$nom = stripslashes(htmlspecialchars($_POST['nom']));
 		$prenom = stripslashes(htmlspecialchars($_POST['prenom']));
@@ -14,7 +19,7 @@
 		}elseif (empty($password)){
 			$erreur = "Vous devez mettre un mot de passe";
 		}else{
-			$update = $bdd->prepare('UPDATE utilisateur SET nom = :nom,prenom = :prenom, email = :email, mdp = :mdp WHERE idUtilisateur=' . $_SESSION["idUtilisateur"]);
+			$update = $bdd->prepare('UPDATE utilisateur SET nom = :nom,prenom = :prenom, email = :email, mdp = :mdp WHERE idUtilisateur=' . $_GET['id']);
 			$update->bindParam(':nom',$nom);
 			$update->bindParam(':prenom',$prenom);
 			$update->bindParam(':email',$email);
@@ -35,19 +40,19 @@
 					</div>
 					<div class="form-input">
 						<label for="nom">Nom : <span>*</span></label>
-						<input type="text" class="pres-input" name="nom" value="<?php echo $_SESSION["nom"] ?>">
+						<input type="text" class="pres-input" name="nom" value="<?php echo $resusers["nom"] ?>">
 					</div>
 					<div class="form-input">
 						<label for="prenom">Pr&#233;nom : <span>*</span></label>
-						<input type="text" class="pres-input" name="prenom" value="<?php echo $_SESSION["prenom"] ?>">
+						<input type="text" class="pres-input" name="prenom" value="<?php echo $resusers["prenom"] ?>">
 					</div>
 					<div class="form-input">
-						<label for="mail">Mail : <span>*</span></label>
-						<input type="email" class="pres-input" name="email" value="<?php echo $_SESSION["email"] ?>">
+						<label for="email">Mail : <span>*</span></label>
+						<input type="email" class="pres-input" name="email" value="<?php echo $resusers["email"] ?>">
 					</div>
 					<div class="form-input">
 						<label for="password">Mot de passe : <span>*</span></label>
-						<input type="text" class="pres-input" name="password" value="" minlength="6">
+						<input type="text" class="pres-input" name="password" value="<?php echo $resusers["mdp"] ?>" minlength="6">
 					</div>
 					<div class="form-input">
 						<input type="submit" name="submit">

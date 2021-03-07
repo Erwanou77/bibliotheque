@@ -66,6 +66,9 @@ table{
     font-size: .8rem;
     width: 100%;
 }
+tbody input{
+	width: 100%;
+}
 thead,tfoot{
     background-color: black;
     color: #fff;
@@ -110,6 +113,16 @@ td,th{
 .post{
 	width: 340px;
 	margin: 20px auto 0 auto;
+}
+td a{
+	color: black;
+	font-size: 24px;
+}
+.fa-edit:hover{
+	color: #60FC66;
+}
+.fa-trash-alt:hover{
+	color: #FF2222;
 }
 /* test biblio */
 

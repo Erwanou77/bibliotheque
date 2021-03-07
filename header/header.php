@@ -1,6 +1,16 @@
 <?php
 session_start();
 $CONFIG = array("root_path"=>"/bibliotheque");
+function actualiser_session(){
+	if (isset($_SESSION['time'])){
+		$tempsMaxSession = 360;                            
+		if(($_SESSION['time'] + $tempsMaxSession) >= time())
+			$_SESSION['time'] = time();
+		else
+			session_destroy();
+	}
+}
+actualiser_session();
 ?>
 <!DOCTYPE html>
 <html>

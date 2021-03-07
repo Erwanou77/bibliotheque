@@ -27,8 +27,7 @@
 					<option value="" selected>-- Choisissez votre option --</option>
 					<optgroup label="Questions :" >
 						<option value="Probleme avec le site">Probl&#232;me avec le site</option>
-						<option value="opt2">Salut</option>
-						<option value="opt3">Salut</option>
+						<option value="Inscription">Inscription</option>
 					</optgroup>
 				</select>
 			</div>

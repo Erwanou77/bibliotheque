@@ -1,26 +1,30 @@
 <?php require "../admin.php"; 
+function genPassword($size){
+    $caractere = array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "&", "{", "(", "[", "|", "@", ")", "]", "}", "+", "=");
+    $password = 0;
+    for($i=1;$i<$size;$i++){
+        $password .= ($i%2)?strtoupper($caractere[array_rand($caractere)]):$caractere[array_rand($caractere)];
+    }		
+    return $password;
+}
+$monMotDePasse = genPassword(10);
+
+	$randclient = rand(10000000,99999999);
 	$erreur = "Entrez vos informations";
 	if (isset($_POST['submit'])) {
-		$nom = stripslashes(htmlspecialchars($_POST['nom']));
-		$prenom = stripslashes(htmlspecialchars($_POST['prenom']));
-		$email = stripslashes(htmlspecialchars($_POST['email']));
-		$mdp = stripslashes(htmlspecialchars(md5($_POST['password'])));
-		if (empty($nom)) {
-			$erreur = "Vous devez mettre un nom";
-		}elseif (empty($nom)){
-			$erreur = "Vous devez mettre un prénom";
-		}elseif (empty($email)){
-			$erreur = "Vous devez mettre un mail";
+		$idclient = stripslashes(htmlspecialchars($_POST['idclient']));
+		$mdp = stripslashes(htmlspecialchars($_POST['password']));
+		if (empty($idclient)) {
+			$erreur = "Vous devez mettre un identifiant";
 		}elseif (empty($mdp)){
 			$erreur = "Vous devez mettre un mot de passe";
 		}else{
-			$insert = $bdd->prepare('INSERT INTO utilisateur (nom,prenom,email,mdp) VALUES (:nom,:prenom,:email,:mdp)');
-			$insert->bindParam(':nom',$nom);
-			$insert->bindParam(':prenom',$prenom);
-			$insert->bindParam(':email',$email);
+			$insert = $bdd->prepare('INSERT INTO utilisateur (idClient,mdp) VALUES (:idClient,:mdp)');
+			$insert->bindParam(':idClient',$idclient);
 			$insert->bindParam(':mdp',$mdp);
 			$insert->execute();
-			$erreur = "Vos informations ont bien été envoyées, reconnectez-vous pour voir les modifications";
+			$erreur = "Les identifiants ont bien été créé";
+			header('location:nouveaulivre.php');
 		}
 	}
 ?>
@@ -31,22 +35,14 @@
 					<p><span>Eléments obligatoires : *</span></p>
 					<div class="erreur">
 						<h3><?php echo $erreur; ?></h3>
+					</div>
+					<div class="form-input">
+						<label for="idclient">Identifiant client : <span>*</span></label>
+						<input type="text" class="pres-input" name="idclient" value="<?php echo $randclient; ?>">
 					</div>					
 					<div class="form-input">
-						<label for="nom">Nom : <span>*</span></label>
-						<input type="text" class="pres-input" name="nom">
-					</div>
-					<div class="form-input">
-						<label for="prenom">Pr&#233;nom : <span>*</span></label>
-						<input type="text" class="pres-input" name="prenom">
-					</div>
-					<div class="form-input">
-						<label for="mail">Mail : <span>*</span></label>
-						<input type="email" class="pres-input" name="email">
-					</div>
-					<div class="form-input">
 						<label for="password">Mot de passe : <span>*</span></label>
-						<input type="password" class="pres-input" name="password">
+						<input type="text" class="pres-input" name="password" value="<?php echo $monMotDePasse; ?>">
 					</div>
 					<div class="form-input">
 						<input type="submit" name="submit">

@@ -31,7 +31,7 @@ require("../header/header.php")?>
 				</dl>
 				<dl>
 					<dt>Editeurs :</dt>
-					<dd><?php echo htmlspecialchars($ligne['editeur']); ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['editeurs']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Date de publication :</dt>
@@ -43,7 +43,7 @@ require("../header/header.php")?>
 				</dl>
 				<dl>
 					<dt>Genre :</dt>
-					<dd><?php echo htmlspecialchars($ligne['genre']); ?></dd>
+					<dd><?php echo htmlspecialchars($ligne['genres']); ?></dd>
 				</dl>
 				<dl>
 					<dt>Nombre de pages :</dt>

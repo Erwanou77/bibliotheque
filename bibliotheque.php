@@ -7,9 +7,10 @@
 	<form method="POST" class="select">
 		<select name="trie">
 			<option value="">Trier par :</option>
-			<option value="titre">Trier par titre</option>
-			<option value="nom">Trier par auteur</option>
-			<option value="annee">Trier par date</option>			
+			<option value="titre">titre</option>
+			<option value="nom">auteur</option>
+			<option value="annee">date</option>
+			<option value="reserv">réservation</option>		
 		</select>
 		<button type="submit">Rafra&#238;chir</button>
 	</form>
@@ -98,7 +99,14 @@
 						</dl>
 					</div>
 				</a>
+				<?php if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 1) { ?>
+				<div class="icons">
+					<a href="admin/modiflivre.php?isbn=<?php echo $ligne['isbn'];?>"><i class="fas fa-edit"></i></a>
+					<a href="admin/reservation.php?isbn=<?php echo $ligne['isbn'];?>"><i class="fas fa-clock"></i></a>
+					<a href=""><i class="fas fa-trash-alt"></i></a>
+				</div>
 				<?php } ?>
+			<?php } ?>
 			</div>
 		<?php } ?>
 	</div>

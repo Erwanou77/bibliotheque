@@ -10,6 +10,8 @@ if (isset($_POST['trie'])) {
 		$pdostat = $bdd->query('SELECT *,editeur.libelle AS editeurs FROM livre JOIN editeur ON livre.editeur = editeur.id JOIN personne ON livre.idPersonne = personne.id ORDER BY nom');
 	}elseif ($_POST['trie']=="titre") {
 		$pdostat = $bdd->query('SELECT *,editeur.libelle AS editeurs FROM livre JOIN editeur ON livre.editeur = editeur.id JOIN personne ON livre.idPersonne = personne.id ORDER BY titre');
+	}elseif ($_POST['trie']=="reserv") {
+		$pdostat = $bdd->query('SELECT *,editeur.libelle AS editeurs FROM livre JOIN editeur ON livre.editeur = editeur.id JOIN personne ON livre.idPersonne = personne.id ORDER BY utilisateur DESC');
 	}else{
 		$pdostat = $bdd->query('SELECT *,editeur.libelle AS editeurs FROM livre JOIN editeur ON livre.editeur = editeur.id JOIN personne ON livre.idPersonne = personne.id');
 	}

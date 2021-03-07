@@ -26,8 +26,9 @@
 .desktop h3{
 	background-color: black;
 	color: white;
-	font-size: 22px;
+	font-size: 24px;
 	font-weight: bold;
+	padding: 12px 0;
 }
 .desktop a{
 	color: black;
@@ -68,4 +69,24 @@ dt{
 	font-size: 18px;
 	padding-bottom: 20px;
 	font-weight: bold;
+}
+.icons{
+	background-color: white;
+	padding: 10px 0; 
+	display: flex;
+	justify-content: space-around;
+	font-size: 24px;
+	cursor: default;
+}
+.icons a{
+	cursor: pointer;
+}
+.fa-edit:hover{
+	color: #60FC66;
+}
+.fa-clock:hover{
+	color: #AEB5AE;
+}
+.fa-trash-alt:hover{
+	color: #FF2222;
 }
