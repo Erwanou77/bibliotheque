@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 01 mars 2021 à 23:47
+-- Généré le : Dim 07 mars 2021 à 12:19
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -177,9 +177,9 @@ CREATE TABLE IF NOT EXISTS `livre` (
 --
 
 INSERT INTO `livre` (`isbn`, `titre`, `annee`, `nbpages`, `synopsis`, `date_retour`, `langue`, `genre`, `editeur`, `utilisateur`, `idPersonne`, `renouvellement`) VALUES
-('2020347199', 'Les bûchers de bocanegra', 2008, NULL, NULL, NULL, 2, 2, 11, 1, 7, NULL),
-('2081382644', 'Le Banquet', 2016, NULL, NULL, '2021-03-24', 2, 9, 2, 2, 12, 1),
-('9782081390713', 'Discours de la Méthode', 2016, 191, NULL, '2021-03-27', 2, 9, 2, 1, 14, 1),
+('2020347199', 'Les bûchers de bocanegra', 2008, NULL, NULL, '2021-03-26', 2, 2, 11, 1, 7, NULL),
+('2081382644', 'Le Banquet', 2016, 656, NULL, NULL, 2, 9, 2, NULL, 12, NULL),
+('9782081390713', 'Discours de la Méthode', 2016, 191, NULL, NULL, 2, 9, 2, NULL, 14, NULL),
 ('2226319468', 'Promesse', 2016, 656, 'Plus de 13 millions d\'exemplaires vendus dans le monde, couronné par tous les grands prix du polar, dont le Grand Prix policier des lectrices de Elle, le Danois Jussi Adler Olsen est une figure incontournable du thriller scandinave.[rl][rl]Bornholm, une île danoise de la mer baltique, fin des années 1990. Le cadavre d\'une jeune fille est retrouvé dans un arbre, son vélo broyé au bord de la route. Aucune trace du chauffard : affaire classée. Sauf pour un inspecteur de la police locale qui finit dix-sept ans plus tard par demander l\'aide de l\'inspecteur Carl Mørck. Avant de se tirer une balle dans la tête.[rl][rl]À l\'initiative de Rose, l\'assistante du flegmatique Mørck, l\'insolite trio du Département V en charge des cold cases débarque sur l\'île de Bornholm. En remuant le passé, ils prennent le risque de réveiller de vieux démons...', NULL, 2, 2, 23, NULL, 3, NULL),
 ('2253003964', 'Dix petits nègres', 1976, 224, 'En a-t-on parlé de l’Île du Nègre! Elle avait, selon certains, été achetée par une star de Hollywood. Des journaux avaient insinué que l’Amirauté britannique s’y livrait à des expériences ultrasecrètes. Bref, quand ils reçurent –sans savoir de qui– cette invitation à passer des vacances à l’Île du Nègre, tous les dix accoururent.', NULL, 2, 2, 24, NULL, 5, NULL),
 ('2253184381', 'Délivrance', 2015, 744, 'Une bouteille jetée à la mer, repêchée et oubliée dans un commissariat des Highlands. A l’intérieur, un appel au secours écrit en lettres de sang et en danois. Lorsque le message échoue au Département V de la police de Copenhague, chargé des dossiers non élucidés, les années ont passé. L’imprévisible Carl Morck, Assad, son assistant syrien au flair infaillible, et Rose, la secrétaire punk, vont-ils prendre au sérieux ce SOS ?', NULL, 2, 2, 24, NULL, 3, NULL),
@@ -267,21 +267,23 @@ INSERT INTO `personne` (`id`, `nom`, `prenom`, `date_naiss`, `ville_naiss`, `bio
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT,
-  `admin` int(11) DEFAULT NULL,
-  `nom` varchar(50) NOT NULL,
-  `prenom` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `idClient` int(11) NOT NULL,
+  `admin` int(11) NOT NULL DEFAULT '0',
+  `nom` varchar(50) DEFAULT NULL,
+  `prenom` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
   `mdp` varchar(50) NOT NULL,
   PRIMARY KEY (`idUtilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`idUtilisateur`, `admin`, `nom`, `prenom`, `email`, `mdp`) VALUES
-(1, 1, 'LAUNAY', 'Erwan', 'rocky77580@gmail.com', 'c8801fc9c02f394e27a97a5c698d0981'),
-(2, 0, 'Petit', 'Rémi', 'remipetit@gmail.com', 'b6edd10559b20cb0a3ddaeb15e5267cc');
+INSERT INTO `utilisateur` (`idUtilisateur`, `idClient`, `admin`, `nom`, `prenom`, `email`, `mdp`) VALUES
+(1, 0, 1, 'LAUNAY', 'Erwan', 'rocky77580@gmail.com', 'mdpErwan'),
+(2, 0, 0, 'Petit', 'Rémi', 'remipetit@gmail.com', 'mdpRemi'),
+(3, 26209739, 0, 'test', 'form', 'testform@gmail.com', 'testform');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
