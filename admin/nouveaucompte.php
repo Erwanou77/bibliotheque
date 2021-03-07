@@ -24,7 +24,6 @@ $monMotDePasse = genPassword(10);
 			$insert->bindParam(':mdp',$mdp);
 			$insert->execute();
 			$erreur = "Les identifiants ont bien été créé";
-			header('location:nouveaulivre.php');
 		}
 	}
 ?>
