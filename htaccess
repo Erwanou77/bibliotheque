@@ -1,8 +1,4 @@
 
 # HTID:16534394: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
 php_value display_errors 1
-RewriteEngine on
-RewriteRule ^(.*)\.html$ $1.php [nc]
-RewriteCond %{THE_REQUEST} \ /(.+)\.php
-RewriteRule ^ /%1.html [L,R=301]
 # DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:16534394:

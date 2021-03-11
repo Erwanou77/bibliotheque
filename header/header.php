@@ -62,10 +62,11 @@ actualiser_session();
 		</div>
 		<ul class="menu">
 			<li><a href="<?php echo $CONFIG['root_path']; ?>">Accueil</a></li>
-			<li><a href="<?php echo $CONFIG['root_path']; ?>/auteur.php">Auteurs</a></li>
-			<li><a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php">Biblioth&#232;que</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/auteur.php?page=1">Auteurs</a></li>
+			<li><a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php?page=1">Biblioth&#232;que</a></li>
 			<?php 
 			if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 1) { ?>
+				<li><a href="<?php echo $CONFIG['root_path']; ?>/utilisateurs/profil.php">Votre espace</a></li>
 				<li><a href="<?php echo $CONFIG['root_path']; ?>/admin/nouveaulivre.php">Admin</a></li>
 				<li><a href="<?php echo $CONFIG['root_path']; ?>/bdd/logout.php">Se déconnecter</a></li>
 			<?php

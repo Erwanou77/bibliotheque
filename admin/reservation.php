@@ -43,7 +43,7 @@
 						</select>
 					</div>
 					<div class="form-input">
-						<label for="date">Date : <span>*</span></label>
+						<label for="date">Date retour: <span>*</span></label>
 						<input type="date" class="pres-input" name="date">
 					</div>
 					<div class="form-input">

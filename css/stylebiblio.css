@@ -1,5 +1,6 @@
 .principal{
 	cursor: url("../img/book_close.png"), pointer;
+	padding-bottom: 0;
 }
 .select{
 	display: flex;
@@ -89,4 +90,21 @@ dt{
 }
 .fa-trash-alt:hover{
 	color: #FF2222;
+}
+.pagination{
+	background: white;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+}
+.pagination .page{
+	display: flex;
+}
+.pagination .page a{
+	padding: 0 4px;
+	color: black;
+	font-size: 20px;
+}
+.pagination .page a:hover{
+	text-decoration: underline;
 }

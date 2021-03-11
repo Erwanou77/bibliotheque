@@ -1,5 +1,6 @@
 		<?php require "../users.php";
 		$resliste = $pdostat->fetchALL();
+		$erreur = "";
 		$datefmt = new IntlDateFormatter('fr_FR', NULL, NULL, NULL, NULL, 'dd MMMM yyyy');
 		if (isset($_POST['submit'])) {
 			$renouvel = stripslashes(htmlspecialchars($_POST['renouvel']));
@@ -10,7 +11,7 @@
 		        $insert=$bdd->prepare("UPDATE livre SET date_retour = date_retour + INTERVAL 15 DAY, renouvellement = :renouvel WHERE isbn=".$renouvel);
 		        $insert->bindParam(':renouvel', $renouvelle);
 				$insert->execute();
-				header('location:voslivres.php');
+				$erreur = "Votre renouvellement a été effectué";
 			}
 		}
 		?>
@@ -18,6 +19,9 @@
 			<h2>Liste des livres réservés :</h2>
 			<?php if (!empty($resliste)) { ?>
 			<form method="POST" class="erreur post">
+				<div class="erreur">
+					<h3><?php echo $erreur; ?></h3>
+				</div>
 				<p>Appuyez sur <b>Envoyer</b> pour effectuer votre unique renouvellement de 15 jours<br></p>
 				<select name="renouvel" class="pres-input">	
 				<option value="">-- Choisissez votre livre --</option>				

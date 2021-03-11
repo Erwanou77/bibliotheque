@@ -51,7 +51,7 @@
 					</div>
 					<div class="form-input">
 						<label>Titre : <span>*</span></label>
-						<input type="text" class="pres-input" name="titre">
+						<input type="text" class="pres-input" name="titre" value="<?php if(isset($_POST['titre'])) echo $titre; ?>">
 					</div>
 					<div class="form-input">
 						<label>Editeur : <span>*</span></label>
@@ -64,11 +64,11 @@
 					</div>
 					<div class="form-input">
 						<label>Année : <span>*</span></label>
-						<input type="number" class="pres-input" name="annee" min="0" max="2500">
+						<input type="number" class="pres-input" name="annee" min="0" max="2500" value="<?php if(isset($_POST['annee'])) echo $annee; ?>">
 					</div>
 					<div class="form-input">
 						<label>ISBN : <span>*</span></label>
-						<input type="text" class="pres-input" name="isbn">
+						<input type="text" class="pres-input" name="isbn" value="<?php if(isset($_POST['isbn'])) echo $isbn; ?>">
 					</div>
 					<div class="form-input">
 						<label>Langue : <span>*</span></label>

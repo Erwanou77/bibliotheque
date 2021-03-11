@@ -103,12 +103,29 @@
 				<div class="icons">
 					<a href="admin/modiflivre.php?isbn=<?php echo $ligne['isbn'];?>"><i class="fas fa-edit"></i></a>
 					<a href="admin/reservation.php?isbn=<?php echo $ligne['isbn'];?>"><i class="fas fa-clock"></i></a>
-					<a href=""><i class="fas fa-trash-alt"></i></a>
+					<a href="admin/deletelivre.php?isbn=<?php echo $ligne['isbn'];?>"><i class="fas fa-trash-alt"></i></a>
 				</div>
 				<?php } ?>
 			<?php } ?>
 			</div>
-		<?php } ?>
+		<?php } ?>		
+	</div>
+	<div class="pagination">
+		<div class="page">
+			<?php if ($page > 1):?>
+				<a href="?page=<?php echo $page - 1; ?>">&#60;</a>
+			<?php endif; ?>
+			<?php for ($i = 1; $i <= $nbPages; $i++):?>
+				<?php if ($_GET['page'] == $i) { ?>
+					<a href="?page=<?php echo $i; ?>" style="color: red;"><?php echo $i; ?></a>
+				<?php }else{ ?>
+					<a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+				<?php } ?>
+			<?php endfor; ?>
+			<?php if ($page < $nbPages):?>
+				<a href="?page=<?php echo $page + 1; ?>">&#62;</a>
+			<?php endif; ?>
+		</div>
 	</div>
 </main>
 <?php require ("Footer/footer.php");?>

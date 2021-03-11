@@ -8,8 +8,8 @@
 		<div class="contact">
 			<h3>Liens : </h3>
 			<a href="<?php echo $CONFIG['root_path']; ?>/index.php">Accueil</a>
-			<a href="<?php echo $CONFIG['root_path']; ?>/auteur.php">Auteurs</a>
-			<a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php">Biblioth&#232;que</a>
+			<a href="<?php echo $CONFIG['root_path']; ?>/auteur.php?page=1">Auteurs</a>
+			<a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php?page=1">Biblioth&#232;que</a>
 			<?php 
 			if (isset($_SESSION['connecter']) && $_SESSION['admin'] == 1) { ?>
 				<a href="<?php echo $CONFIG['root_path']; ?>/admin/nouveaulivre.php">Admin</a>

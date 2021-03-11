@@ -16,7 +16,7 @@
 							<td><?php echo $ligne['prenom'] ?></td>
 							<td><?php echo $ligne['email'] ?></td>
 							<td><a href="modifcompte.php?id=<?php echo $ligne['idUtilisateur'];?>"><i class="fas fa-edit"></i></a></td>
-							<td><a href=""><i class="fas fa-trash-alt"></i></a></td>
+							<td><a href="deletecompte.php?id=<?php echo $ligne['idUtilisateur'];?>"><i class="fas fa-trash-alt"></i></a></td>
 						</tr>
 						<?php } ?>
 					</tbody>
