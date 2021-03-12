@@ -9,7 +9,7 @@ require("../header/header.php")?>
 			$defaut = "../img/couvertures/defaut.png";
 	?>
 	<div class="retour">
-		<p><a href="../bibliotheque.php">Biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;<?php echo htmlspecialchars($ligne['titre']); ?></p>
+		<p><a href="../bibliotheque.php?page=1">Biblioth&#232;que&nbsp;</a><span>&gt;</span>&nbsp;<?php echo htmlspecialchars($ligne['titre']); ?></p>
 	</div>
 	<div class="all">
 		<div class="centrage">

@@ -2,9 +2,9 @@
 
 include('config.php');
 $page = (!empty($_GET['page']) ? $_GET['page'] : 1);
-$limite = 9;
+$limite = 12;
 $debut = ($page - 1) * $limite;
-$nbligne = $bdd->query('SELECT COUNT(isbn) FROM livre');
+$nbligne = $bdd->query('SELECT COUNT(id) FROM personne');
 $nbTotal = $nbligne->fetchColumn();
 $nbPages = ceil($nbTotal / $limite);
 $pdostate = $bdd->prepare('SELECT DISTINCT personne.*, genre.libelle AS genre FROM personne JOIN livre ON personne.id = livre.idPersonne JOIN genre ON livre.genre = genre.id LIMIT :limite OFFSET :debut');

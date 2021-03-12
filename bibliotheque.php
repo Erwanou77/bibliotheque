@@ -111,6 +111,9 @@
 		<?php } ?>		
 	</div>
 	<div class="pagination">
+		<?php if($_GET['page'] > $nbPages){
+			header("location:bibliotheque.php?page=1");
+		}?>
 		<div class="page">
 			<?php if ($page > 1):?>
 				<a href="?page=<?php echo $page - 1; ?>">&#60;</a>

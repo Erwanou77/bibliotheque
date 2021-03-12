@@ -12,7 +12,7 @@
 		$date1 = date_create($ligne['date_naiss']);
 		$images = "../img/Auteurs/".$ligne['id'].".jpg";?>
 		<div class="retour">
-			<p><a href="../auteur.php">Auteurs&nbsp;</a><span>&gt;</span><?php echo " " . bbcode(htmlspecialchars($ligne['nom'])) . " " . bbcode(htmlspecialchars($ligne['prenom']));?></p>
+			<p><a href="../auteur.php?page=1">Auteurs&nbsp;</a><span>&gt;</span><?php echo " " . bbcode(htmlspecialchars($ligne['nom'])) . " " . bbcode(htmlspecialchars($ligne['prenom']));?></p>
 		</div>
 		<div class="position">
 			<div class="portrait">

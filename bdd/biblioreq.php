@@ -2,7 +2,7 @@
 
 include('config.php');
 $page = (!empty($_GET['page']) ? $_GET['page'] : 1);
-$limite = 9;
+$limite = 12;
 $debut = ($page - 1) * $limite;
 $nbligne = $bdd->query('SELECT COUNT(isbn) FROM livre');
 $nbTotal = $nbligne->fetchColumn();

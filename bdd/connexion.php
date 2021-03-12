@@ -17,7 +17,7 @@
             $_SESSION["prenom"] = $info['prenom'];
             $_SESSION["email"] = $info['email'];
             $_SESSION["time"] = time();
-            header("location:../bibliotheque.php"); 
+            header("location:../bibliotheque.php?page=1"); 
         }else{
             header("location:../accueil/accueil.php");
         }

@@ -11,7 +11,6 @@
 		if ($resuser['idClient'] == 0) {
 			$erreur = "Cet identifiant n'existe pas";
 		}elseif(empty($nom)) {
-			header("location:../accueil/registration.php");
 			$erreur = "Vous devez mettre un nom";
 		}elseif (empty($prenom)) {
 			$erreur = "Vous devez mettre un prenom";
