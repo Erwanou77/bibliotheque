@@ -25,4 +25,10 @@
       width: 80%;
       padding: 20px 0;
   }
+  .flex{
+    flex-direction: column;
+  }
+  .flex .imagelien{
+    margin: 10px auto;
+  }
 }

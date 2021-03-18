@@ -4,10 +4,14 @@
 			<h3>Contact :</h3>
 			<h4>Erwan :</h4>
 			<h5><em>e.launay@ecole-ipssi.net</em></h5>
+			<h4>Mattéo :</h4>
+			<h5><em>m.beaulieu@ecole-ipssi.net</em></h5>
+			<h4>Rémi :</h4>
+			<h5><em>r.petit@ecole-ipssi.net</em></h5>
 		</div>
 		<div class="contact">
 			<h3>Liens : </h3>
-			<a href="<?php echo $CONFIG['root_path']; ?>/index.php">Accueil</a>
+			<a href="<?php echo $CONFIG['root_path']; ?>/">Accueil</a>
 			<a href="<?php echo $CONFIG['root_path']; ?>/auteur.php?page=1">Auteurs</a>
 			<a href="<?php echo $CONFIG['root_path']; ?>/bibliotheque.php?page=1">Biblioth&#232;que</a>
 			<?php 

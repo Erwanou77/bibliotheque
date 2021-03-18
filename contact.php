@@ -19,8 +19,7 @@
 			<div class="formall">
 				<h2>T&#233;l&#233;phone</h2>
 				<input type="tel" name="telephone">
-			</div>
-			
+			</div>			
 			<div class="formall">
 				<h2>Sujet</h2>
 				<select name="sujet">
