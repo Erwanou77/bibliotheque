@@ -17,6 +17,8 @@
             $_SESSION["prenom"] = $info['prenom'];
             $_SESSION["email"] = $info['email'];
             $_SESSION["time"] = time();
+            $derniereCo = $bdd->prepare('UPDATE utilisateur SET derniereCo = "' . date('Y-m-d, H:i:s') . '" WHERE email ="' . $_SESSION["email"] . '"');
+            $derniereCo->execute();
             header("location:../bibliotheque.php?page=1"); 
         }else{
             header("location:../accueil/accueil.php");

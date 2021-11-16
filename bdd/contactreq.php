@@ -6,7 +6,6 @@ if(empty($_POST["send"])) {
 	$nom = htmlspecialchars($_POST["nom"]);
     $prenom = htmlspecialchars($_POST["prenom"]);
     $mail = htmlspecialchars($_POST["mail"]);
-    $telephone = htmlspecialchars($_POST["telephone"]);
     $sujet = htmlspecialchars($_POST["sujet"]);
     $message = nl2br(addslashes(htmlspecialchars($_POST["message"])));
 
@@ -43,8 +42,8 @@ if(empty($_POST["send"])) {
 	$messages = wordwrap($messages, 70, "\r\n");
 	 			mail($destinataires, $subject, $messages, $headers);
 
-    $sql = $bdd->query("INSERT INTO contact(nom, prenom, mail, telephone, sujet, message, date)
-            VALUES ('{$nom}', '{$prenom}', '{$mail}', '{$telephone}', '{$sujet}', '{$message}', NOW())");
+    $sql = $bdd->query("INSERT INTO contact(nom, prenom, mail, sujet, message, date)
+            VALUES ('{$nom}', '{$prenom}', '{$mail}', '{$sujet}', '{$message}', NOW())");
 
 
 }

@@ -15,11 +15,7 @@
 			<div class="formall">
 				<h2>Email</h2>
 				<input type="email" name="mail">
-			</div>
-			<div class="formall">
-				<h2>T&#233;l&#233;phone</h2>
-				<input type="tel" name="telephone">
-			</div>			
+			</div>	
 			<div class="formall">
 				<h2>Sujet</h2>
 				<select name="sujet">
@@ -35,7 +31,7 @@
 				<textarea rows="5" name="message"></textarea>
 			</div>
 			<div class="formall">
-				<button type="submit" class="submit">Envoyer</button>
+				<button type="submit" class="submit" name="send">Envoyer</button>
 			</div>
 		</fieldset>
 	</form>
@@ -51,7 +47,6 @@
           nom: "required",
           prenom: "required",
           mail: "required",
-          telephone: "required",
           sujet: "required",
           message: "required",
           nom: {
@@ -62,12 +57,7 @@
           },
           mail: {
             required: true,
-          },          
-          telephone: {
-            required: true,
-            minlength: 10,
-            maxlength: 10,
-          },          
+          },                            
           sujet: {
             required: true
           },          
@@ -81,12 +71,7 @@
           prenom: "Merci d'entrer votre prenom.",
           mail: {
             required: "Merci d'entrer votre mail",
-          },
-          telephone: {
-            required: "Merci d'entrer votre numero de telephone",
-            minlength: "Votre numero de telephone doit contenir 10 numero maximum",
-            maxlength: "Votre numero de telephone est trop long"
-          },
+          },          
           sujet: "Merci de selectionner le sujet",
           message: "Merci d'entrer votre message"
         },

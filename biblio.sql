@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : Dim 07 mars 2021 à 12:19
+-- Généré le : jeu. 01 avr. 2021 à 10:36
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -36,18 +36,20 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `sujet` varchar(256) NOT NULL,
   `message` varchar(2048) NOT NULL,
   `date` date NOT NULL,
-  `telephone` int(11) NOT NULL,
   `idPersonne` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `contact_utilisateur_FK` (`idPersonne`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `contact`
 --
 
-INSERT INTO `contact` (`id`, `prenom`, `nom`, `mail`, `sujet`, `message`, `date`, `telephone`, `idPersonne`) VALUES
-(1, 'test', 'test', 'test@gmail.com', 'opt2', 'cc', '2021-02-13', 665601439, NULL);
+INSERT INTO `contact` (`id`, `prenom`, `nom`, `mail`, `sujet`, `message`, `date`, `idPersonne`) VALUES
+(1, 'test', 'test', 'test@gmail.com', 'opt2', 'cc', '2021-02-13', NULL),
+(2, 'Rémi', 'Petit', 'remi.petit93370@gmail.com', 'Probleme avec le site', 'Salut ma couille, ceci est un test', '2021-03-11', NULL),
+(5, 'Rémi', 'Petit', 'remi.petit93370@gmail.com', 'Probleme avec le site', 'Bonjour, je suis un truc sympa, je suis là pour une démonstration d\'une autre fonctionnalité :p. ', '2021-03-11', NULL),
+(6, 'Flavie', 'Tonon', 'flavie.tonon.pro@gmail.com', 'Probleme avec le site', '- ça ne fonctionne pas pour les isbn non numériques', '2021-03-11', NULL);
 
 -- --------------------------------------------------------
 
@@ -60,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `editeur` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `editeur`
@@ -106,24 +108,24 @@ CREATE TABLE IF NOT EXISTS `genre` (
   `libelle` varchar(150) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `libelle` (`libelle`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `genre`
 --
 
 INSERT INTO `genre` (`id`, `libelle`) VALUES
-(1, 'Théâtre'),
-(2, 'Roman'),
-(3, 'Nouvelle'),
-(4, 'Essai'),
-(5, 'Poésie'),
-(6, 'Manga'),
-(7, 'Éducation'),
+(11, 'Bande dessinée'),
 (8, 'BD'),
-(9, 'Philosophie'),
+(7, 'Éducation'),
+(4, 'Essai'),
 (10, 'Humoristique'),
-(11, 'Bande dessinée');
+(6, 'Manga'),
+(3, 'Nouvelle'),
+(9, 'Philosophie'),
+(5, 'Poésie'),
+(2, 'Roman'),
+(1, 'Théâtre');
 
 -- --------------------------------------------------------
 
@@ -136,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `langue` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `libelle` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `langue`
@@ -168,9 +170,8 @@ CREATE TABLE IF NOT EXISTS `livre` (
   `editeur` int(11) NOT NULL,
   `utilisateur` int(11) DEFAULT NULL,
   `idPersonne` int(11) DEFAULT NULL,
-  `renouvellement` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`isbn`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `renouvellement` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `livre`
@@ -208,7 +209,7 @@ INSERT INTO `livre` (`isbn`, `titre`, `annee`, `nbpages`, `synopsis`, `date_reto
 ('9782843449253', 'Le Sultan des nuages', 2017, 120, NULL, NULL, 2, 2, 1, NULL, 17, NULL),
 ('9782843449260', 'Le Crépuscule des dieux', 2019, 480, NULL, NULL, 2, 2, 4, NULL, 16, NULL),
 ('9791035801823', 'Fahrenheit 451 ', 2018, 256, NULL, NULL, 2, 2, 6, NULL, 24, NULL),
-('2233445566', 'Essai', 1970, 666, NULL, NULL, 1, 11, 25, NULL, 3, NULL);
+('vgffk', 'teste', 2010, 66, NULL, NULL, 4, 11, 14, NULL, 13, NULL);
 
 -- --------------------------------------------------------
 
@@ -225,7 +226,7 @@ CREATE TABLE IF NOT EXISTS `personne` (
   `ville_naiss` varchar(50) DEFAULT NULL,
   `biographie` mediumtext,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `personne`
@@ -273,17 +274,37 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `prenom` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `mdp` varchar(50) NOT NULL,
+  `derniereCo` datetime DEFAULT NULL,
   PRIMARY KEY (`idUtilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`idUtilisateur`, `idClient`, `admin`, `nom`, `prenom`, `email`, `mdp`) VALUES
-(1, 0, 1, 'LAUNAY', 'Erwan', 'rocky77580@gmail.com', 'mdpErwan'),
-(2, 0, 0, 'Petit', 'Rémi', 'remipetit@gmail.com', 'mdpRemi'),
-(3, 26209739, 0, 'test', 'form', 'testform@gmail.com', 'testform');
+INSERT INTO `utilisateur` (`idUtilisateur`, `idClient`, `admin`, `nom`, `prenom`, `email`, `mdp`, `derniereCo`) VALUES
+(1, 11116198, 1, 'LAUNAY', 'Erwan', 'rocky77580@gmail.com', 'mdpErwan', '2021-04-01 10:23:42'),
+(2, 43034393, 1, 'Petit', 'Rémi', 'remipetit@gmail.com', 'mdpRemi', '2021-04-01 00:00:00'),
+(4, 24227660, 1, 'Beaulieu', 'Mattéo', 'beaulieu.matteo@gmail.com', 'mdpMatteo', '2021-03-27 00:00:00'),
+(5, 85598079, 1, 'Chen', 'Maxime', 'professeur.chen@gmail.com', 'mdpMaxime', '2021-03-27 00:00:00'),
+(6, 36923447, 0, 'Livre', 'Arbitre', 'livrearbitre@gmail.com', '123456', '2021-03-27 00:00:00'),
+(7, 62980780, 0, 'Star', 'Books', 'starbooks@gmail.com', '123456', '2021-03-27 00:00:00'),
+(8, 78422008, 0, 'Booking', 'Cafe', 'bookingcafe@gmail.com', '123456', '2021-04-01 10:26:16'),
+(9, 87023024, 0, 'Dubois', 'Julien', 'dubois.julien@gmail.com', '123456', '2021-03-27 00:00:00'),
+(10, 58870007, 0, 'Maurice', 'Médérick', 'maurice.mederick@gmail.com', '123456', '2021-03-27 00:00:00'),
+(12, 39548262, 0, 'Guyon', 'Corentin', 'guyoncorentin@gmail.com', '123456', '2021-03-27 00:00:00'),
+(13, 16217097, 0, 'Benoit', 'Antoine', 'benoit.antoine@gmail.com', '123456', '2021-03-27 00:00:00'),
+(14, 60573499, 0, 'Boutroue', 'Guillaume', 'boutroue.guillaume@gmail.com', '123456', '2021-03-27 00:00:00'),
+(15, 94255783, 0, 'Vincent', 'Alexandre', 'vincent.alexandre@gmail.com', '123456', '2021-03-27 00:00:00'),
+(16, 98041805, 0, 'Thieblemont ', 'Alexandre ', 'thieblemont.alexandre@gmail.com', '123456', '2021-03-27 00:00:00'),
+(17, 36667380, 0, 'Leconte', 'Julien', 'leconte.julien@gmail.com', '123456', '2021-03-27 00:00:00'),
+(18, 61480187, 0, 'HOUR', 'Logan', 'hour.logan@gmail.com', '123456', '2021-03-27 00:00:00'),
+(19, 65613091, 0, 'Wagler', 'Axel', 'wagler.axel@gmail.com', '123456', '2021-03-27 00:00:00'),
+(20, 24038288, 0, 'Lebacle', 'Célian', 'lebacle.celian@gmail.com', '123456', '2021-03-27 00:00:00'),
+(21, 27641591, 0, 'Madeleine', 'Kilian', 'madeleine.kilian@gmail.com', '123456', '2021-03-27 00:00:00'),
+(22, 87892099, 0, 'Teixeira', 'Alexandre', 'teixeira.alexandre@gmail.com', '123456', '2021-03-27 00:00:00'),
+(23, 10086362, 0, 'Lerebours', 'Mederic', 'lerebours.mederic@gmail.com', '123456', '2021-03-27 00:00:00'),
+(25, 11433070, 1, 'Tonon', 'Flavie', 'tonon.flavie@gmail.com', 'adminTONON', '2021-03-27 00:00:00');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

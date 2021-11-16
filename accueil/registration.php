@@ -46,6 +46,7 @@
         <input type="text" class="login-input" name="prenom" placeholder="Prenom" />
         <input type="email" class="login-input" name="email" placeholder="Votre adresse mail">
         <input type="password" class="login-input" name="password" placeholder="Votre mot de passe" minlength="6">
+        <p>L'inscription à un compte OpenVia signifie que vous acceptez les <a href="mentions_legales.php">Mentions Légales</a>.</p>
         <input type="submit" name="submit" value="S'enregistrer" class="login-button">
         <p class="link">Vous avez déjà un compte ? <a href="accueil.php">Se connecter ici</a></p>
     </form>
